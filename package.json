@@ -1,0 +1,22 @@
+{
+  "name": "ariminum_epigraph",
+  "version": "1.0.0",
+  "description": "The SEDA project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scholarly-editing-project/Ariminum_epigraph.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scholarly-editing-project/Ariminum_epigraph/issues"
+  },
+  "homepage": "https://github.com/Scholarly-editing-project/Ariminum_epigraph#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
