@@ -20,6 +20,11 @@ In order to execute **Ariminum Epigraph** locally on your machine you must follo
 
 **Note:** During development changes on front-end files (html,css,javascript and so on) are immediatly displayed on page refresh. Instead back-end files (index.js or other files needed by the server) need the restart of the server (`ctrl+c` for killing the process and start again from **step6**).
 
+### Database
+
+For this project we are using a [NoSQL database](https://www.mongodb.com/nosql-explained) named [Mongodb](https://www.mongodb.com/).
+Every **epigraph** that we are going to show will be saved in **json format**, which is one of the most lightful way to share data throught the web.
+
 ### Backend 
 
 **Programming language:** JavaScript
