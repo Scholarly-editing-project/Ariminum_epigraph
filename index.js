@@ -28,7 +28,7 @@ mongoose.connect(CONSTANTS.DB.CONNECTION)
  * 
  * This will return the index page
  */
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.PAGES.INDEX_PAGE}`)
 })
 
@@ -76,9 +76,9 @@ app.get('/api/epigraph/:id', (req, res) => {
 app.use(express.static(CONSTANTS.FOLDERS.ASSETS))
 
 /**
- * If none of the precedent methods are called 
+ * If none of the precedent methods are called show 404 Error
  */
-app.use(function (req, res, next) {
+app.use((req, res, next) => {
 
   // Update HTTP code to "404 Not Found"
   res.status(404)
