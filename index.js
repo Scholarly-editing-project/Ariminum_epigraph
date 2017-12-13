@@ -11,7 +11,7 @@ const app = express()
 const DIRNAME = __dirname
 
 // Import the JSON structure stored inside the file "constants.js"
-const CONSTANTS = require('./constants')
+const CONSTANTS = require('./assets/constants')
 const EPIGRAPH = require('./db/schemas/epigraph')
 
 // Create the model from Scheme
