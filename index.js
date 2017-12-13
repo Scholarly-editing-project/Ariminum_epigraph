@@ -14,6 +14,9 @@ const DIRNAME = __dirname
 const CONSTANTS = require('./constants')
 const EPIGRAPH = require('./db/schemas/epigraph')
 
+// Create the model from Scheme
+const Epigraph = mongoose.model(CONSTANTS.DB.EPIGRAPH, EPIGRAPH.scheme)
+
 // Connext to mongodb 
 mongoose.connect(CONSTANTS.DB.CONNECTION)
 
@@ -34,18 +37,36 @@ app.get('/', function (req, res) {
  */
 app.get('/api/epigraph', (req, res) => {
 
-  // Create the model from Scheme
-  mongoose.model(CONSTANTS.DB.EPIGRAPH, EPIGRAPH.scheme)
+  // Get all from collection
+  Epigraph.find({}, (err, epigraphs) => {
 
-    // Get all from collection
-    .find({}, (err, epigraphs) => {
+    // Throw given errors
+    if (err) throw err
 
-      // Throw given errors
-      if (err) throw err
+    // Or send back JSON object
+    res.send(epigraphs)
+  })
+})
 
-      // Or send back JSON object
-      res.send(epigraphs)
-    })
+/**
+ * Get the a single Epigraph by its id
+ */
+app.get('/api/epigraph/:id', (req, res) => {
+
+  // Filter to select a single epigraph by its id
+  let filter = {
+    '_id': req.params.id
+  }
+
+  // Get single epigraph from id
+  Epigraph.find(filter, (err, epigraph) => {
+
+    // Throw given errors
+    if (err) throw err
+
+    // Or send back JSON object
+    res.send(epigraph)
+  })
 })
 
 /**
@@ -68,9 +89,6 @@ app.use(function (req, res, next) {
 
 /**
  * This method open the port designed PORT
- * 
  * Now the server is still listening on this port for requests
  */
-app.listen(CONSTANTS.PORT, function () {
-  console.log(`${CONSTANTS.NAME} listening on port ${CONSTANTS.PORT}!`)
-})
+app.listen(CONSTANTS.PORT)
