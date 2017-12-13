@@ -14,7 +14,7 @@
   "size": {
     "structure": "2.80 mt x0.79 mt",
     "base": "0.89 mt x 0.91 mt x 0.87 mt",
-    "letter": {
+    "letters": {
       "body": "0.08~0.07 mt",
       "last_line": "0.12 mt"
     }
@@ -28,7 +28,7 @@
     }
   },
   "date": "1BC~2BC",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

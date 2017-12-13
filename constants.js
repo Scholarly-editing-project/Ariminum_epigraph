@@ -12,6 +12,10 @@ const CONSTANTS = {
   FOLDERS: {
     ASSETS_FOLDER: 'assets',
   },
+  DB:{
+    CONNECTION: 'mongodb://localhost/Ariminum_epigraph',
+    EPIGRAPH: 'Epigraphs'
+  }
 }
 
 // Export the object

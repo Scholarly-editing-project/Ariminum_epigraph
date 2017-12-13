@@ -4,6 +4,7 @@
 
 // Import all needed libraries
 const express = require('express')
+const mongoose = require('mongoose')
 const app = express()
 
 // Store some useful and global constants
@@ -11,6 +12,10 @@ const DIRNAME = __dirname
 
 // Import the JSON structure stored inside the file "constants.js"
 const CONSTANTS = require('./constants')
+const EPIGRAPH = require('./db/schemas/epigraph')
+
+// Connext to mongodb 
+mongoose.connect(CONSTANTS.DB.CONNECTION)
 
 /**
  * This function manage the root request
@@ -22,6 +27,22 @@ const CONSTANTS = require('./constants')
  */
 app.get('/', function (req, res) {
   res.sendFile(`${DIRNAME}/${CONSTANTS.PAGES.INDEX_PAGE}`)
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/epigraph', (req, res) => {
+
+  // Create the model from Scheme
+  mongoose.model(CONSTANTS.DB.EPIGRAPH, EPIGRAPH.scheme)
+
+    // Get all from collection
+    .find({}, (err, epigraphs) => {
+      if (err) throw err
+
+      res.send(epigraphs)
+    })
 })
 
 /**

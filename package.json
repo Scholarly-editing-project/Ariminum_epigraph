@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Scholarly-editing-project/Ariminum_epigraph#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
   }
 }
