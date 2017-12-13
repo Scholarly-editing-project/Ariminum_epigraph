@@ -32,15 +32,18 @@ app.get('/', function (req, res) {
 /**
  * Get the entire list of epigraphs
  */
-app.get('/epigraph', (req, res) => {
+app.get('/api/epigraph', (req, res) => {
 
   // Create the model from Scheme
   mongoose.model(CONSTANTS.DB.EPIGRAPH, EPIGRAPH.scheme)
 
     // Get all from collection
     .find({}, (err, epigraphs) => {
+
+      // Throw given errors
       if (err) throw err
 
+      // Or send back JSON object
       res.send(epigraphs)
     })
 })
@@ -49,7 +52,19 @@ app.get('/epigraph', (req, res) => {
  * This function allows front-end html files to load any asset file 
  * stored inside the folder named "assets"
  */
-app.use(express.static(CONSTANTS.FOLDERS.ASSETS_FOLDER))
+app.use(express.static(CONSTANTS.FOLDERS.ASSETS))
+
+/**
+ * If none of the precedent methods are called 
+ */
+app.use(function (req, res, next) {
+
+  // Update HTTP code to "404 Not Found"
+  res.status(404)
+
+  // Return 404 error
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.NOT_FOUND}`)
+})
 
 /**
  * This method open the port designed PORT

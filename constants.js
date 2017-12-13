@@ -8,9 +8,11 @@ const CONSTANTS = {
   NAME: 'Ariminum Epigraph',
   PAGES: {
     INDEX_PAGE: 'index.html',
+    NOT_FOUND: "404.html" 
   },
   FOLDERS: {
-    ASSETS_FOLDER: 'assets',
+    ASSETS: 'assets',
+    TEMPLATES: 'templates'
   },
   DB:{
     CONNECTION: 'mongodb://localhost/Ariminum_epigraph',
