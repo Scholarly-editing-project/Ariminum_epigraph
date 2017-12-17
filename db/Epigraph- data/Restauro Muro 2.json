@@ -1,0 +1,38 @@
+{
+  "title": [
+  "M LIBVRNIVS L F",
+  "M VETTIVS T F",
+  "EX D C MVRVM PVB",
+  "FAC CVR"
+  ],
+  "Transcription": [
+  "M(arcus) Liburnius L(uci) F(ilius)",
+  "M(arcus) Vettius T(iti) F(ilius)",
+  "Ex D(ecurionum) C(onsulto) murum pub[licum]",
+  "Fac(iundum) cur(averunt)"
+  ],
+  "repository": "Lapidario Romano Rimini",
+  "support": "Stone Block",
+  "material": "Not Avaiable",
+  "size": {
+    "structure": "Not Avaiable",
+    "letters": {
+      "body": "Not Avaiable",
+    }
+  },
+  "place": {
+    "Accuracy": "Medium",
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+      "lat": 44.0625086, 
+	  "DA FARE": "Prope Porta s.Andrea",
+      "len": 12.5648476
+    }
+  },
+  "date": "First half of 1st Century B.C.",
+  "bibliography": [{
+    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+  }]
+}

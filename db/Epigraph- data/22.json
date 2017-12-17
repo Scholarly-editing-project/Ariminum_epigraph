@@ -1,0 +1,37 @@
+{
+  "title": [
+	"M ARRECINVS M F [---]" 
+	"CLEMENS TRIB MIL LEG III CYREN" 
+	"ET LEG XXII PRAEF FABR IIVIR IIIVIR AVG" 
+	"B ET S V S L M"
+  ],
+  "Transcription": [
+    "M(arcus) Arrecinus M(arci) f(ilius) [---]"
+	"Clemens trib(unus) mil(itum) leg(ionis) III Cyren(aicae)"
+    "et leg(ionis) XXII praef(ectus) fabr(um) IIvir IIIvir Aug(ustalis)"
+    "B(accho) et S(ilvano) v(otum) s(olvit) l(ibens) m(erito)"
+  ]
+  "repository": "Lapidario Romano Rimini",
+  "support": "Base for a sacred donation",
+  "material": "Marble",
+  "size": {
+    "structure": "0.195 mt x 0.51 mt x 0.25 mt",
+    "letters": {
+      "body": "0.031~0.018 mt",
+    }
+  },
+  "place": {
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+	  "Accuracy" : "Medium",
+      "lat": 44.0529188, 
+      "len": 12.5085514
+    }
+  },
+  "date": "Half of 1st century A.D.",
+  "bibliography": [{
+    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+  }]
+}

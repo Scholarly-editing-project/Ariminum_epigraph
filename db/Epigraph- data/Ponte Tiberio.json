@@ -1,0 +1,51 @@
+{
+  "title": [
+        {"Side" : "Bridge East-side" [
+			"[...] IVI F AVGVSTVS PONTIFEX MAX COS XIII IMP XX TRIBVNIC POTEST XXII P P",
+			"[...] AR DIVI AVGVSTI F DIVI IVLI N AVGVST PONTIF MAXIM COS IIII IMP VIII TRIB POTEST XXII",
+			"DEDER"]
+		}
+        {"Bridge" : "Bridge West-side" [
+			"IMP CA[_]SAR DIVI F AVGVSTV[...]AXIM C[...]X TRIBVNIC POTEST XXXVII P P",
+			"TI CAESAR DIVI AVGVSTI F D[...]GVST PONTIF[...]S IIII IMP VIII TRIB POTEST XXII",
+			"DEDERE"]
+		}
+  ],
+  "Transcription": [
+	    {"Side" : "Bridge East-side"
+			"Text": [                            
+			"[Imp(erator) Caesar D]ivi f(ilius) Augustus pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
+			"[Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
+			"Deder(e)"]
+		}
+	    {"side" : "Bridge West-side"
+			"Text": [
+			"Imp(erator) Ca[e]sar Divi f(ilius) Augustu[s] [pontifex m]axim(us) c[o(n)s(ul) XIII imp(erator) X]X tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
+			"Ti(berius) Caesar Divi Augusti f(ilius) D[ivi Iuli n(epos) Au]gust(us) pontif(ex)[maxim(us) co(n)]s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
+			"Dedere"]
+		}
+  ],                                                               
+  "repository": "Still in place",
+  "support": "Bridge",
+  "material": "Marble",
+  "size": {
+    "structure": "Not Avaiable",
+    "letters": {
+      "body": "Not Avaiable",
+    }
+  },
+  "place": {
+    "Accuracy": "High",
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+      "lat": 44.063689,
+      "len": 12.563656
+    }
+  },
+  "date": "14AD-21AD",
+  "bibliography": [{
+    "citation": " CIL XI, 00367",
+    "uri": "Not Avaiable"
+  }]
+}

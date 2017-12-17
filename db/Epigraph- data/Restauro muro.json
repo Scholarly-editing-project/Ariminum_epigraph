@@ -1,0 +1,40 @@
+{
+  "title": [
+    "C OBVLCIVS C F",
+	"M OCTAVIVS M [_]",
+	"DVOVIR",
+ 	"HOC OPVS FAC",
+    "QURAVERVNT"
+  ],
+  "Transcription": [
+    "C(aius) Obulcius C(ai) f(ilius)",
+	"M(anius) Octavius M(ani) [filius]",
+	"Duovir(i)",
+ 	"Hoc opus fac(iundum)",
+    "curaverunt"
+  ],
+  "repository": "Lapidario Romano Rimini",
+  "support": "Stone Block",
+  "material": "Not Avaiable",
+  "size": {
+    "structure": "Not Avaiable",
+    "letters": {
+      "body": "Not Avaiable"
+    }
+  },
+  "place": {
+    "Accuracy": "Medium",
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+      "lat": 44.0625086, 
+	  "DA FARE": "vicino castello malatestiano",
+      "len": 12.5648476
+    }
+  },
+  "date": "First half of 1st Century B.C.",
+  "bibliography": [{
+    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+  }]
+}

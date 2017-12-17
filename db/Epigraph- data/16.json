@@ -1,0 +1,46 @@
+{
+  "title": [
+    "IMP CAESAR AVGVSTVS",
+    "PONTIFEX MAXIMVS COS",
+    "XIII TRIBVNICIA POTESTATE XXII",
+    "VIAM AEMILIAM AB ARIMINO",
+    "AD FLVMEN TREBIAM",
+    "MVNIENDAM CVRAVIT",
+    "VII"
+  ],
+  "Transcription": [
+  	"Imp(erator) Caesar Augustus"
+	"pontifex maximus co(n)s(ul)"
+	"XIII tribunicia potestate XXII"
+	"viam Aemiliam ab Arimino"
+	"ad flumen Trebiam"
+	"muniendam curavit"
+	"VII"
+  ]
+  "repository": "Lapidario Romano Rimini",
+  "support": "Milestone",
+  "material": "Calcar stone",
+  "size": {
+    "structure": "2.80 mt x0.79 mt",
+    "base": "0.89 mt x 0.91 mt x 0.87 mt",
+    "letters": {
+      "body": "0.08~0.07 mt",
+      "last_line": "0.12 mt"
+    }
+  },
+  "place": {
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+	  "Accuracy": "Medium",
+      "lat": 44.0625086,
+	  "DA FARE": "Poggio Zona",	
+      "len": 12.5648476
+    }
+  },
+  "date": "1BC~2BC",
+  "bibliography": [{
+    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+  }]
+}
