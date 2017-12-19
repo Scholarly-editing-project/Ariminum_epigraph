@@ -1,15 +1,15 @@
 {
   "title": [
-	"SENATUS POPULUSQ[...]",
-	"[...]",
-	"COS SEPT DESIGNAT OCTAVOM V[...]IA [...]S",
-	"CELEBERRIMEIS ITALIAE VIEIS CONSILIO [...]US [...]NITEIS"
+    "SENATUS POPULUSQ[...]",
+    "[...]",
+    "COS SEPT DESIGNAT OCTAVOM V[...]IA [...]S",
+    "CELEBERRIMEIS ITALIAE VIEIS CONSILIO [...]US [...]NITEIS"
   ],
-   "Transcription": [
-	"Senatus Populusq[ue Romanus]",
-	"[Imp(eratori) Caesari divi f(ilio) Augusto imp(eratori) sept(imo) ...]",
-	"co(n)s(uli) sept(imo) designat(o) octavom v[ia Flamin]ia [et reliquei]s",
-	"celeberrimeis Italiae vieis consilio [et sumptib]us [eius mu]niteis"
+  "Transcription": [
+    "Senatus Populusq[ue Romanus]",
+    "[Imp(eratori) Caesari divi f(ilio) Augusto imp(eratori) sept(imo) ...]",
+    "co(n)s(uli) sept(imo) designat(o) octavom v[ia Flamin]ia [et reliquei]s",
+    "celeberrimeis Italiae vieis consilio [et sumptib]us [eius mu]niteis"
   ],
   "repository": "Still in place",
   "support": "Triumphal Arch",
@@ -17,14 +17,14 @@
   "size": {
     "structure": "Not Avaiable",
     "letters": {
-      "body": "0.25~0.37 mt",
+      "body": "0.25~0.37 mt"
     }
   },
   "place": {
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-	  "Accuracy": "High",
+      "Accuracy": "High",
       "lat": 44.056917,
       "len": 12.571111
     }

@@ -1,31 +1,31 @@
 {
   "title": [
-	"IMP CAES",
-	"DIVI VESPASIAN[[I F]]", 
-	"[[DOMITIANVS]]", 
-	"[[AVG GERMANICVS]]", 
-	"PONTIFEX MAXIM", 
-	"TRIB POTEST [[XII]]", 
-	"IMP [[XX]]II COS [[XV]]I", 
-	"CENSOR PERP P P", 
-	"FACIEND CVRAVIT"
+    "IMP CAES",
+    "DIVI VESPASIAN[[I F]]",
+    "[[DOMITIANVS]]",
+    "[[AVG GERMANICVS]]",
+    "PONTIFEX MAXIM",
+    "TRIB POTEST [[XII]]",
+    "IMP [[XX]]II COS [[XV]]I",
+    "CENSOR PERP P P",
+    "FACIEND CVRAVIT"
   ],
-  "Transcription":[
+  "Transcription": [
     "Imp(erator) Caes(ar)",
-	"divi Vespasian[[i f(ilius)]]",
-	"[[Domitianus]]",
-	"[[Aug(ustus) Germanicus]]",
-	"pontifex maxim(us)", 
-	"trib(unicia) potest(ate) [[XII]]",
-	"imp(erator) [[XX]]II co(n)s(ul) [[XV]]I",
-	"censor perp(etuus) p(ater) p(atriae)",
-	"faciend(um) curavit"
-  ]
+    "divi Vespasian[[i f(ilius)]]",
+    "[[Domitianus]]",
+    "[[Aug(ustus) Germanicus]]",
+    "pontifex maxim(us)",
+    "trib(unicia) potest(ate) [[XII]]",
+    "imp(erator) [[XX]]II co(n)s(ul) [[XV]]I",
+    "censor perp(etuus) p(ater) p(atriae)",
+    "faciend(um) curavit"
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Table",
   "material": "Marble",
   "size": {
-    "structure": "0.86 mt x 0.65 mt x 0.14 mt"
+    "structure": "0.86 mt x 0.65 mt x 0.14 mt",
     "letters": {
       "body": "0.065~0.035 mt"
     }
@@ -34,9 +34,9 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-	  "Accuracy": "Medium",
-      "lat": 44.0625086,   
-	  "DA FARE" : "Fontanelle"
+      "Accuracy": "Medium",
+      "lat": 44.0625086,
+      "DA FARE": "Fontanelle",
       "len": 12.5648476
     }
   },

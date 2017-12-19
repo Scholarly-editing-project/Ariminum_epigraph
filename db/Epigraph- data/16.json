@@ -9,14 +9,14 @@
     "VII"
   ],
   "Transcription": [
-  	"Imp(erator) Caesar Augustus"
-	"pontifex maximus co(n)s(ul)"
-	"XIII tribunicia potestate XXII"
-	"viam Aemiliam ab Arimino"
-	"ad flumen Trebiam"
-	"muniendam curavit"
-	"VII"
-  ]
+    "Imp(erator) Caesar Augustus",
+    "pontifex maximus co(n)s(ul)",
+    "XIII tribunicia potestate XXII",
+    "viam Aemiliam ab Arimino",
+    "ad flumen Trebiam",
+    "muniendam curavit",
+    "VII"
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Milestone",
   "material": "Calcar stone",
@@ -32,9 +32,9 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-	  "Accuracy": "Medium",
+      "Accuracy": "Medium",
       "lat": 44.0625086,
-	  "DA FARE": "Poggio Zona",	
+      "DA FARE": "Poggio Zona",
       "len": 12.5648476
     }
   },

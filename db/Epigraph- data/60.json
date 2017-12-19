@@ -1,23 +1,23 @@
 {
   "title": [
-	"SEPTIMIAE VENERIAE",
-	"NAT NORIC CONIVG",
-	"DVL QUAE VIX ANNIS",
-	"XXXX T F MARCELLUS",
-	"VETER AUGGG"
+    "SEPTIMIAE VENERIAE",
+    "NAT NORIC CONIVG",
+    "DVL QUAE VIX ANNIS",
+    "XXXX T F MARCELLUS",
+    "VETER AUGGG"
   ],
   "Transcription": [
-	"Septimiae Veneriae",
-	"nat(ione) Noric(ae) coniugi",
-	"dulc(issimae) quae vix(it) annis",
-	"XXXX T(itus) Fl(avius) Marcellus",
- 	"veter(anus) Augg(ustorum)"
+    "Septimiae Veneriae",
+    "nat(ione) Noric(ae) coniugi",
+    "dulc(issimae) quae vix(it) annis",
+    "XXXX T(itus) Fl(avius) Marcellus",
+    "veter(anus) Augg(ustorum)"
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Urn",
   "material": "Not Avaiable",
   "size": {
-    "structure": "0.37 mt x 0.54 mt x 0.45 mt"
+    "structure": "0.37 mt x 0.54 mt x 0.45 mt",
     "letters": {
       "body": "0.028~0.026 mt"
     }
@@ -27,8 +27,8 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "lat": 44.0625086,   
-	  "DA FARE": "Fornace fabbri",
+      "lat": 44.0625086,
+      "DA FARE": "Fornace fabbri",
       "len": 12.5648476
     }
   },

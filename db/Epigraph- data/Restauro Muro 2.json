@@ -1,15 +1,15 @@
 {
   "title": [
-  "M LIBVRNIVS L F",
-  "M VETTIVS T F",
-  "EX D C MVRVM PVB",
-  "FAC CVR"
+    "M LIBVRNIVS L F",
+    "M VETTIVS T F",
+    "EX D C MVRVM PVB",
+    "FAC CVR"
   ],
   "Transcription": [
-  "M(arcus) Liburnius L(uci) F(ilius)",
-  "M(arcus) Vettius T(iti) F(ilius)",
-  "Ex D(ecurionum) C(onsulto) murum pub[licum]",
-  "Fac(iundum) cur(averunt)"
+    "M(arcus) Liburnius L(uci) F(ilius)",
+    "M(arcus) Vettius T(iti) F(ilius)",
+    "Ex D(ecurionum) C(onsulto) murum pub[licum]",
+    "Fac(iundum) cur(averunt)"
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
@@ -17,7 +17,7 @@
   "size": {
     "structure": "Not Avaiable",
     "letters": {
-      "body": "Not Avaiable",
+      "body": "Not Avaiable"
     }
   },
   "place": {
@@ -25,8 +25,8 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "lat": 44.0625086, 
-	  "DA FARE": "Prope Porta s.Andrea",
+      "lat": 44.0625086,
+      "DA FARE": "Prope Porta s.Andrea",
       "len": 12.5648476
     }
   },

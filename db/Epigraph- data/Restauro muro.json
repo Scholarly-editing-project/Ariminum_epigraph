@@ -1,16 +1,16 @@
 {
   "title": [
     "C OBVLCIVS C F",
-	"M OCTAVIVS M [_]",
-	"DVOVIR",
- 	"HOC OPVS FAC",
+    "M OCTAVIVS M [_]",
+    "DVOVIR",
+    "HOC OPVS FAC",
     "QURAVERVNT"
   ],
   "Transcription": [
     "C(aius) Obulcius C(ai) f(ilius)",
-	"M(anius) Octavius M(ani) [filius]",
-	"Duovir(i)",
- 	"Hoc opus fac(iundum)",
+    "M(anius) Octavius M(ani) [filius]",
+    "Duovir(i)",
+    "Hoc opus fac(iundum)",
     "curaverunt"
   ],
   "repository": "Lapidario Romano Rimini",
@@ -27,8 +27,8 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "lat": 44.0625086, 
-	  "DA FARE": "vicino castello malatestiano",
+      "lat": 44.0625086,
+      "DA FARE": "vicino castello malatestiano",
       "len": 12.5648476
     }
   },
