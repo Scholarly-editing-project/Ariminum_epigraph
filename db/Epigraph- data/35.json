@@ -25,19 +25,16 @@
   "support": "Table",
   "material": "Marble",
   "size": {
-    "structure": "0.86 mt x 0.65 mt x 0.14 mt",
-    "letters": {
-      "body": "0.065~0.035 mt"
-    }
+    "structure": ["Description: ", "Body: 0.86 mt x 0.65 mt x 0.14 mt"],
+    "letters": "0.065~0.035 mt"
   },
   "place": {
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
       "Accuracy": "Medium",
-      "lat": 44.0625086,
-      "DA FARE": "Fontanelle",
-      "len": 12.5648476
+      "lat": "Fontanelle",
+      "len": "Fontanelle"
     }
   },
   "date": "93 AD",

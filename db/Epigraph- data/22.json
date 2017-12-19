@@ -15,10 +15,11 @@
   "support": "Base for a sacred donation",
   "material": "Marble",
   "size": {
-    "structure": "0.195 mt x 0.51 mt x 0.25 mt",
-    "letters": {
-      "body": "0.031~0.018 mt"
-    }
+    "structure": [
+      "Description: ",
+      "Body: 0.195 mt x 0.51 mt x 0.25 mt"
+    ],
+    "letters": "0.031~0.018 mt"
   },
   "place": {
     "ancient": "Ariminum",
