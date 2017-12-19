@@ -1,0 +1,57 @@
+{
+  "title": [
+    "L. SEPTIMIO",
+    "LIBERALI",
+    "VIVIR AVG",
+    "VICANI VICI CERMALI OB",
+    "MERITA EIUS QVOT DECVRION",
+    "ET VICANIS VICOR VII SING",
+    "IN ANNOS X III IN PERPET REI"
+	"ET IN EAM REM FUNDOS XXI"
+	"OBLIGARI IVSSIT QVORUM"
+	"PARTEM VI LEGIS FALC NOMIN"
+	"DEDVCTAM AB TVTORIBVS"
+	"SEPTIMIAE PRISCAE MATRIS"
+	"SUAE LEPIDIA SEPTIMINA"
+	"POPVLO CONCESSIT"
+  ],
+  "Transcription": [
+	"L(ucio) Septimio"
+	"Liberali"
+	"VIvir(o) Aug(ustali)"
+	"Vicani vici Cermali ob"
+	"Merita eius quo<d=T> decurion(ibus)"
+	"Et vicanis vicor(um) VII sing(ulis)"
+	"In annos X(denarios) III in perpet(uum) re[l(iquit)]"
+	"Et in eam rem fundos XXI"
+	"Obligari iussit quorumpartem VI legis Falc(idiae) nomin(e)"
+	"Deductam ab tutoribus"
+	"Septimiae Priscae matris"
+	"Suae Lepidi[a] Septimina"
+	"Populo concessit"
+  ],
+  "repository": "Lost",
+  "support": "Plate",
+  "material": "Unknown",
+  "size": {
+    "structure": "Unknown",
+    "letters": {
+      "body": "Unknown",
+    }
+  },
+  "place": {
+    "Accuracy": "Low",
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+      "lat": 44.0625086,
+	  "DA FARE": "FORO",
+      "len": 12.5648476
+    }
+  },
+  "date": "Unknown",
+  "bibliography": [{
+    "citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",
+    "uri": "http://www.persee.fr/doc/mefr_0223-5102_1997_num_109_1_1975"
+  }]
+}
