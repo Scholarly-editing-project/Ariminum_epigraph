@@ -2,23 +2,21 @@ const mongoose = require('mongoose')
 
 let scheme = mongoose.Schema({
   title: [String],
+  transcription: [String],
   repository: String,
   support: String,
   material: String,
   size: {
-    structure: String,
-    base: String,
-    letters: {
-      body: String,
-      last_line: String
-    }
+    structure: [String],
+    letters: String
   },
   place: {
     ancient: String,
     modern: String,
     geo: {
-      lat: Number,
-      len: Number
+      accuracy: String,
+      lat: String,
+      len: String
     }
   },
   date: String,

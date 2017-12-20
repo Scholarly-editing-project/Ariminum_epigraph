@@ -10,7 +10,7 @@
     "CENSOR PERP P P",
     "FACIEND CVRAVIT"
   ],
-  "Transcription": [
+  "transcription": [
     "Imp(erator) Caes(ar)",
     "divi Vespasian[[i f(ilius)]]",
     "[[Domitianus]]",
@@ -32,13 +32,13 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "Accuracy": "Medium",
+      "accuracy": "Medium",
       "lat": "Fontanelle",
       "len": "Fontanelle"
     }
   },
   "date": "93 AD",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

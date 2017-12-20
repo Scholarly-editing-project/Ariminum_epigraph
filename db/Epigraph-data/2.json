@@ -7,7 +7,7 @@
     "QVOD SVIS DEDIT APPARE"
 
   ],
-  "Transcription": [
+  "transcription": [
     "Liberteis hisce fecere",
     "patrono Q(uintus) Ovi(us) Q(uinti) l(ibertus) Barg(ates?)",
     "Q(uintus) Nadiacus Q(uintus) Pilon(icus)",
@@ -33,13 +33,13 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "Accuracy": "Medium",
+      "accuracy": "Medium",
       "lat": "borgo s. giovanni",
       "len": "borgo s. giovanni"
     }
   },
   "date": "beginning of 1st century B.C.",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

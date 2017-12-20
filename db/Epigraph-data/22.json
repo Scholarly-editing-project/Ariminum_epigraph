@@ -5,7 +5,7 @@
     "ET LEG XXII PRAEF FABR IIVIR IIIVIR AVG",
     "B ET S V S L M"
   ],
-  "Transcription": [
+  "transcription": [
     "M(arcus) Arrecinus M(arci) f(ilius) [---]",
     "Clemens trib(unus) mil(itum) leg(ionis) III Cyren(aicae)",
     "et leg(ionis) XXII praef(ectus) fabr(um) IIvir IIIvir Aug(ustalis)",
@@ -25,13 +25,13 @@
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "Accuracy": "Medium",
-      "lat": 44.0529188,
-      "len": 12.5085514
+      "accuracy": "Medium",
+      "lat": "44.0529188",
+      "len": "12.5085514"
     }
   },
   "date": "Half of 1st century A.D.",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

@@ -3,33 +3,35 @@
 		"L LEPIDO L F AN",
 		"PROCVLO",
 		"MIL LEG V MACEDON",
-		"Y LEG EIVSD Y LEG EIVSD II",
+		"Y LEG EIVSD II",
 		"Y LEG VI VICTRICIS",
 		"Y LEG XV APOLLINAR",
 		"PRIM LEG XIII GEMIN",
-		"DONIS DONATO AB IMP",
-		"VESPASIANO AUG BELLO",
-		"IVDAICO TORQVIB ARMIL",
-		"PHALERIS CORONA VALLARI",
+		"DONIS DONATO AB",
+		"IMP VESPASIANO AUG",
+		"BELLO IVDAICO TORQVIB",
+		"ARMILLIS PHALERIS",
+		"CORONA VALLARI",
 		"SALINATORES CIVITATIS",
-		"MORINORUM OB MER EIUS",
+		"MENAPIORUM OB MER EIUS",
 		"SEPTIMIA F REPONEND",
 		"CURAVIT"
 	],
-	"Transcription": [
+	"transcription": [
 		"L(ucio) Lepidio L(uci) f(ilio) An(iensi)",
 		"Proculo",
 		"Mil(iti) leg(ionis) V Macedon(icae)",
-		"(centurioni) leg(ionis) eiusd(em)(centurioni) leg(ionis) eiusd(em) II",
+		"(centurioni) leg(ionis) eiusd(em) II",
 		"(centurioni) leg(ionis) VI Victricis",
 		"(centurioni) leg(ionis) XV Apollinar(is)",
 		"Prim(o pilo) leg(ionis) XIII Gemin(ae)",
-		"Donis donato ab Imp(eratore)",
-		"Vespasiano Aug(usto) bello",
-		"Iudaico torquib(us) armil(lis)",
-		"Phaleris corona vallari",
+		"Donis donato ab",
+		"Imp(eratore) Vespasiano Aug(usto)",
+		"Bello Iudaico torquib(us)",
+		"Armillis phaleris",
+		"Corona vallari",
 		"Salinatores civitatis",
-		"Morinorum ob mer(ita) eius",
+		"Menapiorum ob mer(ita) eius",
 		"Septimina f(ilia) reponend(um)",
 		"Curavit"
 	],
@@ -37,23 +39,20 @@
 	"support": "Unknown",
 	"material": "Unknown",
 	"size": {
-		"structure": "Unknown",
-		"letters": {
-			"body": "Unknown"
-		}
+		"structure": ["Unknown"],
+		"letters": "Unknown"
 	},
 	"place": {
-		"Accuracy": "Low",
 		"ancient": "Ariminum",
 		"modern": "Rimini",
 		"geo": {
-			"lat": 44.0625086,
-			"DaFARE": "foro",
-			"len": 12.5648476
+			"accuracy": "Low",
+			"lat": "foro",
+			"len": "foro"
 		}
 	},
 	"date": "Unknown",
-	"bibliography": [{
+	"bibliographies": [{
 		"citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",
 		"uri": "http://www.persee.fr/doc/mefr_0223-5102_1997_num_109_1_1975"
 	}]

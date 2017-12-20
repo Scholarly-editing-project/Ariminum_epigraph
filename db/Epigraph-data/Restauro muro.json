@@ -1,37 +1,36 @@
 {
   "title": [
-    "M LIBVRNIVS L F",
-    "M VETTIVS T F",
-    "EX D C MVRVM PVB",
-    "FAC CVR"
+    "C OBVLCIVS C F",
+    "M OCTAVIVS M [_]",
+    "DVOVIR",
+    "HOC OPVS FAC",
+    "QURAVERVNT"
   ],
-  "Transcription": [
-    "M(arcus) Liburnius L(uci) F(ilius)",
-    "M(arcus) Vettius T(iti) F(ilius)",
-    "Ex D(ecurionum) C(onsulto) murum pub[licum]",
-    "Fac(iundum) cur(averunt)"
+  "transcription": [
+    "C(aius) Obulcius C(ai) f(ilius)",
+    "M(anius) Octavius M(ani) [filius]",
+    "Duovir(i)",
+    "Hoc opus fac(iundum)",
+    "curaverunt"
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
   "material": "Not Avaiable",
   "size": {
-    "structure": "Not Avaiable",
-    "letters": {
-      "body": "Not Avaiable"
-    }
+    "structure": ["Not Avaiable"],
+    "letters": "Not Avaiable"
   },
   "place": {
-    "Accuracy": "Medium",
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "lat": 44.0625086,
-      "DA FARE": "Prope Porta s.Andrea",
-      "len": 12.5648476
+      "accuracy": "Medium",
+      "lat": "vicino castello malatestiano",
+      "len": "vicino castello malatestiano"
     }
   },
   "date": "First half of 1st Century B.C.",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

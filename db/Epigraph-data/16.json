@@ -8,7 +8,7 @@
     "MVNIENDAM CVRAVIT",
     "VII"
   ],
-  "Transcription": [
+  "transcription": [
     "Imp(erator) Caesar Augustus",
     "pontifex maximus co(n)s(ul)",
     "XIII tribunicia potestate XXII",
@@ -26,19 +26,19 @@
       "Cilinder: 2.80 mt x0.79 mt",
       "Base: 0.89 mt x 0.91 mt x 0.87 mt"
     ],
-    "letters": "0.08~0.07 mt (last line: 0.12mt"
+    "letters": "0.08~0.07 mt (last line: 0.12mt)"
   },
   "place": {
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "Accuracy": "Medium",
+      "accuracy": "Medium",
       "lat": "Poggio Zona",
       "len": "Poggio Zona"
     }
   },
   "date": "1BC~2BC",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
   }]

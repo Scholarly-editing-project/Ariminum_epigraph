@@ -15,7 +15,7 @@
     "SUAE LEPIDIA SEPTIMINA",
     "POPVLO CONCESSIT"
   ],
-  "Transcription": [
+  "transcription": [
     "L(ucio) Septimio",
     "Liberali",
     "VIvir(o) Aug(ustali)",
@@ -34,23 +34,20 @@
   "support": "Plate",
   "material": "Unknown",
   "size": {
-    "structure": "Unknown",
-    "letters": {
-      "body": "Unknown"
-    }
+    "structure": ["Unknown"],
+    "letters": "Unknown"
   },
   "place": {
-    "Accuracy": "Low",
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
-      "lat": 44.0625086,
-      "DA FARE": "FORO",
-      "len": 12.5648476
+      "Accuracy": "Low",
+      "lat": "foro",
+      "len": "foro"
     }
   },
   "date": "Unknown",
-  "bibliography": [{
+  "bibliographies": [{
     "citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",
     "uri": "http://www.persee.fr/doc/mefr_0223-5102_1997_num_109_1_1975"
   }]
