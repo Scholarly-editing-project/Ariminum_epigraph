@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 let scheme = mongoose.Schema({
+  _id: String,
   title: [String],
   transcription: [String],
   repository: String,

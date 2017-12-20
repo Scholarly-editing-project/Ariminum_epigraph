@@ -13,9 +13,7 @@ const DIRNAME = __dirname
 // Import the JSON structure stored inside the file "constants.js"
 const CONSTANTS = require('./assets/constants')
 const EPIGRAPH = require('./db/schemas/epigraph')
-
-// Create the model from Scheme
-const Epigraph = mongoose.model(CONSTANTS.DB.EPIGRAPH, EPIGRAPH.scheme)
+const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
 mongoose.connect(CONSTANTS.DB.CONNECTION)
@@ -37,13 +35,10 @@ app.get('/', (req, res) => {
  */
 app.get('/api/epigraph', (req, res) => {
 
-  // Get all from collection
-  Epigraph.find({}, (err, epigraphs) => {
+  MONGODB.findAll((err, epigraphs) => {
 
-    // Throw given errors
     if (err) throw err
 
-    // Or send back JSON object
     res.send(epigraphs)
   })
 })
@@ -53,13 +48,7 @@ app.get('/api/epigraph', (req, res) => {
  */
 app.get('/api/epigraph/:id', (req, res) => {
 
-  // Filter to select a single epigraph by its id
-  let filter = {
-    '_id': req.params.id
-  }
-
-  // Get single epigraph from id
-  Epigraph.find(filter, (err, epigraph) => {
+  MONGODB.findById(req.params.id, (err, epigraph) => {
 
     // Throw given errors
     if (err) throw err
