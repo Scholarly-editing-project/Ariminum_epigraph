@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0003",
+  "_id": "ariminum_0003",
   "title": [
     "M ARRECINVS M F [---]",
     "CLEMENS TRIB MIL LEG III CYREN",
@@ -31,6 +31,9 @@
       "len": "12.5085514"
     }
   },
+  "people": [
+	"marcus_arrecinus_clemens"
+	]
   "date": "Half of 1st century A.D.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

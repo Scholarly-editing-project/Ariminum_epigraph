@@ -1,0 +1,29 @@
+{
+	"_id": "titus_flavius_marcellus",
+	"name": {
+		"praenomen": "Titus",
+		"nomen": "Flavius",
+		"cognomen": "Marcellus"
+	}
+	"gender": "male",
+	"age": "unknown",
+	"social-status": "roman citizen",
+	"city": "Ariminum",
+	"career":[
+	{
+		"role": "veteran",
+		"grade": "miles" ,
+		"place": "unknown",
+		"type": "military",
+		"description": "not avaiable"
+	}
+	"relation":[
+	{
+		"type": "husband of",
+		"person": "septimiae_veneriae"
+		}
+	]
+	"documents":{
+		"_id": "ariminum_0005"
+	}
+}

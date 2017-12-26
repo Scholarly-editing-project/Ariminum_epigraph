@@ -1,7 +1,7 @@
 {
-  "_id": "ep_0009",
+  "_id": "ariminum_0009",
   "title": [
-    "L. SEPTIMIO",
+	"L SEPTIMIO",
     "LIBERALI",
     "VIVIR AVG",
     "VICANI VICI CERMALI OB",
@@ -47,6 +47,14 @@
       "len": "foro"
     }
   },
+  "people": [
+	"lucius_septimius_liberalis",
+	"lepidia_septimina",
+	"septimia_prisca",
+	"vicani_cermali",
+	"vicani_vicorum",
+	"ariminum_decurioni"
+	],
   "date": "Unknown",
   "bibliographies": [{
     "citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",

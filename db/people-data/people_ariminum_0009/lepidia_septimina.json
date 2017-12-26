@@ -1,0 +1,30 @@
+{
+	"_id": "lepidia_septimina",
+	"name": {
+		"nomen": "Lepidia",
+		"cognomen": "Septimina"
+	}
+	"gender": "female",
+	"age": "unknown",
+	"social-status": "unknown",
+	"city": "Ariminum",
+	"relation":[
+	{
+		"type": "daughter of",
+		"person": "septimia_prisca"
+	}
+	{
+		"type": "daughter of",
+		"person": "lucius_lepidius_proculus"
+	}
+	{
+		"type": "granddaughter of",
+		"person": "lucius_septimius_liberalis"
+	}
+	],
+	"documents":{
+	 "_id": "ariminum_0007",
+	 "_id": "ariminum_0008",
+	 "_id": "ariminum_0009"
+	}
+}

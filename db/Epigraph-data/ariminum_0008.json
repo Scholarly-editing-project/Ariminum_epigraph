@@ -1,5 +1,5 @@
 {
-	"_id": "ep_0008",
+	"_id": "ariminum_0008",
 	"title": [
 		"L LEPIDO L F AN",
 		"PROCVLO",
@@ -50,6 +50,12 @@
 			"len": "foro"
 		}
 	},
+	"people": [
+		"lucius_lepidius_proculus",
+		"lepidia_septimina",
+		"Vespasian (https://en.wikipedia.org/wiki/Vespasian )",
+		"salinatores_morini"
+	],
 	"date": "Unknown",
 	"bibliographies": [{
 		"citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",

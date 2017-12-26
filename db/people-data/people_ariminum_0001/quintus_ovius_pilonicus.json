@@ -1,0 +1,21 @@
+{
+	"_id": "quintus_ovius_pilonicus",
+	"name": {
+		"praenomen": "Quintus",
+		"nomen": "Ovius",
+		"cognomen": "Pilonicus"
+	}
+	"gender": "male",
+	"age": "unknown",
+	"social-status": "libertus",
+	"city": "Ariminum",
+	"relation":[
+	{
+		"type": "libertus of",
+		"person": "quintus_ovius_fregellanus"
+	}
+	]
+	"documents":{
+		"_id": "ariminum_0001"
+	}
+}

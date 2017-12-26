@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0012",
+  "_id": "ariminum_0012",
   "title": [
     "C OBVLCIVS C F",
     "M OCTAVIVS M [_]",
@@ -30,6 +30,10 @@
       "len": "vicino castello malatestiano"
     }
   },
+   "people": [
+	"caius_obulcius",
+	"manius_octavius"
+	]
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
