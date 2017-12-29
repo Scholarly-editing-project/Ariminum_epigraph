@@ -3,18 +3,16 @@
 	"name": {
 		"nomen": "Septimia",
 		"cognomen": "Veneria"
-	}
+	},
 	"gender": "female",
 	"age": "40 years old",
 	"social-status": "none",
 	"city": "Ariminum (provenance:Noricum)",
-	"relation":[
-	{
+	"relation": [{
 		"type": "wife of",
 		"person": "titus_flavius_marcellus"
-	}
-	]
-	"documents":{
+	}],
+	"documents": {
 		"_id": "ariminum_0005"
 	}
 }

@@ -20,18 +20,19 @@
     "letters": "Not Avaiable"
   },
   "place": {
-    
+
     "ancient": "Ariminum",
     "modern": "Rimini",
-    "geo": {"accuracy": "Medium",
+    "geo": {
+      "accuracy": "Medium",
       "lat": "Prope Porta s.Andrea",
       "len": "Prope Porta s.Andrea"
     }
   },
   "people": [
-	"marcus_liburnus",
-	"marcus_vettius"
-	]
+    "marcus_liburnus",
+    "marcus_vettius"
+  ],
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

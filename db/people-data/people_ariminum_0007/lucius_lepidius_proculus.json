@@ -4,74 +4,72 @@
 		"praenomen": "Lucius",
 		"nomen": "Lepidius",
 		"cognomen": "Proculus"
-	}
+	},
 	"gender": "male",
 	"age": "unknown",
 	"social-status": "roman citizen",
 	"city": "Ariminum",
-	"career":[
-	{
-		"role": "Milites",
-		"grade": "unknown" ,
-		"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Legionary"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio VI Victrix (https://en.wikipedia.org/wiki/Legio_VI_Victrix )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio XV Apollinaris (https://en.wikipedia.org/wiki/Legio_XV_Apollinaris )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Primus Pilus",
-		"grade": "unknown" ,
-		"place": "legio XIII Gemina (https://en.wikipedia.org/wiki/Legio_XIII_Gemina )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Primus_pilus"
-	}
-	{
-		"role": "prizewinner",
-		"grade": "torqe (https://en.wikipedia.org/wiki/Torc ), armillae (https://en.wikipedia.org/wiki/Armilla_(military_decoration) ), phaleris (https://en.wikipedia.org/wiki/Phalera_(military_decoration) ),Corona vallari (https://en.wikipedia.org/wiki/Camp_crown )" ,
-		"place": "Bello Iudaico (https://en.wikipedia.org/wiki/Galilee_campaign_(67) )",
-		"type": "Military",
-		"description": "Given by Imperator Vespasian Augustus (https://en.wikipedia.org/wiki/Vespasian )",
-	}
-	]
-	"relation":[
-	{
-		"type": "father of",
-		"person": "lepidia_septimina"
-	}
-	{
-		"type": "husband of",
-		"person": "septimia_prisca"
-	}
-	{
-		"type": "son of",
-		"person": "Lucius Lepidius"
-	}
-	{
-		"type": "son in law of",
-		"person": "lucius_septimius_liberalis"
-	}
-	]
-	"documents":{
+	"career": [{
+			"role": "Milites",
+			"grade": "unknown",
+			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Legionary"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio VI Victrix (https://en.wikipedia.org/wiki/Legio_VI_Victrix )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio XV Apollinaris (https://en.wikipedia.org/wiki/Legio_XV_Apollinaris )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Primus Pilus",
+			"grade": "unknown",
+			"place": "legio XIII Gemina (https://en.wikipedia.org/wiki/Legio_XIII_Gemina )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Primus_pilus"
+		},
+		{
+			"role": "prizewinner",
+			"grade": "torqe (https://en.wikipedia.org/wiki/Torc ), armillae (https://en.wikipedia.org/wiki/Armilla_(military_decoration) ), phaleris (https://en.wikipedia.org/wiki/Phalera_(military_decoration) ),Corona vallari (https://en.wikipedia.org/wiki/Camp_crown )",
+			"place": "Bello Iudaico (https://en.wikipedia.org/wiki/Galilee_campaign_(67) )",
+			"type": "Military",
+			"description": "Given by Imperator Vespasian Augustus (https://en.wikipedia.org/wiki/Vespasian )",
+		}
+	],
+	"relation": [{
+			"type": "father of",
+			"person": "lepidia_septimina"
+		},
+		{
+			"type": "husband of",
+			"person": "septimia_prisca"
+		},
+		{
+			"type": "son of",
+			"person": "Lucius Lepidius"
+		},
+		{
+			"type": "son in law of",
+			"person": "lucius_septimius_liberalis"
+		}
+	],
+	"documents": {
 		"_id": "ariminum_0007",
 		"_id": "ariminum_0008"
 	}

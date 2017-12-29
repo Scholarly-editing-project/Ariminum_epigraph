@@ -4,30 +4,29 @@
 		"praenomen": "Quintus",
 		"nomen": "Ovius",
 		"cognomen": "Fregellanus"
-	}
+	},
 	"gender": "male",
 	"age": "unknown",
 	"social-status": "roman citizen",
 	"city": "Ariminum",
-	"relation":[
-	{
-		"type": "son of",
-		"person": "Caius Ovius Fregellanus"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_bargates"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_nadiacus"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_pilonicus"
-	}
-	]
-	"documents":{
+	"relation": [{
+			"type": "son of",
+			"person": "Caius Ovius Fregellanus"
+		},
+		{
+			"type": "patronus of",
+			"person": "quintus_ovius_bargates"
+		},
+		{
+			"type": "patronus of",
+			"person": "quintus_ovius_nadiacus"
+		},
+		{
+			"type": "patronus of",
+			"person": "quintus_ovius_pilonicus"
+		}
+	],
+	"documents": {
 		"_id": "ariminum_0001"
 	}
 }

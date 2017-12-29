@@ -3,26 +3,25 @@
 	"name": {
 		"nomen": "Septimia",
 		"cognomen": "Prisca"
-	}
+	},
 	"gender": "female",
 	"age": "unknown",
 	"social-status": "None",
 	"city": "Ariminum",
-	"relation":[
-	{
-		"type": "daughter of",
-		"person": "lucius_septimius_liberalis"
-	}
-	{
-		"type": "wife of",
-		"person": "lucius_lepidius_proculus"
-	}
-	{
-		"type": "mother of",
-		"person": "lepidia_septimina"
-	}
-	]
-	"documents":{
+	"relation": [{
+			"type": "daughter of",
+			"person": "lucius_septimius_liberalis"
+		},
+		{
+			"type": "wife of",
+			"person": "lucius_lepidius_proculus"
+		},
+		{
+			"type": "mother of",
+			"person": "lepidia_septimina"
+		}
+	],
+	"documents": {
 		"_id": "ariminum_0009"
 	}
 }

@@ -4,35 +4,32 @@
 		"praenomen": "Lucius",
 		"nomen": "Septimius",
 		"cognomen": "Liberalis"
-	}
+	},
 	"gender": "male",
 	"age": "unknown",
 	"social-status": "unknown (libertus?)",
 	"city": "Ariminum",
-	"relation":[
-	{
-		"type": "father of",
-		"person": "septimia_prisca"
-	}
-	{
-		"type": "granfather of",
-		"person": "lepidia_septimina"
-	}
-	{
-		"type": "father in law of",
-		"person": "lucius_lepidius_proculus"
-	}
-	]
-	"career":[
-	{
+	"relation": [{
+			"type": "father of",
+			"person": "septimia_prisca"
+		},
+		{
+			"type": "granfather of",
+			"person": "lepidia_septimina"
+		},
+		{
+			"type": "father in law of",
+			"person": "lucius_lepidius_proculus"
+		}
+	],
+	"career": [{
 		"role": "Sevir Augustalis",
-		"grade": "unknown" ,
+		"grade": "unknown",
 		"place": "Ariminum",
 		"type": "religious",
 		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0063%3Aalphabetic+letter%3DA%3Aentry+group%3D10%3Aentry%3Daugustales-cn-02"
-	}
-	]
-	"documents":{
+	}],
+	"documents": {
 		"_id": "ariminum_0009"
 	}
 }

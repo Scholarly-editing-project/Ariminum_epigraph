@@ -40,12 +40,11 @@
     }
   },
   "people": [
-	"quintus_ovius_bargates",
-	"quintus_ovius_nadiacus",
-	"quintus_ovius_pilonicus",
-	"quintus_ovius_fregellanus"
-	]
-  ]
+    "quintus_ovius_bargates",
+    "quintus_ovius_nadiacus",
+    "quintus_ovius_pilonicus",
+    "quintus_ovius_fregellanus"
+  ],
   "date": "beginning of 1st century B.C.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

@@ -4,18 +4,16 @@
 		"praenomen": "Quintus",
 		"nomen": "Ovius",
 		"cognomen": "Bargates"
-	}
+	},
 	"gender": "male",
 	"age": "unknown",
 	"social-status": "libertus",
 	"city": "Ariminum",
-	"relation":[
-	{
+	"relation": [{
 		"type": "libertus of",
 		"person": "quintus_ovius_fregellanus"
-	}
-	]
-	"documents":{
+	}],
+	"documents": {
 		"_id": "ariminum_0001"
 	}
 }
