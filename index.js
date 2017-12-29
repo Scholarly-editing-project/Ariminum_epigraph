@@ -35,7 +35,21 @@ app.get('/', (req, res) => {
  */
 app.get('/api/epigraph', (req, res) => {
 
-  MONGODB.findAll((err, epigraphs) => {
+  let city = req.query.city
+  let filter = {}
+
+  if (typeof city != 'undefined')
+    filter = {
+      $or: [{
+          'place.modern': city
+        },
+        {
+          'place.ancient': city
+        }
+      ]
+    }
+
+  MONGODB.findByFilter(filter, (err, epigraphs) => {
 
     if (err) throw err
 
@@ -48,7 +62,11 @@ app.get('/api/epigraph', (req, res) => {
  */
 app.get('/api/epigraph/:id', (req, res) => {
 
-  MONGODB.findById(req.params.id, (err, epigraph) => {
+  let filter = {
+    '_id': id
+  }
+
+  MONGODB.findByFilter(filter, (err, epigraph) => {
 
     // Throw given errors
     if (err) throw err

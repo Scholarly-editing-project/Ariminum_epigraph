@@ -47,13 +47,9 @@ module.exports = {
   /**
    * 
    */
-  findById: function (id, callback) {
+  findByFilter: function (filter, callback) {
 
     let Epigraph = this._getEpigraphModel()
-
-    let filter = {
-      '_id': id
-    }
 
     // Get single epigraph from id
     Epigraph.find(filter, (err, epigraph) => {
