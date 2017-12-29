@@ -4,7 +4,7 @@
 
 // Import all needed libraries
 const express = require('express')
-const mongoose = require('mongoose')
+//const mongoose = require('mongoose')
 const app = express()
 
 // Store some useful and global constants
@@ -12,8 +12,8 @@ const DIRNAME = __dirname
 
 // Import the JSON structure stored inside the file "constants.js"
 const CONSTANTS = require('./assets/constants')
-const EPIGRAPH = require('./db/schemas/epigraph')
-const MONGODB = require('./db/mongodb-driver')
+//const EPIGRAPH = require('./db/schemas/epigraph')
+//const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
 //mongoose.connect(CONSTANTS.DB.CONNECTION)
