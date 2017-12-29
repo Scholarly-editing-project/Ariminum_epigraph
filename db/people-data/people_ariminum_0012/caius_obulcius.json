@@ -1,0 +1,31 @@
+{
+	"_id": "caius_obulcius",
+	"name": {
+		"praenomen": "Caius",
+		"nomen": "Obulcius",
+		"cognomen": "unknown"
+	},
+	"gender": "male",
+	"age": "unknown",
+	"social-status": "roman citizen",
+	"city": "Ariminum",
+	"relation": [{
+			"type": "Duoviro with",
+			"person": "manius_octavius"
+		},
+		{
+			"type": "son of",
+			"person": "Caius Obulcius (senior)"
+		}
+	],
+	"career": [{
+		"role": "Duoviro",
+		"grade": "none",
+		"place": "Ariminum",
+		"type": "political",
+		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=duo-viri-cn&highlight=duumviri"
+	}],
+	"documents": {
+		"_id": "ariminum_0012"
+	}
+}

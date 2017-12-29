@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0006",
+  "_id": "ariminum_0006",
   "title": [
     "SENATUS POPULUSQ[...]",
     "[...]",
@@ -28,6 +28,9 @@
       "len": "12.571111"
     }
   },
+  "people": [
+    "Augustus (https://en.wikipedia.org/wiki/Augustus )"
+  ],
   "date": "27 BC",
   "bibliographies": [{
     "citation": " CIL XI, 365",

@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0004",
+  "_id": "ariminum_0004",
   "title": [
     "IMP CAES",
     "DIVI VESPASIAN[[I F]]",
@@ -38,6 +38,9 @@
       "len": "Fontanelle"
     }
   },
+  "people": [
+    "Imperator Domitianus (https://en.wikipedia.org/wiki/Domitian )"
+  ],
   "date": "93 AD",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

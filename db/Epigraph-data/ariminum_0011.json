@@ -1,18 +1,16 @@
 {
-  "_id": "ep_0012",
+  "_id": "ariminum_0011",
   "title": [
-    "C OBVLCIVS C F",
-    "M OCTAVIVS M [_]",
-    "DVOVIR",
-    "HOC OPVS FAC",
-    "QURAVERVNT"
+    "M LIBVRNIVS L F",
+    "M VETTIVS T F",
+    "EX D C MVRVM PVB",
+    "FAC CVR"
   ],
   "transcription": [
-    "C(aius) Obulcius C(ai) f(ilius)",
-    "M(anius) Octavius M(ani) [filius]",
-    "Duovir(i)",
-    "Hoc opus fac(iundum)",
-    "curaverunt"
+    "M(arcus) Liburnius L(uci) F(ilius)",
+    "M(arcus) Vettius T(iti) F(ilius)",
+    "Ex D(ecurionum) C(onsulto) murum pub[licum]",
+    "Fac(iundum) cur(averunt)"
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
@@ -22,14 +20,19 @@
     "letters": "Not Avaiable"
   },
   "place": {
+
     "ancient": "Ariminum",
     "modern": "Rimini",
     "geo": {
       "accuracy": "Medium",
-      "lat": "vicino castello malatestiano",
-      "len": "vicino castello malatestiano"
+      "lat": "Prope Porta s.Andrea",
+      "len": "Prope Porta s.Andrea"
     }
   },
+  "people": [
+    "marcus_liburnus",
+    "marcus_vettius"
+  ],
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

@@ -16,7 +16,7 @@ const EPIGRAPH = require('./db/schemas/epigraph')
 const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
-mongoose.connect(CONSTANTS.DB.CONNECTION)
+//mongoose.connect(CONSTANTS.DB.CONNECTION)
 
 /**
  * This function manage the root request

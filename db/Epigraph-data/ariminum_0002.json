@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0002",
+  "_id": "ariminum_0002",
   "title": [
     "IMP CAESAR AVGVSTVS",
     "PONTIFEX MAXIMVS COS",
@@ -38,6 +38,9 @@
       "len": "Poggio Zona"
     }
   },
+  "people": [
+    "Augustus (https://en.wikipedia.org/wiki/Augustus )"
+  ],
   "date": "1BC~2BC",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

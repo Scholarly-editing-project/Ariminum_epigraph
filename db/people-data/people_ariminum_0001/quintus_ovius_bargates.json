@@ -1,0 +1,19 @@
+{
+	"_id": "quintus_ovius_bargates",
+	"name": {
+		"praenomen": "Quintus",
+		"nomen": "Ovius",
+		"cognomen": "Bargates"
+	},
+	"gender": "male",
+	"age": "unknown",
+	"social-status": "libertus",
+	"city": "Ariminum",
+	"relation": [{
+		"type": "libertus of",
+		"person": "quintus_ovius_fregellanus"
+	}],
+	"documents": {
+		"_id": "ariminum_0001"
+	}
+}

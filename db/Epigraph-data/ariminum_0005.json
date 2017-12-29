@@ -1,5 +1,5 @@
 {
-  "_id": "ep_0005",
+  "_id": "ariminum_0005",
   "title": [
     "SEPTIMIAE VENERIAE",
     "NAT NORIC CONIVG",
@@ -30,6 +30,10 @@
       "len": "Fornace fabbri"
     }
   },
+  "people": [
+    "septimiae_veneriae",
+    "titus_flavius_marcellus"
+  ],
   "date": "3rd Century A.D.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
