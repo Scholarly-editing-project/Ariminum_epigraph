@@ -4,7 +4,7 @@
 
 // Init the JSON object
 const CONSTANTS = {
-  PORT: 8080,
+  PORT: 5000,
   NAME: 'Ariminum Epigraph',
   PAGES: {
     INDEX_PAGE: 'index.html',
