@@ -28,8 +28,26 @@
 		"place": "Ariminum",
 		"type": "religious",
 		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0063%3Aalphabetic+letter%3DA%3Aentry+group%3D10%3Aentry%3Daugustales-cn-02"
+<<<<<<< HEAD
+	}
+	]
+	"actions":[
+		{
+		"_id": "luciusseptimius_lastwill",
+		"role": "doer"
+		}
+		{
+		"_id": "luciusseptimius_dedication",
+		"role": "receiver"
+		}
+		]
+	"documents":[
+		"ariminum_0009"
+	]
+=======
 	}],
 	"documents": {
 		"_id": "ariminum_0009"
 	}
+>>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff
 }

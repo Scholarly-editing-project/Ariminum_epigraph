@@ -1,0 +1,20 @@
+{
+	"_id": "dedication_qoviusfreg",
+	"type": "burial dedication",
+	"doer/s": [
+		"quintus_ovius_bargates",
+		"quintus_ovius_nadiacus",
+		"quintus_ovius_pilonicus"
+	]
+	"receiver/s": [
+		"quintus_ovius_fregellanus"
+	]
+	"description": [
+	"The freedman could build that monument because their master freed them when he was alive."
+	"Only free roman citizen could build a monument."
+	"For that reason: 'what he gave...' (the freedom) '...is shown' (through the building of that monument by his three freedmen)"   
+	]
+	"documents": [
+		"ariminum_0001"
+	]
+}

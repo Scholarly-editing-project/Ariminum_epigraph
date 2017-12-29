@@ -1,0 +1,31 @@
+{
+	"_id": "septimiae_veneriae",
+	"name": {
+		"nomen": "Septimia",
+		"cognomen": "Veneria"
+	},
+	"gender": "female",
+	"age": "40 years old",
+	"social-status": "none",
+	"city": "Ariminum (provenance:Noricum)",
+	"relation": [{
+		"type": "wife of",
+		"person": "titus_flavius_marcellus"
+<<<<<<< HEAD:db/people-data/people_ariminum_0005/septimia_veneria.json
+	}
+	]
+	"actions":[
+		{
+		"_id": "septveneria_dedication",
+		"role": "receiver"
+		}
+	"documents":[
+		"ariminum_0005"
+	]
+=======
+	}],
+	"documents": {
+		"_id": "ariminum_0005"
+	}
+>>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff:db/people-data/people_ariminum_0005/septimiae_veneriae.json
+}

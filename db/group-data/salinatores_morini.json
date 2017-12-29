@@ -1,0 +1,17 @@
+{
+	"_id": "salinatores_morini"
+	"members":[
+		"Guild of salt-traders"
+	]
+	"place": "Morini's territory (https://en.wikipedia.org/wiki/Morini )"
+	"type": "commercial"
+	"actions":[
+	{
+		"_id": "lepidioprocul_dedication_morini",
+		"role": "doer"
+	}
+	]
+	"documents":[
+		"ariminum_0008"
+	]
+}

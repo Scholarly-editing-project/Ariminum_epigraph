@@ -1,0 +1,20 @@
+{
+	"_id": "dedication_qoviusfreg",
+	"type": "legacy",
+	"doer/s": [
+		"lucius_septimius_liberalis"
+	]
+	"receiver/s": [
+		"vicani_7_vici",
+		"Decurions of Ariminum (https://en.wikipedia.org/wiki/Decurion_(administrative) )",
+		"septimia_prisca"
+	]
+	"description": [
+	"Lucius Septimius Liberalis made a legacy, so that every year the decurions and the vicani of the seven vici can receive three deniers each.",
+	"The legacy is guaranteed by the obligation of 21 funds.",
+	"The sixth part of the legacy was given to the tutors of Settimia Prisca (Septimius' daughter), following the lex Falcidia."
+	]
+	"documents": [
+		"ariminum_0009"
+	]
+}

@@ -11,6 +11,29 @@
 	"city": "Ariminum",
 	"career": [{
 		"role": "veteran",
+<<<<<<< HEAD
+		"grade": "miles" ,
+		"place": "Noricum(?)(https://en.wikipedia.org/wiki/Noricum )",
+		"type": "military",
+		"description": "During the campaign of Two Imperators (https://en.wikipedia.org/wiki/Marcus_Aurelius ; https://en.wikipedia.org/wiki/Lucius_Verus )"
+	}
+	]
+	"relation":[
+	{
+		"type": "husband of",
+		"person": "septimia_veneria"
+		}
+	]
+	"actions":[
+		{
+		"_id": "septveneria_dedication",
+		"role": "doer"
+		}
+	]
+	"documents":[
+		"ariminum_0005"
+	]
+=======
 		"grade": "miles",
 		"place": "unknown",
 		"type": "military",
@@ -23,4 +46,5 @@
 	"documents": {
 		"_id": "ariminum_0005"
 	}
+>>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff
 }

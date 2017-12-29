@@ -21,9 +21,31 @@
 			"person": "lucius_septimius_liberalis"
 		}
 	],
+<<<<<<< HEAD
+	"actions":[
+		{
+		"_id": "lepidioprocul_restoring_menapii",
+		"role": "doer"
+		}
+		{
+		"_id": "lepidioprocul_restoring_morini",
+		"role": "doer"
+		}
+		{
+		"_id": "lepidiaseptimia_granted"",
+		"role": "doer"
+		}
+	]
+	"documents":[
+		"ariminum_0007",
+		"ariminum_0008",
+		"ariminum_0009"
+	]
+=======
 	"documents": {
 		"_id": "ariminum_0007",
 		"_id": "ariminum_0008",
 		"_id": "ariminum_0009"
 	}
+>>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff
 }

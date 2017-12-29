@@ -1,0 +1,21 @@
+{
+	"_id": "lepidioprocul_award",
+	"type": "military award",
+	"doer/s": [
+		"Vespasian (https://en.wikipedia.org/wiki/Vespasian )"
+	]
+	"receiver/s": [
+		"lucius_lepidius_proculus"
+	]
+	"description": [
+	"During the Jewish War (https://en.wikipedia.org/wiki/Galilee_campaign_(67) ) Imperator Vespasian awarded Lucius Lepidius Proculus with:"
+	"torqe (https://en.wikipedia.org/wiki/Torc ),",
+	"armillae (https://en.wikipedia.org/wiki/Armilla_(military_decoration) ),",
+	"phaleris (https://en.wikipedia.org/wiki/Phalera_(military_decoration) ),",
+	"Corona vallari (https://en.wikipedia.org/wiki/Camp_crown )"
+	]
+	"documents": [
+		"ariminum_0007"
+		"ariminum_0008"
+	]
+}
