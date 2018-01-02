@@ -12,21 +12,13 @@
 	"relation": [{
 		"type": "libertus of",
 		"person": "quintus_ovius_fregellanus"
-<<<<<<< HEAD
-	}
-	]
+	}],
 	"actions":[
 		{
 		"_id": "dedication_qoviusfreg",
 		"role": "doer"
-		}
+		}],
 	"documents":[
 		"ariminum_0001"
 	]
-=======
-	}],
-	"documents": {
-		"_id": "ariminum_0001"
-	}
->>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff
 }

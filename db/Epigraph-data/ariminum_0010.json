@@ -34,6 +34,11 @@
       ]
     }
   ],
+  "translation": [
+	"The emperor, son of the divine Caesar, Augustus, pontifex maximus, consul fourteen times, greeted as emperor twenty times, awarded with the tribunicia potestas thirtyseven times, pater patriae.",
+	"Tiberius Caesar, son of the divine Augustus, nephew of the divine Julius, Augustus, pontifex maximus, consul four times, greeted as emperor eight times, awarded with the tribunicia potestate twenty-two times.",
+	"Dedicated."
+  ],
   "repository": "Still in place",
   "support": "Bridge",
   "material": "Marble",
@@ -53,6 +58,9 @@
   "people": [
     "Augustus (https://en.wikipedia.org/wiki/Augustus)",
     "Tiberius (https://en.wikipedia.org/wiki/Tiberius)"
+  ],
+  "actions": [
+	"ariminum_bridge_construction"
   ],
   "date": "14AD-21AD",
   "bibliographies": [{

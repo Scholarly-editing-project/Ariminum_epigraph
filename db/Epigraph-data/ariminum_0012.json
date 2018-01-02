@@ -14,6 +14,12 @@
     "Hoc opus fac(iundum)",
     "curaverunt"
   ],
+  "translation": [
+	"Caius Obulcius, son of Caius,",
+	"and Manius Octavius, son of Manius,",
+	"duoviri,",
+	"took care of the achievement of this work."
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
   "material": "Not Avaiable",
@@ -34,6 +40,9 @@
     "caius_obulcius",
     "manius_octavius"
   ],
+  "actions": [
+	"obulcius_octavius_wall_construction"
+  ]
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

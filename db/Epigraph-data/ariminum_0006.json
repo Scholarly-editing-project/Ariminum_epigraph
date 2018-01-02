@@ -12,6 +12,12 @@
     "co(n)s(uli) sept(imo) designat(o) octavom v[ia Flamin]ia [et reliquei]s",
     "celeberrimeis Italiae vieis consilio [et sumptib]us [eius mu]niteis"
   ],
+  "translation": [
+	"The Senate and People of Rome (gave this arch)",
+	"to Imperator Caesar Augustus, son of the divine Julius, Imperator seven times,",
+	"Consul seven times and consul-elect for an eighth time, for the via Flaminia",
+	"and the other very distinguished roads of Italy too which have been repaired by his auctoritas."
+	],
   "repository": "Still in place",
   "support": "Triumphal Arch",
   "material": "Marble",
@@ -30,6 +36,9 @@
   },
   "people": [
     "Augustus (https://en.wikipedia.org/wiki/Augustus )"
+  ],
+  "actions": [
+	"augustusarch_ariminum"
   ],
   "date": "27 BC",
   "bibliographies": [{

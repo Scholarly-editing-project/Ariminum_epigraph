@@ -36,6 +36,19 @@
 		"Septimina f(ilia) reponend(um)",
 		"Curavit"
 	],
+	"translation": [
+		"To Lucius Lepidius Proculus, son of Lucius, of Aniensis tribe,",
+		"Soldier of V legion Macedonica,",
+		"Centurion of the same legion two times",
+		"Centurion of VI legion Victrix",
+		"Centurion of XV legion Apollinaris",
+		"Primus Pilus of VI legion Gemina",
+		"awarded by Imperator Vespasianus Augustus during the Jewish War",
+		"with torquis, armillis, phaleris",
+		"and the Corona vallari",
+		"(made by) Salinatores from Menapii's territory on his merits.",
+		"His daughter, Septimia, took care of restoring."
+	],
 	"repository": "Lost",
 	"support": "Unknown",
 	"material": "Unknown",
@@ -57,6 +70,11 @@
 		"lepidia_septimina",
 		"Vespasian (https://en.wikipedia.org/wiki/Vespasian )",
 		"salinatores_menapii"
+	],
+	"actions": [
+		"lepidioprocul_award",
+		"lepidioprocul_dedication_menapii",
+		"lepidioprocul_restoring_menapii"
 	],
 	"date": "Unknown",
 	"bibliographies": [{

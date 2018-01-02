@@ -18,6 +18,13 @@
     "muniendam curavit",
     "VII"
   ],
+  "translation": [
+	"The emperor Caesar Augustus",
+	"pontifex maximus, consul thirteen times,",
+	"awarded with tribunicia potestas twenty-two times,",
+	"took care to restore Via Aemilia from Ariminum to the river Trebia.",
+	"Seven (miles left to Ariminum)"
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Milestone",
   "material": "Calcar stone",
@@ -41,6 +48,9 @@
   "people": [
     "Augustus (https://en.wikipedia.org/wiki/Augustus )"
   ],
+  "actions": [
+	"viaaemilia_augustus1bc"
+  ]
   "date": "1BC~2BC",
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",

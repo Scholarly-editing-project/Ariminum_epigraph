@@ -8,7 +8,6 @@
 	"age": "unknown",
 	"social-status": "None",
 	"city": "Ariminum",
-<<<<<<< HEAD
 	"relation":[
 	{
 		"type": "daughter of",
@@ -22,32 +21,14 @@
 		"type": "mother of",
 		"person": "lepidia_septimina"
 	}
-	]
+	],
 	"actions":[
 		{
 		"_id": "luciusseptimius_lastwill",
 		"role": "receiver"
 		}
-		]
+		],
 	"documents":[
 		"ariminum_0009"
 	]
-=======
-	"relation": [{
-			"type": "daughter of",
-			"person": "lucius_septimius_liberalis"
-		},
-		{
-			"type": "wife of",
-			"person": "lucius_lepidius_proculus"
-		},
-		{
-			"type": "mother of",
-			"person": "lepidia_septimina"
-		}
-	],
-	"documents": {
-		"_id": "ariminum_0009"
-	}
->>>>>>> d4041dfab032c1b6fc86fbfcdf1a6a6764f888ff
 }
