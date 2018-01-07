@@ -18,6 +18,7 @@ const CONSTANTS = require('./assets/constants')
 // Connext to mongodb 
 //mongoose.connect(CONSTANTS.DB.CONNECTION)
 
+const MONGODB_URI = process.env.MONGODB_URI
 /**
  * This function allows front-end html files to load any asset file 
  * stored inside the folder named "assets"
@@ -47,6 +48,11 @@ app.get('/inscriptions', (req, res) => {
 app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
+
+app.get('/db', (req, res) => {
+  res.send(MONGODB_URI)
+})
+
 
 
 /**
