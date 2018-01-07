@@ -16,7 +16,7 @@ const CONSTANTS = require('./assets/constants')
 //const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
-mongoose.connect(CONSTANTS.DB.CONNECTION)
+//mongoose.connect(CONSTANTS.DB.CONNECTION)
 
 /**
  * This function allows front-end html files to load any asset file 
@@ -51,7 +51,7 @@ app.get('/contact', (req, res) => {
 
 /**
  * Get the entire list of epigraphs
- */
+ 
 app.get('/api/epigraph', (req, res) => {
 
   let city = req.query.city
@@ -74,11 +74,11 @@ app.get('/api/epigraph', (req, res) => {
 
     res.send(epigraphs)
   })
-})
+})*/
 
 /**
  * Get the a single Epigraph by its id
- */
+ 
 app.get('/api/epigraph/:id', (req, res) => {
 
   let filter = {
@@ -93,7 +93,7 @@ app.get('/api/epigraph/:id', (req, res) => {
     // Or send back JSON object
     res.send(epigraph)
   })
-})
+})*/
 
 /**
  * If none of the precedent methods are called show 404 Error
