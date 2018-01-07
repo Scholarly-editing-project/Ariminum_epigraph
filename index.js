@@ -16,7 +16,7 @@ const EPIGRAPH = require('./db/schemas/epigraph')
 const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
-//mongoose.connect(CONSTANTS.DB.CONNECTION)
+mongoose.connect(CONSTANTS.DB.CONNECTION)
 
 /**
  * This function allows front-end html files to load any asset file 
@@ -93,4 +93,4 @@ app.use((req, res, next) => {
  * This method open the port designed PORT
  * Now the server is still listening on this port for requests
  */
-app.listen(CONSTANTS.PORT)
+app.listen(process.env.PORT || CONSTANTS.PORT)
