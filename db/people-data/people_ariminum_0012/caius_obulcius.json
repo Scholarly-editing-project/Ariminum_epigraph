@@ -25,7 +25,13 @@
 		"type": "political",
 		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=duo-viri-cn&highlight=duumviri"
 	}],
-	"documents": {
-		"_id": "ariminum_0012"
-	}
+	"actions":[
+		{
+		"_id": "obulcius_octavius_wall_construction",
+		"role": "doer"
+		}
+	],
+	"documents":[
+		"ariminum_0012"
+	]
 }

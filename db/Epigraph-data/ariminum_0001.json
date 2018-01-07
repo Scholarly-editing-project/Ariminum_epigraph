@@ -15,6 +15,13 @@
     "Q(uintus) Ovi(us) C(ai) f(ilius) Freg(ellanus) hic sepult(us)",
     "quod suis dedit appare(t)"
   ],
+  "translation": [
+	"Freedmen did that",
+	"to their master. (made by) Quintus Ovius Bargates, freedman of Quintus;",
+	"Quintus Ovius Nadiacus, freedman of Quintus; Quintus Ovius Pilonicus, freedman of Quintus.",
+	"Quintus Ovius Fregellanus, son of Caius, is buried here.",
+	"What he gave is shown."
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Grave Monument",
   "material": "unknown",
@@ -44,6 +51,9 @@
     "quintus_ovius_nadiacus",
     "quintus_ovius_pilonicus",
     "quintus_ovius_fregellanus"
+  ],
+  "actions": [
+	"dedication_qoviusfreg"
   ],
   "date": "beginning of 1st century B.C.",
   "bibliographies": [{

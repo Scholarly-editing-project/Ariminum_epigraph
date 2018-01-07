@@ -12,6 +12,12 @@
     "Ex D(ecurionum) C(onsulto) murum pub[licum]",
     "Fac(iundum) cur(averunt)"
   ],
+  "translation": [
+	"Marcus Liburnius, son of Lucius,",
+	"Marcus Vettius, son of Titus,",
+	"following the decision of the decurions,",
+	"took care of the construction of the public walls."
+  ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
   "material": "Not Avaiable",
@@ -25,13 +31,16 @@
     "modern": "Rimini",
     "geo": {
       "accuracy": "Medium",
-      "lat": "Prope Porta s.Andrea",
-      "len": "Prope Porta s.Andrea"
+      "lat": "44.0570249",
+      "len": "12.5654303"
     }
   },
   "people": [
     "marcus_liburnus",
     "marcus_vettius"
+  ],
+  "actions": [
+	"liburnus_vettius_wall_construction"
   ],
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{

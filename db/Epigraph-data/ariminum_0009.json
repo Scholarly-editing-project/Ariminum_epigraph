@@ -31,6 +31,16 @@
     "Suae Lepidi[a] Septimina",
     "Populo concessit"
   ],
+  "translation": [
+	"To Lucius Septimius Lieralis,",
+	"Sevir Augustalis",
+	"(made by) vicani from Vicus Cermali on his merits",
+	"to have made a legacy for which each year the decurions and the vicani of the seven Vicis receive forever three denarii.",
+	"The legacy is guaranteed from the debenture of twenty one funds, from which the sixth part is deducted from",
+	"tutors of Septimia Prisca, her mother (mother of Lepidia Septimina), by virtue of the lex Falcidia.",
+	"Lepidia Septimina granted it to people."
+	
+  ],
   "repository": "Lost",
   "support": "Plate",
   "material": "Unknown",
@@ -43,8 +53,8 @@
     "modern": "Rimini",
     "geo": {
       "Accuracy": "Low",
-      "lat": "foro",
-      "len": "foro"
+      "lat": "44.0593404",
+      "len": "12.5686654"
     }
   },
   "people": [
@@ -53,8 +63,13 @@
 	"septimia_prisca",
 	"vicani_cermali",
 	"vicani_vicorum",
-	"ariminum_decurioni"
+	"decurioni of Ariminum (https://en.wikipedia.org/wiki/Decurion_(administrative) )"
 	],
+  "actions": [
+	"luciusseptimius_lastwill",
+	"luciusseptimius_dedication",
+	"lepidiaseptimia_granted"
+  ],
   "date": "Unknown",
   "bibliographies": [{
     "citation": "Cenerini Francesca. Notizie di economia dall'iscrizione riminese CIL XI 419. In: Mélanges de l'Ecole française de Rome. Antiquité, tome 109, n°1. 1997. pp. 21-30;",

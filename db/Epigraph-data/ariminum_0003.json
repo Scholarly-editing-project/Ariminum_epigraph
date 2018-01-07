@@ -9,8 +9,14 @@
   "transcription": [
     "M(arcus) Arrecinus M(arci) f(ilius) [---]",
     "Clemens trib(unus) mil(itum) leg(ionis) III Cyren(aicae)",
-    "et leg(ionis) XXII praef(ectus) fabr(um) IIvir IIIvir Aug(ustalis)",
+    "et leg(ionis) XXII praef(ectus) fabr(um) IIvir IIIvir Aug(ur)",
     "B(accho) et S(ilvano) v(otum) s(olvit) l(ibens) m(erito)"
+  ],
+  "translation": [
+	"Marcus Arrecinus son of Marcus",
+	"Clemens, tribunus militum of III legion Cyrenaica",
+	"and XXII legion; prefectus fabrum, duovir, tresvir, Augur.",
+	"He willingly dissolved a vow having Bacchus and Silvanus well deserved."
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Base for a sacred donation",
@@ -33,6 +39,9 @@
   },
   "people": [
     "marcus_arrecinus_clemens"
+  ],
+  "actions": [
+	"marrecinus_exvoto"
   ],
   "date": "Half of 1st century A.D.",
   "bibliographies": [{

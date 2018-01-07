@@ -16,7 +16,13 @@ const CONSTANTS = require('./assets/constants')
 //const MONGODB = require('./db/mongodb-driver')
 
 // Connext to mongodb 
-//mongoose.connect(CONSTANTS.DB.CONNECTION)
+mongoose.connect(CONSTANTS.DB.CONNECTION)
+
+/**
+ * This function allows front-end html files to load any asset file 
+ * stored inside the folder named "assets"
+ */
+app.use(express.static(CONSTANTS.FOLDERS.TEMPLATES))
 
 /**
  * This function manage the root request
@@ -27,8 +33,21 @@ const CONSTANTS = require('./assets/constants')
  * This will return the index page
  */
 app.get('/', (req, res) => {
-  res.sendFile(`${DIRNAME}/${CONSTANTS.PAGES.INDEX_PAGE}`)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.INDEX_PAGE}`)
 })
+
+app.get('/project', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.PROJECT}`)
+})
+
+app.get('/inscriptions', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.INSCRIPTIONS}`)
+})
+
+app.get('/contact', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
+})
+
 
 /**
  * Get the entire list of epigraphs
@@ -77,12 +96,6 @@ app.get('/api/epigraph/:id', (req, res) => {
 })
 
 /**
- * This function allows front-end html files to load any asset file 
- * stored inside the folder named "assets"
- */
-app.use(express.static(CONSTANTS.FOLDERS.ASSETS))
-
-/**
  * If none of the precedent methods are called show 404 Error
  */
 app.use((req, res, next) => {
@@ -98,4 +111,4 @@ app.use((req, res, next) => {
  * This method open the port designed PORT
  * Now the server is still listening on this port for requests
  */
-app.listen(CONSTANTS.PORT)
+app.listen(process.env.PORT || CONSTANTS.PORT)

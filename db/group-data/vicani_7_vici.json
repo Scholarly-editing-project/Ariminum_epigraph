@@ -1,0 +1,23 @@
+{
+	"_id": "vicani_7_vici",
+	"members":[
+		"vicani_cermali",
+		"vicani Aventini",
+		"vicani Velabri",
+		"vicani Dianensis",
+		"vicani Fortunae",
+		"unknown",
+		"unknown"
+	]
+	"city": "Ariminum",
+	"type": "social and political",
+	"actions":[
+	{
+		"_id": "luciusseptimius_lastwill",
+		"role": "receivers"
+	}
+	]
+	"documents":[
+		"ariminum_0009"
+	]
+}

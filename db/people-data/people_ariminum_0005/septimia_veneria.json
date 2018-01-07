@@ -12,7 +12,12 @@
 		"type": "wife of",
 		"person": "titus_flavius_marcellus"
 	}],
-	"documents": {
-		"_id": "ariminum_0005"
-	}
+	"actions":[
+		{
+		"_id": "septveneria_dedication",
+		"role": "receiver"
+		}],
+	"documents":[
+		"ariminum_0005"
+	]
 }

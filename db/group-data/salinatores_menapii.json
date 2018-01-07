@@ -1,0 +1,17 @@
+{
+	"_id": "salinatores_menapii"
+	"members":[
+		"Guild of salt-traders"
+	]
+	"place": "Menapii's territory (https://en.wikipedia.org/wiki/Menapii )"
+	"type": "commercial"
+	"actions":[
+	{
+		"_id": "lepidioprocul_dedication_menapii",
+		"role": "doer"
+	}
+	]
+	"documents":[
+		"ariminum_0007"
+	]
+}

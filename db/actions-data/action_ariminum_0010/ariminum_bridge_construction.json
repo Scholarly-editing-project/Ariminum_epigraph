@@ -1,0 +1,17 @@
+{
+	"_id": "ariminum_bridge_construction",
+	"type": "Imperial propaganda",
+	"doer/s": [
+		"Augustus (https://en.wikipedia.org/wiki/Augustus)",
+		"Tiberius (https://en.wikipedia.org/wiki/Tiberius)"
+	]
+	"receiver/s": [
+		"Citizens"
+	]
+	"description": [
+		"In 14 A.D. Augustus started the construction of a bridge in Ariminum. In 21 A.D. Tiberius, successor of Augustus, completed the construction."
+	]
+	"documents": [
+		"ariminum_0010"
+	]
+}
