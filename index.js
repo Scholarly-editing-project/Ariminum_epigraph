@@ -4,7 +4,7 @@
 
 // Import all needed libraries
 const express = require('express')
-//const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const app = express()
 
 // Store some useful and global constants
@@ -12,13 +12,14 @@ const DIRNAME = __dirname
 
 // Import the JSON structure stored inside the file "constants.js"
 const CONSTANTS = require('./assets/constants')
-//const EPIGRAPH = require('./db/schemas/epigraph')
-//const MONGODB = require('./db/mongodb-driver')
-
-// Connext to mongodb 
-//mongoose.connect(CONSTANTS.DB.CONNECTION)
+const EPIGRAPH = require('./db/schemas/epigraph')
+const MONGODB = require('./db/mongodb-driver')
 
 const MONGODB_URI = process.env.MONGODB_URI
+
+// Connext to mongodb 
+mongoose.connect(MONGODB_URI)
+
 /**
  * This function allows front-end html files to load any asset file 
  * stored inside the folder named "assets"
@@ -48,11 +49,6 @@ app.get('/inscriptions', (req, res) => {
 app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
-
-app.get('/db', (req, res) => {
-  res.send(MONGODB_URI)
-})
-
 
 
 /**
