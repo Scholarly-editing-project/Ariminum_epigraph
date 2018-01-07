@@ -19,6 +19,12 @@ const MONGODB = require('./db/mongodb-driver')
 //mongoose.connect(CONSTANTS.DB.CONNECTION)
 
 /**
+ * This function allows front-end html files to load any asset file 
+ * stored inside the folder named "assets"
+ */
+app.use(express.static(CONSTANTS.FOLDERS.TEMPLATES))
+
+/**
  * This function manage the root request
  * 
  * eg. localhost:8080 from a browser will trigger this event 
@@ -27,8 +33,21 @@ const MONGODB = require('./db/mongodb-driver')
  * This will return the index page
  */
 app.get('/', (req, res) => {
-  res.sendFile(`${DIRNAME}/${CONSTANTS.PAGES.INDEX_PAGE}`)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.INDEX_PAGE}`)
 })
+
+app.get('/project', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.PROJECT}`)
+})
+
+app.get('/inscriptions', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.INSCRIPTIONS}`)
+})
+
+app.get('/contact', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
+})
+
 
 /**
  * Get the entire list of epigraphs
@@ -57,12 +76,6 @@ app.get('/api/epigraph/:id', (req, res) => {
     res.send(epigraph)
   })
 })
-
-/**
- * This function allows front-end html files to load any asset file 
- * stored inside the folder named "assets"
- */
-app.use(express.static(CONSTANTS.FOLDERS.ASSETS))
 
 /**
  * If none of the precedent methods are called show 404 Error

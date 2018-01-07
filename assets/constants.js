@@ -8,13 +8,16 @@ const CONSTANTS = {
   NAME: 'Ariminum Epigraph',
   PAGES: {
     INDEX_PAGE: 'index.html',
-    NOT_FOUND: "404.html" 
+    NOT_FOUND: "404.html",
+    PROJECT: 'project.html',
+    INSCRIPTIONS: 'inscriptions.html',
+    CONTACT: 'contact.html'
   },
   FOLDERS: {
     ASSETS: 'assets',
-    TEMPLATES: 'templates'
+    TEMPLATES: 'templates',
   },
-  DB:{
+  DB: {
     CONNECTION: 'mongodb://localhost/Ariminum_epigraph',
     EPIGRAPH: 'Epigraphs'
   }
