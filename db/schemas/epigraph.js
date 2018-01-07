@@ -4,6 +4,7 @@ let scheme = mongoose.Schema({
   _id: String,
   title: [String],
   transcription: [String],
+  translation: [String],
   repository: String,
   support: String,
   material: String,
@@ -20,6 +21,8 @@ let scheme = mongoose.Schema({
       len: String
     }
   },
+  people: [String],
+  actions: [String],
   date: String,
   bibliographies: [{
     citation: String,
