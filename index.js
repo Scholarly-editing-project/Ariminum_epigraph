@@ -65,7 +65,7 @@ app.get('/epigraph', (req, res, next) => {
 
       else
         // Or send back JSON object
-        res.send(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
+        res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
     })
 })
 
