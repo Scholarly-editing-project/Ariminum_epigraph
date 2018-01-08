@@ -40,7 +40,7 @@ general
 }
 
 .active {
-  color: #990000!important;
+  color: #990000 !important;
 }
 
 a {
@@ -115,6 +115,15 @@ header
   width: 30px;
   background: black;
   margin-bottom: 5px;
+}
+
+h1#code__inscription {
+  text-transform: uppercase;
+}
+
+#epigraph__transcription {
+  font-size: 30px;
+  letter-spacing: 3px;
 }
 
 /*-----------------------------
@@ -259,7 +268,6 @@ Footer
 /*-----------------------------
 Single
 -----------------------------*/
-.panel {}
 
 .panel__copy {
   max-width: 800px;

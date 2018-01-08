@@ -90,7 +90,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<div class="card__copy">
+			<div id="epigraph__transcription" class="card__copy">
 				<p>Trascrizione senza abbreviazioni + audio</p>
 			</div>
 		</div>
@@ -239,7 +239,13 @@
 				})
 				.done(function (epigraph) {
 					epigraph = epigraph[0]
+
 					$('#code__inscription').text(epigraph['_id'])
+
+					$('#epigraph__transcription').html('')
+					epigraph.title.forEach(function (line) {
+						$('#epigraph__transcription').append('<p>' + line + '</p>')
+					})
 				})
 		})
 	</script>
