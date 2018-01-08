@@ -11,7 +11,8 @@ const CONSTANTS = {
     NOT_FOUND: "404.html",
     PROJECT: 'project.html',
     INSCRIPTIONS: 'inscriptions.html',
-    CONTACT: 'contact.html'
+    CONTACT: 'contact.html',
+    EPIGRAPH: 'epigraph.html'
   },
   FOLDERS: {
     ASSETS: 'assets',

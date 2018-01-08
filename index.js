@@ -15,7 +15,7 @@ const CONSTANTS = require('./assets/constants')
 const EPIGRAPH = require('./db/schemas/epigraph')
 const MONGODB = require('./db/mongodb-driver')
 
-const MONGODB_URI = process.env.MONGODB_URI
+const MONGODB_URI = typeof process.env.MONGODB_URI == 'undefined' ? CONSTANTS.DB.CONNECTION : process.env.MONGODB_URI
 
 // Connext to mongodb 
 mongoose.connect(MONGODB_URI)
@@ -48,6 +48,10 @@ app.get('/inscriptions', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
+})
+
+app.get('/epigraph/:id', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
 })
 
 
