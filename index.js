@@ -63,10 +63,6 @@ app.get('/epigraph', (req, res, next) => {
       // Throw given errors
       if (err) throw err
 
-      // If the epigraph doesn't exists
-      if (epigraph.length == 0)
-        return next()
-
       else
         // Or send back JSON object
         res.send(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
