@@ -50,8 +50,21 @@ app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
 
-app.get('/epigraph/:id', (req, res) => {
-  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
+app.get('/epigraph', (req, res) => {
+
+  // Send 404 if the id param doesn't exist
+  if (typeof req.query.id == 'undefined') {
+
+    // Update HTTP code to "404 Not Found"
+    res.status(404)
+
+    // Return 404 error
+    res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.NOT_FOUND}`)
+  }
+
+  // Send epigraph page
+  else
+    res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
 })
 
 
