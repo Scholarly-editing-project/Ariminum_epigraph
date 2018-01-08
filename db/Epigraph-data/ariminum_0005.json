@@ -15,11 +15,11 @@
     "veter(anus) Augg(ustorum)"
   ],
   "translation": [
-	"To Septimia Veneria,",
-	"from the country of Noricum,",
-	"very sweet wife that lived forty years.",
-	"(made by) Titus Flavius Marcellus,",
-	"veteran of the two Impeators."
+    "To Septimia Veneria,",
+    "from the country of Noricum,",
+    "very sweet wife that lived forty years.",
+    "(made by) Titus Flavius Marcellus,",
+    "veteran of the two Impeators."
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Urn",
@@ -40,10 +40,10 @@
   "people": [
     "septimiae_veneriae",
     "titus_flavius_marcellus",
-	"Two Imperators: Marcus Aurelius (https://en.wikipedia.org/wiki/Marcus_Aurelius) and Lucius Verus (https://en.wikipedia.org/wiki/Lucius_Verus)"
+    "Two Imperators: Marcus Aurelius (https://en.wikipedia.org/wiki/Marcus_Aurelius) and Lucius Verus (https://en.wikipedia.org/wiki/Lucius_Verus)"
   ],
   "actions": [
-	"septveneria_dedication"
+    "septveneria_dedication"
   ],
   "date": "3rd Century A.D.",
   "bibliographies": [{

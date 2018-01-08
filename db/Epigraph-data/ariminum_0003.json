@@ -13,10 +13,10 @@
     "B(accho) et S(ilvano) v(otum) s(olvit) l(ibens) m(erito)"
   ],
   "translation": [
-	"Marcus Arrecinus son of Marcus",
-	"Clemens, tribunus militum of III legion Cyrenaica",
-	"and XXII legion; prefectus fabrum, duovir, tresvir, Augur.",
-	"He willingly dissolved a vow having Bacchus and Silvanus well deserved."
+    "Marcus Arrecinus son of Marcus",
+    "Clemens, tribunus militum of III legion Cyrenaica",
+    "and XXII legion; prefectus fabrum, duovir, tresvir, Augur.",
+    "He willingly dissolved a vow having Bacchus and Silvanus well deserved."
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Base for a sacred donation",
@@ -41,7 +41,7 @@
     "marcus_arrecinus_clemens"
   ],
   "actions": [
-	"marrecinus_exvoto"
+    "marrecinus_exvoto"
   ],
   "date": "Half of 1st century A.D.",
   "bibliographies": [{

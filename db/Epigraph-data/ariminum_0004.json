@@ -23,12 +23,12 @@
     "faciend(um) curavit"
   ],
   "translation": [
-	"The emperor Caesar,",
-	"son of the divine Vespasian,",
-	"Domitian Augustus Germanicus,",
-	"pontifex maximus, awarded with the tribunicia potestate twelve times, greeted as emperor",
-	"twenty-two times, sixteen times consul, perpetuous censor, pater patriae,",
-	"took care of the construction."
+    "The emperor Caesar,",
+    "son of the divine Vespasian,",
+    "Domitian Augustus Germanicus,",
+    "pontifex maximus, awarded with the tribunicia potestate twelve times, greeted as emperor",
+    "twenty-two times, sixteen times consul, perpetuous censor, pater patriae,",
+    "took care of the construction."
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Table",
@@ -50,8 +50,8 @@
     "Imperator Domitianus (https://en.wikipedia.org/wiki/Domitian )"
   ],
   "actions": [
-	"domitianus_build93",
-	"domitianus_damnatiomemoriae"
+    "domitianus_build93",
+    "domitianus_damnatiomemoriae"
   ],
   "date": "93 AD",
   "bibliographies": [{

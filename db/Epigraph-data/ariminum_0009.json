@@ -1,7 +1,7 @@
 {
   "_id": "ariminum_0009",
   "title": [
-	"L SEPTIMIO",
+    "L SEPTIMIO",
     "LIBERALI",
     "VIVIR AVG",
     "VICANI VICI CERMALI OB",
@@ -32,14 +32,14 @@
     "Populo concessit"
   ],
   "translation": [
-	"To Lucius Septimius Lieralis,",
-	"Sevir Augustalis",
-	"(made by) vicani from Vicus Cermali on his merits",
-	"to have made a legacy for which each year the decurions and the vicani of the seven Vicis receive forever three denarii.",
-	"The legacy is guaranteed from the debenture of twenty one funds, from which the sixth part is deducted from",
-	"tutors of Septimia Prisca, her mother (mother of Lepidia Septimina), by virtue of the lex Falcidia.",
-	"Lepidia Septimina granted it to people."
-	
+    "To Lucius Septimius Lieralis,",
+    "Sevir Augustalis",
+    "(made by) vicani from Vicus Cermali on his merits",
+    "to have made a legacy for which each year the decurions and the vicani of the seven Vicis receive forever three denarii.",
+    "The legacy is guaranteed from the debenture of twenty one funds, from which the sixth part is deducted from",
+    "tutors of Septimia Prisca, her mother (mother of Lepidia Septimina), by virtue of the lex Falcidia.",
+    "Lepidia Septimina granted it to people."
+
   ],
   "repository": "Lost",
   "support": "Plate",
@@ -58,17 +58,17 @@
     }
   },
   "people": [
-	"lucius_septimius_liberalis",
-	"lepidia_septimina",
-	"septimia_prisca",
-	"vicani_cermali",
-	"vicani_vicorum",
-	"decurioni of Ariminum (https://en.wikipedia.org/wiki/Decurion_(administrative) )"
-	],
+    "lucius_septimius_liberalis",
+    "lepidia_septimina",
+    "septimia_prisca",
+    "vicani_cermali",
+    "vicani_vicorum",
+    "decurioni of Ariminum (https://en.wikipedia.org/wiki/Decurion_(administrative) )"
+  ],
   "actions": [
-	"luciusseptimius_lastwill",
-	"luciusseptimius_dedication",
-	"lepidiaseptimia_granted"
+    "luciusseptimius_lastwill",
+    "luciusseptimius_dedication",
+    "lepidiaseptimia_granted"
   ],
   "date": "Unknown",
   "bibliographies": [{

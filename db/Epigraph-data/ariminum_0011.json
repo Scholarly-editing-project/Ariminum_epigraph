@@ -13,10 +13,10 @@
     "Fac(iundum) cur(averunt)"
   ],
   "translation": [
-	"Marcus Liburnius, son of Lucius,",
-	"Marcus Vettius, son of Titus,",
-	"following the decision of the decurions,",
-	"took care of the construction of the public walls."
+    "Marcus Liburnius, son of Lucius,",
+    "Marcus Vettius, son of Titus,",
+    "following the decision of the decurions,",
+    "took care of the construction of the public walls."
   ],
   "repository": "Lapidario Romano Rimini",
   "support": "Stone Block",
@@ -40,7 +40,7 @@
     "marcus_vettius"
   ],
   "actions": [
-	"liburnus_vettius_wall_construction"
+    "liburnus_vettius_wall_construction"
   ],
   "date": "First half of 1st Century B.C.",
   "bibliographies": [{
