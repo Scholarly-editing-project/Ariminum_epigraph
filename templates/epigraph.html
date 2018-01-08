@@ -227,10 +227,12 @@
 
 			let params = new URLSearchParams(document.location.search.substring(1))
 			let id = params.get("id")
+			let url = 'api/epigraph/' + id
 
 			$.ajax({
 					method: "GET",
-					url: "https://roman-epigraphy.herokuapp.com/api/epigraph/" + id
+					dataType: 'json',
+					url: url
 				})
 				.done(function (epigraph) {
 					console.log(epigraph)

@@ -101,7 +101,7 @@ app.get('/api/epigraph', (req, res) => {
 app.get('/api/epigraph/:id', (req, res) => {
 
   let filter = {
-    '_id': id
+    '_id': req.params.id
   }
 
   MONGODB.findByFilter(filter, (err, epigraph) => {
