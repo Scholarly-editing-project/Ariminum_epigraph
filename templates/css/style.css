@@ -39,6 +39,10 @@ general
   font-family: 'EB Garamond', serif;
 }
 
+.active {
+  color: #990000!important;
+}
+
 a {
   color: #660000;
   text-decoration: none;
