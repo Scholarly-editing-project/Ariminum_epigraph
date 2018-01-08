@@ -64,7 +64,7 @@ app.get('/epigraph', (req, res, next) => {
       if (err) throw err
 
       // If the epigraph doesn't exists
-      if (!epigraph.length)
+      if (epigraph.length == 0)
         return next()
 
       else
