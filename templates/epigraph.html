@@ -42,7 +42,7 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 style="font-weight:100;">CODICE ISCRIZIONE</h1>
+				<h1 id="code__inscription" style="font-weight:100;">CODICE ISCRIZIONE</h1>
 				<h2>Subtitle of the page</h2>
 			</div>
 		</div>
@@ -235,7 +235,7 @@
 					url: url
 				})
 				.done(function (epigraph) {
-					console.log(epigraph)
+					$('#code__inscription').text(epigraph['_id'])
 				})
 		})
 	</script>
