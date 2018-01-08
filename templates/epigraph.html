@@ -235,6 +235,7 @@
 					url: url
 				})
 				.done(function (epigraph) {
+					epigraph = epigraph[0]
 					$('#code__inscription').text(epigraph['_id'])
 				})
 		})
