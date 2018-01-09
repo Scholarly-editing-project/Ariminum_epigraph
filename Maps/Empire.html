@@ -29,47 +29,47 @@
 	<!--Script mappa-->
     <script id="jsbin-javascript">
   
-	<!--crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine!-->
+	//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
 	var map = L.map('map', {
-            maxZoom: 9, <!--max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa-->
+            maxZoom: 9, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
             minZoom: 5,
-			maxBoundsViscosity: 1, <!--rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)-->
+			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
         });
-        map.setView([45.43, 13.18], 5); <!--coordinate inziali-->
-		imageBounds = [[21.08, -28.04], [62.12, 50.54]]; <!--confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale-->
+        map.setView([45.43, 13.18], 5); //coordinate inziali
+		imageBounds = [[21.08, -28.04], [62.12, 50.54]]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
 		map.setMaxBounds(imageBounds);
 	
-	prov = L.geoJson(provinces).addTo(map);   <!--carica il geojson che disegna le province dell'impero-->
+	prov = L.geoJson(provinces).addTo(map);   //carica il geojson che disegna le province dell'impero
 	prov.eachLayer(function (layer) {
-		layer.bindPopup(layer.feature.properties.name);  <!--crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)-->
+		layer.bindPopup(layer.feature.properties.name);  //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
-	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8}) <!--personalizza il disegno creato dal file geojson-->
+	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8}) //personalizza il disegno creato dal file geojson
 	
-	var selected   <!--evidenzia una provincia quando viene selezionata-->
+	var selected   //evidenzia una provincia quando viene selezionata
 		prov.on('click', function (e) {
 		if (selected) {
-		selected.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8})   <!--ripristina l'elemento all'origine quando si seleziona un nuovo elemento-->
+		selected.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8})   //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
 		}
-		<!--determina una nuovo elemento selezionato-->
+		//determina una nuovo elemento selezionato
 		selected = e.layer 
-		<!--porta il selezionato in primo piano-->
+		//porta il selezionato in primo piano
 		selected.bringToFront()
-		<!--assegna un nuovo aspetto all'elemento selezionato-->
+		//assegna un nuovo aspetto all'elemento selezionato
 		selected.setStyle({
 		'color': 'red', 'fillColor': '#d27979',
 		})
 		}).addTo(map)
 	
-	<!--marker-->
+	//marker
 	
-	<!--crea le singole icone da utilizzare come markers-->
+	//crea le singole icone da utilizzare come markers
 	var city = L.icon({
 					iconUrl: 'icons/city.png',
 					iconSize: [20, 20],
 					});
 
-	<!--crea marker con: coordinate, icona e popup al click-->
-	<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
+	//crea marker con: coordinate, icona e popup al click
+	//piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato
 	
 	var marker = L.marker([44.05951, 12.56857], {icon: city}).addTo(map);
 					marker.bindPopup('ARIMINUM').openPopup();
@@ -77,7 +77,7 @@
 	
 	
 	
-	//</script>
+	</script>
 		
 </body>
 
