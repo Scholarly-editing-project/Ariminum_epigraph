@@ -275,8 +275,8 @@ Footer
 
 .footer {
   background-image: url("../img/footer.jpg");
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 3px;
+  padding-bottom: 1px;
   letter-spacing: 1px;
 }
 
