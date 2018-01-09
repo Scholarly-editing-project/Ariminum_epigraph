@@ -7,6 +7,7 @@ body {
   font-family: 'EB Garamond', serif;
   font-size: 19px;
   color: #333333;
+  line-height: 170%;
 }
 
 p {
@@ -149,6 +150,16 @@ Cover
   position: relative;
 }
 
+.cover3 {
+  height: 35px;
+  background-image: url("../img/map.jpg");
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
 .cover__filter {
   background: #000;
   width: 100%;
@@ -255,13 +266,26 @@ Banner
 }
 
 /*-----------------------------
+Contact
+-----------------------------*/
+
+input {
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+textarea {
+  width: 100%;
+}
+
+/*-----------------------------
 Footer
 -----------------------------*/
 
 .footer {
   background-image: url("../img/footer.jpg");
-  padding-top: 10px;
-  padding-bottom: 30px;
+  padding-top: 3px;
+  padding-bottom: 1px;
   letter-spacing: 1px;
 }
 
