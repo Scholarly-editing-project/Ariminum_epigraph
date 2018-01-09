@@ -203,14 +203,14 @@
 			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
         });
         map.setView([45.43, 13.18], 4); //coordinate inziali
-		imageBounds = [[21.08, -28.04], [62.12, 50.54]]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
+		imageBounds = [[21.08, -11], [57, 46]]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
 		map.setMaxBounds(imageBounds);
 	
 	prov = L.geoJson(provinces).addTo(map);   //carica il geojson che disegna le province dell'impero
 	prov.eachLayer(function (layer) {
 		layer.bindPopup(layer.feature.properties.name);  //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
-	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8}) //personalizza il disegno creato dal file geojson
+	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8, weight: 1}) //personalizza il disegno creato dal file geojson
 	
 	var selected   //evidenzia una provincia quando viene selezionata
 		prov.on('click', function (e) {
@@ -223,8 +223,9 @@
 		selected.bringToFront()
 		//assegna un nuovo aspetto all'elemento selezionato
 		selected.setStyle({
-		'color': 'red', 'fillColor': '#d27979',
-		})
+		'color': 'red', 'fillColor': '#d27979'})
+		map.fitBounds(selected.getBounds());
+		
 		}).addTo(map)
 	
 	//marker
