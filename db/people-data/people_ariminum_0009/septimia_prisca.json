@@ -6,29 +6,26 @@
 	},
 	"gender": "female",
 	"age": "unknown",
-	"social-status": "None",
+	"social_status": "None",
 	"city": "Ariminum",
-	"relation":[
-	{
-		"type": "daughter of",
-		"person": "lucius_septimius_liberalis"
-	}
-	{
-		"type": "wife of",
-		"person": "lucius_lepidius_proculus"
-	}
-	{
-		"type": "mother of",
-		"person": "lepidia_septimina"
-	}
-	],
-	"actions":[
+	"relation": [{
+			"type": "daughter of",
+			"person": "lucius_septimius_liberalis"
+		},
 		{
-		"_id": "luciusseptimius_lastwill",
-		"role": "receiver"
+			"type": "wife of",
+			"person": "lucius_lepidius_proculus"
+		},
+		{
+			"type": "mother of",
+			"person": "lepidia_septimina"
 		}
-		],
-	"documents":[
+	],
+	"actions": [{
+		"role": "receiver",
+		"name": "luciusseptimius_lastwill"
+	}],
+	"documents": [
 		"ariminum_0009"
 	]
 }

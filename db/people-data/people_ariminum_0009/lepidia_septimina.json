@@ -6,7 +6,7 @@
 	},
 	"gender": "female",
 	"age": "unknown",
-	"social-status": "unknown",
+	"social_status": "unknown",
 	"city": "Ariminum",
 	"relation": [{
 			"type": "daughter of",
@@ -21,21 +21,21 @@
 			"person": "lucius_septimius_liberalis"
 		}
 	],
-	"actions":[
+	"actions": [{
+
+			"role": "doer",
+			"name": "lepidioprocul_restoring_menapii"
+		},
 		{
-		"_id": "lepidioprocul_restoring_menapii",
-		"role": "doer"
-		}
+			"role": "doer",
+			"name": "lepidioprocul_restoring_morini"
+		},
 		{
-		"_id": "lepidioprocul_restoring_morini",
-		"role": "doer"
-		}
-		{
-		"_id": "lepidiaseptimia_granted"",
-		"role": "doer"
+			"role": "doer",
+			"name": "lepidiaseptimia_granted"
 		}
 	],
-	"documents":[
+	"documents": [
 		"ariminum_0007",
 		"ariminum_0008",
 		"ariminum_0009"

@@ -7,90 +7,79 @@
 	},
 	"gender": "male",
 	"age": "unknown",
-	"social-status": "roman citizen",
+	"social_status": "roman citizen",
 	"city": "Ariminum",
-	"career":[
-	{
-		"role": "Milites",
-		"grade": "unknown" ,
-		"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Legionary"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio VI Victrix (https://en.wikipedia.org/wiki/Legio_VI_Victrix )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Centurion",
-		"grade": "unknown" ,
-		"place": "legio XV Apollinaris (https://en.wikipedia.org/wiki/Legio_XV_Apollinaris )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Centurion"
-	}
-	{
-		"role": "Primus Pilus",
-		"grade": "unknown" ,
-		"place": "legio XIII Gemina (https://en.wikipedia.org/wiki/Legio_XIII_Gemina )",
-		"type": "Military",
-		"description": "https://en.wikipedia.org/wiki/Primus_pilus"
-	}
+	"career": [{
+			"role": "Milites",
+			"grade": "unknown",
+			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Legionary"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio VI Victrix (https://en.wikipedia.org/wiki/Legio_VI_Victrix )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Centurion",
+			"grade": "unknown",
+			"place": "legio XV Apollinaris (https://en.wikipedia.org/wiki/Legio_XV_Apollinaris )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Centurion"
+		},
+		{
+			"role": "Primus Pilus",
+			"grade": "unknown",
+			"place": "legio XIII Gemina (https://en.wikipedia.org/wiki/Legio_XIII_Gemina )",
+			"type": "Military",
+			"description": "https://en.wikipedia.org/wiki/Primus_pilus"
+		}
 	],
-	"relation":[
-	{
-		"type": "father of",
-		"person": "lepidia_septimina"
-	}
-	{
-		"type": "husband of",
-		"person": "septimia_prisca"
-	}
-	{
-		"type": "son of",
-		"person": "Lucius Lepidius"
-	}
-	{
-		"type": "son in law of",
-		"person": "lucius_septimius_liberalis"
-	}
+	"relation": [{
+			"type": "father of",
+			"person": "lepidia_septimina"
+		},
+		{
+			"type": "husband of",
+			"person": "septimia_prisca"
+		},
+		{
+			"type": "son of",
+			"person": "Lucius Lepidius"
+		},
+		{
+			"type": "son in law of",
+			"person": "lucius_septimius_liberalis"
+		}
 	],
-	"actions": [
-	{
-		"_id": "lepidioprocul_award",
-		"role": "receiver"
-
-	}
-	{
-		"_id": "lepidioprocul_dedication_menapii",
-		"role": "receiver"
-	}
-	{
-		"_id": "lepidioprocul_restoring_menapii",
-		"role": "receiver"
-	}
-	{
-		"_id": "lepidioprocul_dedication_morini",
-		"role": "receiver"
-	}
-	{
-		"_id": "lepidioprocul_restoring_morini",
-		"role": "receiver"
-	}
-	
-	],
-	"documents":[
+	"actions": [{
+		"role": "receiver",
+		"name": "lepidioprocul_award"
+	}, {
+		"role": "receiver",
+		"name": "lepidioprocul_dedication_menapii"
+	}, {
+		"role": "receiver",
+		"name": "lepidioprocul_restoring_menapii"
+	}, {
+		"role": "receiver",
+		"name": "lepidioprocul_dedication_morini"
+	}, {
+		"role": "receiver",
+		"name": "lepidioprocul_restoring_morini"
+	}],
+	"documents": [
 		"ariminum_0007",
 		"ariminum_0008"
-	  ]
-	
+	]
 }

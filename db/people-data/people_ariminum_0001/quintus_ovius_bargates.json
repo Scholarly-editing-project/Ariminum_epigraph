@@ -7,21 +7,17 @@
 	},
 	"gender": "male",
 	"age": "unknown",
-	"social-status": "libertus",
+	"social_status": "libertus",
 	"city": "Ariminum",
-	"relation":[
-		{
+	"relation": [{
 		"type": "libertus of",
 		"person": "quintus_ovius_fregellanus"
-		}
-	],
-	"actions":[
-		{
-		"_id": "dedication_qoviusfreg",
-		"role": "doer"
-		}
-	],
-	"documents":[
+	}],
+	"actions": [{
+		"role": "doer",
+		"name": "dedication_qoviusfreg"
+	}],
+	"documents": [
 		"ariminum_0001"
 	]
 }

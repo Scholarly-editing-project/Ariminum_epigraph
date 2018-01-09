@@ -6,18 +6,17 @@
 	},
 	"gender": "female",
 	"age": "40 years old",
-	"social-status": "none",
+	"social_status": "none",
 	"city": "Ariminum (provenance:Noricum)",
 	"relation": [{
 		"type": "wife of",
 		"person": "titus_flavius_marcellus"
 	}],
-	"actions":[
-		{
-		"_id": "septveneria_dedication",
-		"role": "receiver"
-		}],
-	"documents":[
+	"actions": [{
+		"role": "receiver",
+		"name": "septveneria_dedication"
+	}],
+	"documents": [
 		"ariminum_0005"
 	]
 }

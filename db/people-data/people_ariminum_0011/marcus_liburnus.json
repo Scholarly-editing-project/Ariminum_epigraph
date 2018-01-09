@@ -7,8 +7,15 @@
 	},
 	"gender": "male",
 	"age": "unknown",
-	"social-status": "roman citizen",
+	"social_status": "roman citizen",
 	"city": "Ariminum",
+	"career": [{
+		"role": "Duoviro",
+		"grade": "none",
+		"place": "Ariminum",
+		"type": "political",
+		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=duo-viri-cn&highlight=duumviri"
+	}],
 	"relation": [{
 			"type": "Duoviro with",
 			"person": "marcus_vettius"
@@ -18,20 +25,10 @@
 			"person": "Lucius Liburnus (senior)"
 		}
 	],
-	"career": [{
-		"role": "Duoviro",
-		"grade": "none",
-		"place": "Ariminum",
-		"type": "political",
-		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=duo-viri-cn&highlight=duumviri"
-	}
-	],
-	"actions":[
-		{
-		"_id": "liburnus_vettius_wall_construction",
-		"role": "doer"
-		}
-		],
+	"actions": [{
+		"role": "doer",
+		"name": "liburnus_vettius_wall_construction"
+	}],
 	"documents": [
 		"ariminum_0011"
 	]

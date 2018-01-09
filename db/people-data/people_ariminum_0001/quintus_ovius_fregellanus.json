@@ -7,31 +7,30 @@
 	},
 	"gender": "male",
 	"age": "unknown",
-	"social-status": "roman citizen",
+	"social_status": "roman citizen",
 	"city": "Ariminum",
-	"relation":[
-	{
-		"type": "son of",
-		"person": "Caius Ovius Fregellanus"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_bargates"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_nadiacus"
-	}
-	{
-		"type": "patronus of",
-		"person": "quintus_ovius_pilonicus"
-	}],
-	"actions":[
+	"relation": [{
+			"type": "son of",
+			"person": "Caius Ovius Fregellanus"
+		},
 		{
-		"_id": "dedication_qoviusfreg",
-		"role": "receiver"
-		}],
-	"documents":[
+			"type": "patronus of",
+			"person": "quintus_ovius_bargates"
+		},
+		{
+			"type": "patronus of",
+			"person": "quintus_ovius_nadiacus"
+		},
+		{
+			"type": "patronus of",
+			"person": "quintus_ovius_pilonicus"
+		}
+	],
+	"actions": [{
+		"role": "receiver",
+		"name": "dedication_qoviusfreg"
+	}],
+	"documents": [
 		"ariminum_0001"
 	]
 }
