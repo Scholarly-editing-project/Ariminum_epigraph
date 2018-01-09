@@ -141,6 +141,16 @@ Cover
   position: relative;
 }
 
+.cover3 {
+  height: 35px;
+  background-image: url("../img/map.jpg");
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
 .cover__filter {
   background: #000;
   width: 100%;
