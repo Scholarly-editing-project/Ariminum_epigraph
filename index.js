@@ -50,23 +50,10 @@ app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
 
-app.get('/epigraph', (req, res, next) => {
+app.get('/epigraph/:id', (req, res, next) => {
 
-  // Send 404 if the id param doesn't exist
-  if (typeof req.query.id == 'undefined')
-    next()
-
-  // Send epigraph page
-  else
-    getEpigraphById(req.params.id, (err, epigraph) => {
-
-      // Throw given errors
-      if (err) throw err
-
-      else
-        // Or send back JSON object
-        res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.EPIGRAPH}`)
-    })
+  res.cookie("epigraphy_id", req.params.id)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/epigraph/${CONSTANTS.PAGES.EPIGRAPH}`)
 })
 
 

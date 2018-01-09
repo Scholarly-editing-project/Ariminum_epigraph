@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Roman Epigraphy</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -123,7 +123,7 @@
 
 	<section class="cards clearfix">
 		<div class="card">
-			<img class="card__image" src="img/personaggi.jpg" alt="">
+			<img class="card__image" src="../img/personaggi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
 					<a>Personaggi</a>
@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card__image" src="img/gruppi.jpg" alt="">
+			<img class="card__image" src="../img/gruppi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
 					<a>Gruppi</a>
@@ -143,7 +143,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card__image" src="img/eventi.jpg" alt="">
+			<img class="card__image" src="../img/eventi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
 					<a>Eventi</a>
@@ -218,6 +218,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script>
 		$(document).ready(function () {
 
@@ -228,9 +229,7 @@
 
 			});
 
-			let params = new URLSearchParams(document.location.search.substring(1))
-			let id = params.get("id")
-			let url = 'api/epigraph/' + id
+			var url = '../api/epigraph/' + Cookies.get('epigraphy_id')
 
 			$.ajax({
 					method: "GET",
