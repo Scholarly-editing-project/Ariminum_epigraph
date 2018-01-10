@@ -9,15 +9,15 @@
 	"social_status": "None",
 	"city": "Ariminum",
 	"relation": [{
-			"type": "daughter of",
+			"is": "daughter of",
 			"person": "lucius_septimius_liberalis"
 		},
 		{
-			"type": "wife of",
+			"is": "wife of",
 			"person": "lucius_lepidius_proculus"
 		},
 		{
-			"type": "mother of",
+			"is": "mother of",
 			"person": "lepidia_septimina"
 		}
 	],

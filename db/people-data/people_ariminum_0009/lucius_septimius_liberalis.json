@@ -13,19 +13,19 @@
 		"role": "Sevir Augustalis",
 		"grade": "unknown",
 		"place": "Ariminum",
-		"type": "religious",
+		"category": "religious",
 		"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0063%3Aalphabetic+letter%3DA%3Aentry+group%3D10%3Aentry%3Daugustales-cn-02"
 	}],
 	"relation": [{
-			"type": "father of",
+			"is": "father of",
 			"person": "septimia_prisca"
 		},
 		{
-			"type": "granfather of",
+			"is": "granfather of",
 			"person": "lepidia_septimina"
 		},
 		{
-			"type": "father in law of",
+			"is": "father in law of",
 			"person": "lucius_lepidius_proculus"
 		}
 	],

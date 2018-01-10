@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const epigraphScheme = require('./schemas/epigraph')
+const peopleScheme = require('./schemas/people')
 
 module.exports = {
 
@@ -14,7 +15,15 @@ module.exports = {
   /**
    * 
    */
-  save: function (obj, callback) {
+  _getPeopleModel: function () {
+
+    return mongoose.model('People', peopleScheme.scheme)
+  },
+
+  /**
+   * 
+   */
+  saveEpigraph: function (obj, callback) {
 
     let Epigraph = this._getEpigraphModel()
 
@@ -28,7 +37,7 @@ module.exports = {
   /**
    * 
    */
-  findAll: function (callback) {
+  findAllEpigraphs: function (callback) {
 
     let Epigraph = this._getEpigraphModel()
 
@@ -41,13 +50,12 @@ module.exports = {
       // Or send back JSON object
       return callback(null, epigraphs)
     })
-
   },
 
   /**
    * 
    */
-  findByFilter: function (filter, callback) {
+  findEpigraphsByFilter: function (filter, callback) {
 
     let Epigraph = this._getEpigraphModel()
 
@@ -60,5 +68,37 @@ module.exports = {
       // Or send back JSON object
       return callback(null, epigraph)
     })
-  }
+  },
+
+  /**
+   * 
+   */
+  findAllPeople: function (filter, callback) {
+
+    let People = this._getPeopleModel()
+
+    // Get all from collection
+    People.find(filter, (err, people) => {
+
+      // Throw given errors
+      if (err) return callback(err)
+
+      // Or send back JSON object
+      return callback(null, people)
+    })
+  },
+
+    /**
+   * 
+   */
+  savePeople: function (obj, callback) {
+
+    let People = this._getPeopleModel()
+
+    new People(obj).save(function (err, res) {
+      if (err) return callback(err)
+
+      return callback(null, res)
+    });
+  },
 }

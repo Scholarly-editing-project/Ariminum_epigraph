@@ -12,47 +12,47 @@
 			"role": "Augur",
 			"grade": "none",
 			"place": "Ariminum",
-			"type": "religious",
+			"category": "religious",
 			"description": "https://en.wikipedia.org/wiki/Augur"
 		},
 		{
 			"role": "Tresvir",
 			"grade": "none",
 			"place": "Ariminum",
-			"type": "political",
+			"category": "political",
 			"description": "not avaiable"
 		},
 		{
 			"role": "Duovir",
 			"grade": "none",
 			"place": "Ariminum",
-			"type": "political",
+			"category": "political",
 			"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=duo-viri-cn&highlight=duumviri"
 		},
 		{
 			"role": "Praefectus fabrum",
 			"grade": "none",
 			"place": "unknown",
-			"type": "military",
+			"category": "military",
 			"description": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:id=fabri-cn"
 		},
 		{
 			"role": "Tribunus militum",
 			"grade": "Equestrian",
 			"place": "legio XXII (https://en.wikipedia.org/wiki/Legio_XXII_Primigenia )",
-			"type": "military",
+			"category": "military",
 			"description": "https://en.wikipedia.org/wiki/Military_tribune"
 		},
 		{
 			"role": "Tribunus militum",
 			"grade": "Equestrian",
 			"place": "legio III Cyrenaica (https://en.wikipedia.org/wiki/Legio_III_Cyrenaica )",
-			"type": "military",
+			"category": "military",
 			"description": "https://en.wikipedia.org/wiki/Military_tribune"
 		}
 	],
 	"relation": [{
-		"type": "son of",
+		"is": "son of",
 		"person": "Marcus Arrecinus"
 	}],
 	"actions": [{

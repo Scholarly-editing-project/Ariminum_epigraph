@@ -76,11 +76,26 @@ app.get('/api/epigraph', (req, res) => {
       ]
     }
 
-  MONGODB.findByFilter(filter, (err, epigraphs) => {
+  MONGODB.findEpigraphsByFilter(filter, (err, epigraphs) => {
 
     if (err) throw err
 
     res.send(epigraphs)
+  })
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/api/people', (req, res) => {
+
+  let filter = {}
+
+  MONGODB.findAllPeople(filter, (err, people) => {
+
+    if (err) throw err
+
+    res.send(people)
   })
 })
 
@@ -99,6 +114,8 @@ app.get('/api/epigraph/:id', (req, res) => {
   })
 })
 
+
+
 /**
  * 
  * @param {*} id 
@@ -110,7 +127,7 @@ function getEpigraphById(id, callback) {
     '_id': id
   }
 
-  MONGODB.findByFilter(filter, (err, epigraph) => {
+  MONGODB.findEpigraphsByFilter(filter, (err, epigraph) => {
 
     // Throw given errors
     if (err) callback(err)

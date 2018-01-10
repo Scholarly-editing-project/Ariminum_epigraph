@@ -10,19 +10,19 @@
 	"social_status": "roman citizen",
 	"city": "Ariminum",
 	"relation": [{
-			"type": "son of",
+			"is": "son of",
 			"person": "Caius Ovius Fregellanus"
 		},
 		{
-			"type": "patronus of",
+			"is": "patronus of",
 			"person": "quintus_ovius_bargates"
 		},
 		{
-			"type": "patronus of",
+			"is": "patronus of",
 			"person": "quintus_ovius_nadiacus"
 		},
 		{
-			"type": "patronus of",
+			"is": "patronus of",
 			"person": "quintus_ovius_pilonicus"
 		}
 	],

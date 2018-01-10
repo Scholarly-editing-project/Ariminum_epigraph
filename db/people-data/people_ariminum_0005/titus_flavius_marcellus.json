@@ -13,11 +13,11 @@
 		"role": "veteran",
 		"grade": "miles",
 		"place": "Noricum(?)(https://en.wikipedia.org/wiki/Noricum )",
-		"type": "military",
+		"category": "military",
 		"description": "During the campaign of Two Imperators (https://en.wikipedia.org/wiki/Marcus_Aurelius ; https://en.wikipedia.org/wiki/Lucius_Verus )"
 	}],
 	"relation": [{
-		"type": "husband of",
+		"is": "husband of",
 		"person": "septimia_veneria"
 	}],
 	"actions": [{

@@ -13,52 +13,52 @@
 			"role": "Milites",
 			"grade": "unknown",
 			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-			"type": "Military",
+			"category": "Military",
 			"description": "https://en.wikipedia.org/wiki/Legionary"
 		},
 		{
 			"role": "Centurion",
 			"grade": "unknown",
 			"place": "legio V Macedonica (https://en.wikipedia.org/wiki/Legio_V_Macedonica )",
-			"type": "Military",
+			"category": "Military",
 			"description": "https://en.wikipedia.org/wiki/Centurion"
 		},
 		{
 			"role": "Centurion",
 			"grade": "unknown",
 			"place": "legio VI Victrix (https://en.wikipedia.org/wiki/Legio_VI_Victrix )",
-			"type": "Military",
+			"category": "Military",
 			"description": "https://en.wikipedia.org/wiki/Centurion"
 		},
 		{
 			"role": "Centurion",
 			"grade": "unknown",
 			"place": "legio XV Apollinaris (https://en.wikipedia.org/wiki/Legio_XV_Apollinaris )",
-			"type": "Military",
+			"category": "Military",
 			"description": "https://en.wikipedia.org/wiki/Centurion"
 		},
 		{
 			"role": "Primus Pilus",
 			"grade": "unknown",
 			"place": "legio XIII Gemina (https://en.wikipedia.org/wiki/Legio_XIII_Gemina )",
-			"type": "Military",
+			"category": "Military",
 			"description": "https://en.wikipedia.org/wiki/Primus_pilus"
 		}
 	],
 	"relation": [{
-			"type": "father of",
+			"is": "father of",
 			"person": "lepidia_septimina"
 		},
 		{
-			"type": "husband of",
+			"is": "husband of",
 			"person": "septimia_prisca"
 		},
 		{
-			"type": "son of",
+			"is": "son of",
 			"person": "Lucius Lepidius"
 		},
 		{
-			"type": "son in law of",
+			"is": "son in law of",
 			"person": "lucius_septimius_liberalis"
 		}
 	],

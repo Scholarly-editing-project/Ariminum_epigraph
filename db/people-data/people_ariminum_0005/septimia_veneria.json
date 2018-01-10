@@ -9,7 +9,7 @@
 	"social_status": "none",
 	"city": "Ariminum (provenance:Noricum)",
 	"relation": [{
-		"type": "wife of",
+		"is": "wife of",
 		"person": "titus_flavius_marcellus"
 	}],
 	"actions": [{

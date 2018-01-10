@@ -9,15 +9,15 @@
 	"social_status": "unknown",
 	"city": "Ariminum",
 	"relation": [{
-			"type": "daughter of",
+			"is": "daughter of",
 			"person": "septimia_prisca"
 		},
 		{
-			"type": "daughter of",
+			"is": "daughter of",
 			"person": "lucius_lepidius_proculus"
 		},
 		{
-			"type": "granddaughter of",
+			"is": "granddaughter of",
 			"person": "lucius_septimius_liberalis"
 		}
 	],

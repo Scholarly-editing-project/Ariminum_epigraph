@@ -19,7 +19,7 @@ let scheme = mongoose.Schema({
 		description: String
   }],
   relation: [{
-    type: String,
+    is: String,
     person: String
   }],
   actions: [{

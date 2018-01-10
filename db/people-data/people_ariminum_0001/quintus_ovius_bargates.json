@@ -10,7 +10,7 @@
 	"social_status": "libertus",
 	"city": "Ariminum",
 	"relation": [{
-		"type": "libertus of",
+		"is": "libertus of",
 		"person": "quintus_ovius_fregellanus"
 	}],
 	"actions": [{
