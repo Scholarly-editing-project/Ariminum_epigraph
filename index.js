@@ -50,10 +50,14 @@ app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
 
+app.get('/city/ariminum', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.ARIMINUM}`)
+})
+
 app.get('/epigraph/:id', (req, res, next) => {
 
   res.cookie("epigraphy_id", req.params.id)
-  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/epigraph/${CONSTANTS.PAGES.EPIGRAPH}`)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EPIGRAPH}`)
 })
 
 

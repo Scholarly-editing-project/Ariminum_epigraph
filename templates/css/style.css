@@ -21,8 +21,9 @@ ol {
   text-align: justify;
 }
 
+
 /*-----------------------------
-general
+General
 -----------------------------*/
 
 .animate {
@@ -57,8 +58,9 @@ hr {
   border-top: 1px solid #fff;
 }
 
+
 /*-----------------------------
-header
+Header
 -----------------------------*/
 
 .header {
@@ -127,9 +129,11 @@ h1#code__inscription {
   letter-spacing: 3px;
 }
 
+
 /*-----------------------------
 Cover
 -----------------------------*/
+
 #map {
   min-height: 500px;
   margin: 0 auto;
@@ -199,6 +203,7 @@ Cover
   font-size: 42px;
 }
 
+
 /*-----------------------------
 Cards
 -----------------------------*/
@@ -216,8 +221,10 @@ Cards
 }
 
 .card__image {
-  width: 100%;
+  width: 115%;
   height: auto;
+  position: relative;
+  left: -23px;
 }
 
 .card__copy {
@@ -227,6 +234,7 @@ Cards
 .card__copy h3 {
   margin-bottom: 0;
 }
+
 
 /*-----------------------------
 Banner
@@ -271,32 +279,9 @@ Banner
   margin: 5px 0;
 }
 
-/*-----------------------------
-Contact
------------------------------*/
-
-input {
-  width: 100%;
-  margin-bottom: 17px;
-}
-
-textarea {
-  width: 100%;
-}
 
 /*-----------------------------
-Footer
------------------------------*/
-
-.footer {
-  background-image: url("../img/footer.jpg");
-  padding-top: 3px;
-  padding-bottom: 1px;
-  letter-spacing: 1px;
-}
-
-/*-----------------------------
-Single
+Project
 -----------------------------*/
 
 .panel__copy {
@@ -317,6 +302,68 @@ Single
 .panel__copy__title {
   font-size: 32px;
 }
+
+.card__image__project {
+  width: 100%;
+  height: auto;
+}
+
+
+/*-----------------------------
+Contact
+-----------------------------*/
+
+input {
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+textarea {
+  width: 100%;
+}
+
+
+/*-----------------------------
+Ariminum page
+-----------------------------*/
+
+.description__ariminum {
+  position: relative;
+  bottom: -34px;
+}
+
+.cover__ariminum1 {
+  height: 50%;
+  background-image: url("../img/cover__rimini.jpg");
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.cover__ariminum2 {
+  height: 50%;
+  background-image: url("../img/cover__rimini2.jpg");
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+
+/*-----------------------------
+Footer
+-----------------------------*/
+
+.footer {
+  background-image: url("../img/footer.jpg");
+  padding-top: 3px;
+  padding-bottom: 1px;
+  letter-spacing: 1px;
+}
+
 
 /*-----------------------------
 Tablet

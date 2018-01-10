@@ -12,11 +12,13 @@ const CONSTANTS = {
     PROJECT: 'project.html',
     INSCRIPTIONS: 'inscriptions.html',
     CONTACT: 'contact.html',
-    EPIGRAPH: 'epigraph.html'
+    EPIGRAPH: 'epigraph.html',
+    ARIMINUM: 'ariminum.html'
   },
   FOLDERS: {
     ASSETS: 'assets',
     TEMPLATES: 'templates',
+    SUB_FOLDER: 'sub'
   },
   DB: {
     CONNECTION: 'mongodb://localhost/Ariminum_epigraph',
