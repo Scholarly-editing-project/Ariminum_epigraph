@@ -9,13 +9,11 @@
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- Mappa -->
-	<style id="jsbin-css">#map { height: 400px; border:solid;}</style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
 
-
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+	  crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+	  crossorigin=""></script>
 </head>
 
 <body>
@@ -51,10 +49,7 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1> 
-					<div id='map'></div> 
-					<script type="text/javascript" src="geo-data/provinces.js"></script>
-				</h1>
+				<div id='map'></div>
 			</div>
 		</div>
 	</section>
@@ -181,6 +176,9 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<script type="text/javascript" src="geo-data/provinces.js"></script>
+
 	<script>
 		$(document).ready(function () {
 
@@ -192,58 +190,70 @@
 			});
 		});
 	</script>
-	
+
 	<!--script_mappa-->
 	<script id="jsbin-javascript">
-  
-	//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
-	var map = L.map('map', {
-            maxZoom: 9, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
-            minZoom: 4,
+		//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
+		var map = L.map('map', {
+			maxZoom: 9, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
+			minZoom: 4,
 			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
-        });
-        map.setView([45.43, 13.18], 4); //coordinate inziali
-		imageBounds = [[21.08, -28.04], [62.12, 50.54]]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
-		map.setMaxBounds(imageBounds);
-	
-	prov = L.geoJson(provinces).addTo(map);   //carica il geojson che disegna le province dell'impero
-	prov.eachLayer(function (layer) {
-		layer.bindPopup(layer.feature.properties.name);  //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
 		});
-	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8}) //personalizza il disegno creato dal file geojson
-	
-	var selected   //evidenzia una provincia quando viene selezionata
-		prov.on('click', function (e) {
-		if (selected) {
-		selected.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8})   //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
-		}
-		//determina una nuovo elemento selezionato
-		selected = e.layer 
-		//porta il selezionato in primo piano
-		selected.bringToFront()
-		//assegna un nuovo aspetto all'elemento selezionato
-		selected.setStyle({
-		'color': 'red', 'fillColor': '#d27979',
-		})
-		}).addTo(map)
-	
-	//marker
-	
-	//crea le singole icone da utilizzare come markers
-	var city = L.icon({
-					iconUrl: 'icons/city.png',
-					iconSize: [20, 20],
-					});
+		map.setView([45.43, 13.18], 4); //coordinate inziali
+		imageBounds = [
+			[21.08, -11],
+			[57, 46]
+		]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
+		map.setMaxBounds(imageBounds);
 
-	//crea marker con: coordinate, icona e popup al click
-	//piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato
-	
-	var marker = L.marker([44.05951, 12.56857], {icon: city}).addTo(map);
-					marker.bindPopup('ARIMINUM').openPopup();
-	
-	
-	
-	
+		prov = L.geoJson(provinces).addTo(map); //carica il geojson che disegna le province dell'impero
+		prov.eachLayer(function (layer) {
+			layer.bindPopup(layer.feature.properties.name); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
+		});
+		prov.setStyle({
+			fillColor: "#a6a6a6",
+			color: "grey",
+			fillOpacity: 0.8,
+			weight: 1
+		}) //personalizza il disegno creato dal file geojson
+
+		var selected //evidenzia una provincia quando viene selezionata
+		prov.on('click', function (e) {
+			if (selected) {
+				selected.setStyle({
+					fillColor: "#a6a6a6",
+					color: "grey",
+					fillOpacity: 0.8
+				}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
+			}
+			//determina una nuovo elemento selezionato
+			selected = e.layer
+			//porta il selezionato in primo piano
+			selected.bringToFront()
+			//assegna un nuovo aspetto all'elemento selezionato
+			selected.setStyle({
+				'color': 'red',
+				'fillColor': '#d27979'
+			})
+			map.fitBounds(selected.getBounds());
+
+		}).addTo(map)
+
+		//marker
+
+		//crea le singole icone da utilizzare come markers
+		var city = L.icon({
+			iconUrl: 'icons/city.png',
+			iconSize: [20, 20],
+		});
+
+		//crea marker con: coordinate, icona e popup al click
+		//piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato
+
+		var marker = L.marker([44.05951, 12.56857], {
+			icon: city
+		}).addTo(map);
+		marker.bindPopup('ARIMINUM').openPopup();
 	</script>
 </body>
 
