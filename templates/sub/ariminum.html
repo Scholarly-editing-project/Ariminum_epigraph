@@ -49,9 +49,12 @@
 
 	<article class="panel">
 		<div class="panel__copy">
-			<p class="description__ariminum"align="center"><strong>Founded:</strong> 268 b.C.</p>
-			<p class="description__ariminum" align="center"><strong>Province:</strong> Regio VIII Aemilia</p>
-			<p class="description__ariminum" align="center"><strong>Current name:</strong> Rimini</p>
+			<p class="description__ariminum" align="center">
+				<strong>Founded:</strong> 268 b.C.</p>
+			<p class="description__ariminum" align="center">
+				<strong>Province:</strong> Regio VIII Aemilia</p>
+			<p class="description__ariminum" align="center">
+				<strong>Current name:</strong> Rimini</p>
 		</div>
 	</article>
 
@@ -73,11 +76,10 @@
 					<a>All the epigraphs</a>
 				</h3>
 				<p>
-					<ol type="I" start="1">
-						<li><a href="" alt="" id="epigraphs__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="epigraphs__ariminum_left" type="I" start="1">
+						<li>
+							<a href="" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 					</ol>
 				</p>
 			</div>
@@ -85,12 +87,10 @@
 		<div class="card">
 			<div class="card__copy">
 				<p>
-					<ol type="I" start="5">
-						<li><a href="" alt="" id="epigraphs__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="epigraphs__ariminum_right" type="I" start="5">
+						<li>
+							<a href="" alt="" id="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 					</ol>
 				</p>
 			</div>
@@ -107,7 +107,9 @@
 				</h3>
 				<p>
 					<ol type="I" start="1">
-						<li><a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -119,7 +121,9 @@
 			<div class="card__copy">
 				<p>
 					<ol type="I" start="5">
-						<li><a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -150,7 +154,9 @@
 				</h3>
 				<p>
 					<ol type="I" start="1">
-						<li><a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -162,7 +168,9 @@
 			<div class="card__copy">
 				<p>
 					<ol type="I" start="5">
-						<li><a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -183,7 +191,9 @@
 				</h3>
 				<p>
 					<ol type="I" start="1">
-						<li><a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -195,7 +205,9 @@
 			<div class="card__copy">
 				<p>
 					<ol type="I" start="5">
-						<li><a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
+						<li>
+							<a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+						</li>
 						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
 						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
 						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
@@ -283,6 +295,33 @@
 				e.preventDefault();
 
 			});
+
+			var url = '../api/epigraph?city=Ariminum'
+
+			$.ajax({
+					method: "GET",
+					dataType: 'json',
+					url: url
+				})
+				.done(function (epigraphs) {
+
+					$('#epigraphs__ariminum_left').html('')
+					$('#epigraphs__ariminum_right').html('')
+					epigraphs.forEach(function (epigraph, index) {
+						if (index <= 4)
+							$('#epigraphs__ariminum_left').append(
+								`<li><a href="../epigraph/${epigraph['_id']}" alt="" >${epigraph['_id']}</a></li>`)
+						if (index > 4 && index <= 9)
+							$('#epigraphs__ariminum_right').append(
+								`<li><a href="../epigraph/${epigraph['_id']}" alt="" >${epigraph['_id']}</a></li>`)
+					})
+
+					if (!$('#epigraphs__ariminum_left').children().length)
+						$('#epigraphs__ariminum_left').replaceWith('<p>Empty...</p>')
+
+					if (!$('#epigraphs__ariminum_right').children().length)
+						$('#epigraphs__ariminum_right').remove()
+				})
 		});
 	</script>
 
