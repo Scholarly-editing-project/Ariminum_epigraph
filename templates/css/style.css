@@ -366,12 +366,8 @@ Events page
 Epigraph page
 -----------------------------*/
 
-.card__image__epigraph {
-  width: 100%;
-  height: auto;
-}
 
-.card__image__epigraph__events {
+.card__image__epigraph {
   width: 100%;
   height: 270px;
 }
