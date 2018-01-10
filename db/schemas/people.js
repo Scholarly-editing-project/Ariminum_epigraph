@@ -14,9 +14,9 @@ let scheme = mongoose.Schema({
   career: [{
     role: String,
     grade: String,
-		place: String,
+    place: String,
     type: String,
-		description: String
+    description: String
   }],
   relation: [{
     is: String,
@@ -27,6 +27,8 @@ let scheme = mongoose.Schema({
     name: String
   }],
   documents: [String]
+}, {
+  collection: 'people'
 })
 
 module.exports = {
