@@ -130,6 +130,12 @@ h1#code__inscription {
 /*-----------------------------
 Cover
 -----------------------------*/
+#map {
+  min-height: 500px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .cover {
   height: 80%;
   background-image: url("../img/background.jpeg");
