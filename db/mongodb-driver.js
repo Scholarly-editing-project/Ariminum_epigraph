@@ -23,39 +23,7 @@ module.exports = {
   /**
    * 
    */
-  saveEpigraph: function (obj, callback) {
-
-    let Epigraph = this._getEpigraphModel()
-
-    new Epigraph(obj).save(function (err, res) {
-      if (err) return callback(err)
-
-      return callback(null, res)
-    });
-  },
-
-  /**
-   * 
-   */
-  findAllEpigraphs: function (callback) {
-
-    let Epigraph = this._getEpigraphModel()
-
-    // Get all from collection
-    Epigraph.find({}, (err, epigraphs) => {
-
-      // Throw given errors
-      if (err) return callback(err)
-
-      // Or send back JSON object
-      return callback(null, epigraphs)
-    })
-  },
-
-  /**
-   * 
-   */
-  findEpigraphsByFilter: function (filter, callback) {
+  findEpigraphs: function (filter, callback) {
 
     let Epigraph = this._getEpigraphModel()
 
@@ -73,7 +41,7 @@ module.exports = {
   /**
    * 
    */
-  findAllPeople: function (filter, callback) {
+  findPeople: function (filter, callback) {
 
     let People = this._getPeopleModel()
 
@@ -96,6 +64,20 @@ module.exports = {
     let People = this._getPeopleModel()
 
     new People(obj).save(function (err, res) {
+      if (err) return callback(err)
+
+      return callback(null, res)
+    });
+  },
+
+  /**
+   * 
+   */
+  saveEpigraph: function (obj, callback) {
+
+    let Epigraph = this._getEpigraphModel()
+
+    new Epigraph(obj).save(function (err, res) {
       if (err) return callback(err)
 
       return callback(null, res)

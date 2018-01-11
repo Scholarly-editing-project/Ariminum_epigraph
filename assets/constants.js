@@ -13,7 +13,10 @@ const CONSTANTS = {
     INSCRIPTIONS: 'inscriptions.html',
     CONTACT: 'contact.html',
     EPIGRAPH: 'epigraph.html',
-    ARIMINUM: 'ariminum.html'
+    ARIMINUM: 'ariminum.html',
+    EVENTS: 'events.html',
+    GROUPS: 'groups.html',
+    PEOPLE: 'people.html'
   },
   FOLDERS: {
     ASSETS: 'assets',

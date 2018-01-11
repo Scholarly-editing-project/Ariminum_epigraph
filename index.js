@@ -50,6 +50,18 @@ app.get('/contact', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.CONTACT}`)
 })
 
+app.get('/groups', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.GROUPS}`)
+})
+
+app.get('/events', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EVENTS}`)
+})
+
+app.get('/people', (req, res) => {
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.PEOPLE}`)
+})
+
 app.get('/city/ariminum', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.ARIMINUM}`)
 })
@@ -80,7 +92,7 @@ app.get('/api/epigraph', (req, res) => {
       ]
     }
 
-  MONGODB.findEpigraphsByFilter(filter, (err, epigraphs) => {
+  MONGODB.findEpigraphs(filter, (err, epigraphs) => {
 
     if (err) throw err
 
@@ -95,7 +107,7 @@ app.get('/api/people', (req, res) => {
 
   let filter = {}
 
-  MONGODB.findAllPeople(filter, (err, people) => {
+  MONGODB.findPeople(filter, (err, people) => {
 
     if (err) throw err
 
@@ -108,7 +120,11 @@ app.get('/api/people', (req, res) => {
  */
 app.get('/api/epigraph/:id', (req, res) => {
 
-  getEpigraphById(req.params.id, (err, epigraph) => {
+  let filter = {
+    _id: req.params.id
+  }
+
+  findEpigraphs(filter, (err, epigraph) => {
 
     // Throw given errors
     if (err) throw err
@@ -127,15 +143,13 @@ app.get('/api/people/:id', (req, res) => {
     _id: req.params.id
   }
 
-  MONGODB.findAllPeople(filter, (err, people) => {
+  MONGODB.findPeople(filter, (err, people) => {
 
     if (err) throw err
 
     res.send(people)
   })
 })
-
-
 
 /**
  * 
