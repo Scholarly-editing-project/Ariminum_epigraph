@@ -92,7 +92,7 @@
 	<section class="cards clearfix">
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">IMAGE</p>
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">CIL IMAGE</p>
 			</div>
 		</div>
 		<div class="card">
@@ -110,15 +110,17 @@
 	<section class="cards clearfix">
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;"></p>
+				<a target="_blank" id="inscription_cil_image" href="">
+					<img src="" alt="CIL screenshot">
+				</a>
 			</div>
 		</div>
 		<div class="card">
 			<div id="inscription__title" class="card__copy">
-				<p>Trascrizione senza abbreviazioni</p>
+				<p>Inscription without abbr.</p>
 			</div>
 			<div id="inscription__transcription" class="card__copy">
-				<p>Trascrizione con abbreviazione</p>
+				<p>Inscription with abbr.</p>
 			</div>
 			<div class="card__copy">
 				<button id="btn_toggle" data-type="transcription">See transcription</button>
@@ -140,7 +142,8 @@
 				<h3>
 					<a>Characters</a>
 				</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
+				<p>
+					<ul id="inscription__people"></ul>
 				</p>
 			</div>
 		</div>
@@ -242,10 +245,12 @@
 
 			const TRANSCRIPTION = 'transcription'
 			const TITLE = 'original'
+			const EPIGRAPH_API_URL = '../api/epigraph/'
+			const PEOPLE_API_URL = '../api/people/'
 
 			$('#inscription__transcription').hide()
 
-			var url = '../api/epigraph/' + Cookies.get('epigraphy_id')
+			var url = EPIGRAPH_API_URL + Cookies.get('epigraphy_id')
 
 			$('#btn_toggle').on('click', function (e) {
 				e.preventDefault()
@@ -296,6 +301,13 @@
 					$('#inscription__material').text(epigraph.material)
 					$('#inscription__place').text(`${epigraph.place.ancient} (${epigraph.place.modern})`)
 
+					if (typeof epigraph.cil_URL != 'undefined') {
+						$('#inscription_cil_image').find('img').attr('src', `../img/CIL_Ariminum/${epigraph.cil_URL}`)
+						$('#inscription_cil_image').attr('href', `../img/CIL_Ariminum/${epigraph.cil_URL}`)
+					} else
+						$('#inscription_cil_image').replaceWith('<p>CIL image not given</p>')
+
+
 					$('#inscription__title').html('')
 					epigraph.title.forEach(function (line) {
 						$('#inscription__title').append('<p>' + line + '</p>')
@@ -309,6 +321,23 @@
 					$('#inscription__translation').html('')
 					epigraph.translation.forEach(function (line) {
 						$('#inscription__translation').append('<p>' + line + '</p>')
+					})
+
+					$('#inscription__people').html('')
+					epigraph.people.forEach(function (person) {
+
+						var person_url = PEOPLE_API_URL + person
+
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: person_url
+						}).done(function (person) {
+							name = person[0].name
+							$('#inscription__people').append(`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
+						})
+
+						
 					})
 				})
 		})

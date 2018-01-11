@@ -122,9 +122,13 @@ Header
   text-transform: uppercase;
 }
 
-#epigraph__transcription {
+#inscription__transcription {
   font-size: 30px;
   letter-spacing: 3px;
+}
+
+#inscription_cil_image img{
+  max-height: 600px
 }
 
 .hidden {
