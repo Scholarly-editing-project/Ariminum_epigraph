@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>Empire</title>	
+ 
+	<!-- Mappa -->
+	<style id="jsbin-css">#map { height: 400px; border:solid;}</style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+
+
+
+
+</head>
+
+<body>
+		<!--div mappa-->
+        <div id='map'></div> 
+		<script type="text/javascript" src="geo-data/provinces.js"></script>
+
+			 
+			 
+	<!--Script mappa-->
+    <script id="jsbin-javascript">
+  
+	//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
+	var map = L.map('map', {
+            maxZoom: 17, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
+            minZoom: 5,
+			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
+        });
+        map.setView([45.43, 13.18], 5); //coordinate inziali
+		imageBounds = [[21.08, -28.04], [62.12, 50.54]]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
+		map.setMaxBounds(imageBounds);
+	prov = L.geoJson(provinces).addTo(map);   //carica il geojson che disegna le province dell'impero
+	prov.eachLayer(function (layer) {
+		layer.bindPopup(layer.feature.properties.name);  //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
+		});
+	prov.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8}) //personalizza il disegno creato dal file geojson
+	
+	var osm = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { 			//importa i dati da openstreetmap (inserisce giustamente i crediti al servizio OSM)
+			}).addTo(map);
+			
+	var selected   //evidenzia una provincia quando viene selezionata
+		prov.on('click', function (e) {
+		if (map.getZoom() < 13){
+		if (selected) {
+		selected.setStyle({fillColor: "#a6a6a6", color: "grey", fillOpacity: 0.8})   //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
+		}
+		//determina una nuovo elemento selezionato
+		selected = e.layer 
+		//porta il selezionato in primo piano
+		selected.bringToFront()
+		//assegna un nuovo aspetto all'elemento selezionato
+		selected.setStyle({
+		'color': 'red', 'fillColor': '#d27979',
+		})
+		}}).addTo(map)
+	
+	//marker
+	
+	//crea le singole icone da utilizzare come markers
+	var city = L.icon({
+					iconUrl: 'icons/city.png',
+					iconSize: [20, 20],
+					});
+
+	//crea marker con: coordinate, icona e popup al click
+	//piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato
+	
+	var ariminum = L.marker([44.05951, 12.56857], {icon: city});
+					ariminum.bindPopup('ARIMINUM').openPopup();
+	ariminum.on('click', function(eve){
+    map.setView(eve.latlng, 13);
+	});
+	var cities = L.layerGroup([ariminum]).addTo(map);
+					
+					
+	var	bounds = new L.LatLngBounds(     <!--confini della mappa, praticamente un rettangolo generato dalla sua diagonale (è "settato" su Rimini)-->
+					new L.LatLng(44.026026114234604, 12.442703247070314),
+					new L.LatLng(44.10977494207831, 12.663459777832031));
+					
+					
+	var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds);    <!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
+
+	map.on('zoomend', function () {
+    if (map.getZoom() < 13 && map.hasLayer(overlay)) {
+        map.addLayer(prov);
+		map.removeLayer(overlay);
+		map.setMaxBounds(imageBounds);
+		map.addLayer(cities);
+		map.removeLayer(ariminum_icons);
+    }
+    if (map.getZoom() >= 13 && map.hasLayer(overlay) == false)
+    {
+        map.addLayer(overlay);
+		map.setMaxBounds(bounds);
+		map.removeLayer(prov);
+		map.removeLayer(cities);
+		map.addLayer(ariminum_icons);
+    }   
+    });
+	
+	var epigraph = L.icon({
+					iconUrl: 'icons/epigraph.png',
+					iconSize: [30, 30],
+					});
+	var place = L.icon({
+					iconUrl: 'icons/place.png',
+					iconSize: [30, 30],
+					});
+	var street = L.icon({
+					iconUrl: 'icons/street.png',
+					iconSize: [50, 50],
+					});
+
+	<!--crea marker con: coordinate, icona e popup al click-->
+	<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
+	
+	/*
+	var Surgeon_Domus = L.marker([44.06225, 12.56768], {icon: place});
+					Surgeon_Domus.bindPopup("Surgeon's Domus").openPopup();
+					
+	var Via_Aemilia = L.marker([44.06887, 12.54213], {icon: street});
+					Via_Aemilia.bindPopup('Via Aemilia').openPopup();
+					*/
+
+	$.ajax({
+	 url: 'api/epigraph',
+	 method: 'GET'
+	}).done(function(epigraphs){
+	
+		var epigraph_array = []
+		
+		epigraphs.forEach(function(epigraph){
+			var current_epigraph = L.marker([epigraph.place.geo.lat, epigraph.place.geo.len]);
+			var text = ""
+			
+			epigraph.transcription.forEeach(function(line){
+				text+= "<p>"+ line +"</p>"
+			})
+			
+			current_epigraph.bindPopup(text).openPopup();
+			epigraph_array.push(current_epigraph)
+		})
+		
+		
+		var ariminum_icons = L.layerGroup(epigraph_array);
+	})			
+					
+	</script>
+		
+</body>
+
+</html>
