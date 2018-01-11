@@ -39,8 +39,8 @@
     "modern": "Rimini",
     "geo": {
       "accuracy": "High",
-      "lat": 44.063689,
-      "len": 12.563656
+      "lat": "44.063689",
+      "len": "12.563656"
     }
   },
   "people": [
