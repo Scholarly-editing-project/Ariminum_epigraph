@@ -118,6 +118,23 @@ app.get('/api/epigraph/:id', (req, res) => {
   })
 })
 
+/**
+ * Get a single person by id
+ */
+app.get('/api/people/:id', (req, res) => {
+
+  let filter = {
+    _id: req.params.id
+  }
+
+  MONGODB.findAllPeople(filter, (err, people) => {
+
+    if (err) throw err
+
+    res.send(people)
+  })
+})
+
 
 
 /**

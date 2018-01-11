@@ -88,7 +88,7 @@ module.exports = {
     })
   },
 
-    /**
+  /**
    * 
    */
   savePeople: function (obj, callback) {

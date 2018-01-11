@@ -333,7 +333,7 @@
 							dataType: 'json',
 							url: person_url
 						}).done(function (person) {
-							name = person[0].name
+							var name = person[0].name
 							$('#inscription__people').append(`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
 						})
 
