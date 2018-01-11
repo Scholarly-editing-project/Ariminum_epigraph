@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 
 let scheme = mongoose.Schema({
   _id: String,
+  cil: String,
+  cil_URL: String,
   title: [String],
   transcription: [String],
   translation: [String],
