@@ -21,7 +21,6 @@ ol {
   text-align: justify;
 }
 
-
 /*-----------------------------
 General
 -----------------------------*/
@@ -57,7 +56,6 @@ a:hover {
 hr {
   border-top: 1px solid #fff;
 }
-
 
 /*-----------------------------
 Header
@@ -120,7 +118,7 @@ Header
   margin-bottom: 5px;
 }
 
-h1#code__inscription {
+#inscription__code, #inscription__title, #inscription__transcription {
   text-transform: uppercase;
 }
 
@@ -129,6 +127,9 @@ h1#code__inscription {
   letter-spacing: 3px;
 }
 
+.hidden {
+  display: none;
+}
 
 /*-----------------------------
 Cover
@@ -203,7 +204,6 @@ Cover
   font-size: 42px;
 }
 
-
 /*-----------------------------
 Cards
 -----------------------------*/
@@ -234,7 +234,6 @@ Cards
 .card__copy h3 {
   margin-bottom: 0;
 }
-
 
 /*-----------------------------
 Banner
@@ -279,7 +278,6 @@ Banner
   margin: 5px 0;
 }
 
-
 /*-----------------------------
 Project
 -----------------------------*/
@@ -308,7 +306,6 @@ Project
   height: auto;
 }
 
-
 /*-----------------------------
 Contact
 -----------------------------*/
@@ -321,7 +318,6 @@ input {
 textarea {
   width: 100%;
 }
-
 
 /*-----------------------------
 Ariminum page
@@ -352,7 +348,6 @@ Ariminum page
   position: relative;
 }
 
-
 /*-----------------------------
 Events page
 -----------------------------*/
@@ -365,7 +360,6 @@ Events page
 /*-----------------------------
 Epigraph page
 -----------------------------*/
-
 
 .card__image__epigraph {
   width: 100%;
@@ -382,7 +376,6 @@ Footer
   padding-bottom: 1px;
   letter-spacing: 1px;
 }
-
 
 /*-----------------------------
 Tablet
