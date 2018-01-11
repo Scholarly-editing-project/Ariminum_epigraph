@@ -38,27 +38,27 @@
 		</ul>
 	</header>
 
-	<section class="cover cover--single">
+	<section class="cover__ariminum1 cover--single">
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 id="code__inscription" style="font-weight:100;">CODICE ISCRIZIONE</h1>
-				<h2>Subtitle of the page</h2>
+				<h1 id="inscription__code" style="font-weight:100;">Inscription ID</h1>
+				<h2 id="inscription__cil">Inscription CIL</h2>
 			</div>
 		</div>
 	</section>
 
 	<article class="panel">
 		<div class="panel__copy">
-			<p>E' possibile visualizzare e scaricare la
-				<a>descrizione dell'epigrafe in Json</a>.</p>
-			<p>E' possibile visualizzare e scaricare la
-				<a>bibliografia in PDF</a>.</p>
+			<p>See the description in Json format from
+				<a target="_blank" id="inscription__api">HERE</a>.</p>
+			<p>See the bibliographies from
+				<a>HERE</a>.</p>
 			</p>
 		</div>
 	</article>
 
-	<section class="cover2 cover--single">
+	<section class="cover__ariminum2 cover--single">
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 		</div>
@@ -70,12 +70,18 @@
 		<div class="banner__image"></div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
-				<p>INSERIRE METADATI</p>
-				<p>Metadati 1: E' possibile fare una ricerca sulla lista di tutte le epigrafi</p>
-				<p>Metadati 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p>Metadati 3: Et fuga quae aperiam eaque id, illum delectus repudiandae</p>
-				<p>Metadati 4: natus minus, ullam! Impedit excepturi quaerat delectus</p>
-				<p>Metadati 5: provident consectetur laboriosam deleniti at, temporibus</p>
+				<p>Repository:
+					<b id="inscription__repository"></b>
+				</p>
+				<p>support:
+					<b id="inscription__support"></b>
+				</p>
+				<p>material:
+					<b id="inscription__material"></b>
+				</p>
+				<p>Place:
+					<b id="inscription__place"></b>
+				</p>
 				</p>
 			</div>
 		</div>
@@ -86,17 +92,17 @@
 	<section class="cards clearfix">
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;"></p>
-			</div>
-		</div>
-		<div class="card">
-			<div id="epigraph__transcription" class="card__copy">
-				<p>Trascrizione senza abbreviazioni + audio</p>
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">CIL IMAGE</p>
 			</div>
 		</div>
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;"></p>
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">TRANSCRIPTION</p>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card__copy">
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">TRANSLATION</p>
 			</div>
 		</div>
 	</section>
@@ -104,17 +110,25 @@
 	<section class="cards clearfix">
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">IMMAGINE DELL'EPIGRAFE</p>
+				<a target="_blank" id="inscription_cil_image" href="">
+					<img src="" alt="CIL screenshot">
+				</a>
 			</div>
 		</div>
 		<div class="card">
+			<div id="inscription__title" class="card__copy">
+				<p>Inscription without abbr.</p>
+			</div>
+			<div id="inscription__transcription" class="card__copy">
+				<p>Inscription with abbr.</p>
+			</div>
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">TRASCRIZIONE DELL'EPIGRAFE</p>
+				<button id="btn_toggle" data-type="transcription">See transcription</button>
 			</div>
 		</div>
 		<div class="card">
-			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">TRADUZIONE DELL'EPIGRAFE</p>
+			<div id="inscription__translation" class="card__copy">
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;"></p>
 			</div>
 		</div>
 	</section>
@@ -123,30 +137,31 @@
 
 	<section class="cards clearfix">
 		<div class="card">
-			<img class="card__image" src="../img/personaggi.jpg" alt="">
+			<img class="card__image__epigraph" src="../img/rimini__personaggi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
-					<a>Personaggi</a>
+					<a>Characters</a>
+				</h3>
+				<p>
+					<ul id="inscription__people"></ul>
+				</p>
+			</div>
+		</div>
+		<div class="card">
+			<img class="card__image__epigraph" src="../img/rimini__gruppi.jpg" alt="">
+			<div class="card__copy">
+				<h3>
+					<a>Groups</a>
 				</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
 				</p>
 			</div>
 		</div>
 		<div class="card">
-			<img class="card__image" src="../img/gruppi.jpg" alt="">
+			<img class="card__image__epigraph" src="../img/rimini__eventi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
-					<a>Gruppi</a>
-				</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
-				</p>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card__image" src="../img/eventi.jpg" alt="">
-			<div class="card__copy">
-				<h3>
-					<a>Eventi</a>
+					<a>Events</a>
 				</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
 				</p>
@@ -226,10 +241,48 @@
 
 				$(".header__menu").toggleClass('is-open');
 				e.preventDefault();
-
 			});
 
-			var url = '../api/epigraph/' + Cookies.get('epigraphy_id')
+			const TRANSCRIPTION = 'transcription'
+			const TITLE = 'original'
+			const EPIGRAPH_API_URL = '../api/epigraph/'
+			const PEOPLE_API_URL = '../api/people/'
+
+			$('#inscription__transcription').hide()
+
+			var url = EPIGRAPH_API_URL + Cookies.get('epigraphy_id')
+
+			$('#btn_toggle').on('click', function (e) {
+				e.preventDefault()
+
+				var data_type = $(this).data('type')
+
+				switch (data_type) {
+
+					// Show Transcription
+					case TRANSCRIPTION:
+						// Change shown text
+
+						$('#inscription__title').hide()
+						$('#inscription__transcription').show()
+						// Prepare to handle next event
+						$(this).data('type', TITLE)
+						$(this).text('See ' + TITLE)
+						break
+
+						// Show Title
+					case TITLE:
+
+						// Change shown text
+						$('#inscription__transcription').hide()
+						$('#inscription__title').show()
+
+						// Prepare to handle next event
+						$(this).data('type', TRANSCRIPTION)
+						$(this).text('See ' + TRANSCRIPTION)
+						break
+				}
+			})
 
 			$.ajax({
 					method: "GET",
@@ -239,11 +292,52 @@
 				.done(function (epigraph) {
 					epigraph = epigraph[0]
 
-					$('#code__inscription').text(epigraph['_id'])
+					$('#inscription__code').text(epigraph['_id'])
+					$('#inscription__cil').text('CIL: ' + epigraph['cil'])
+					$('#inscription__api').attr('href', url)
 
-					$('#epigraph__transcription').html('')
+					$('#inscription__repository').text(epigraph.repository)
+					$('#inscription__support').text(epigraph.support)
+					$('#inscription__material').text(epigraph.material)
+					$('#inscription__place').text(`${epigraph.place.ancient} (${epigraph.place.modern})`)
+
+					if (typeof epigraph.cil_URL != 'undefined') {
+						$('#inscription_cil_image').find('img').attr('src', `../img/CIL_Ariminum/${epigraph.cil_URL}`)
+						$('#inscription_cil_image').attr('href', `../img/CIL_Ariminum/${epigraph.cil_URL}`)
+					} else
+						$('#inscription_cil_image').replaceWith('<p>CIL image not given</p>')
+
+
+					$('#inscription__title').html('')
 					epigraph.title.forEach(function (line) {
-						$('#epigraph__transcription').append('<p>' + line + '</p>')
+						$('#inscription__title').append('<p>' + line + '</p>')
+					})
+
+					$('#inscription__transcription').html('')
+					epigraph.transcription.forEach(function (line) {
+						$('#inscription__transcription').append('<p>' + line + '</p>')
+					})
+
+					$('#inscription__translation').html('')
+					epigraph.translation.forEach(function (line) {
+						$('#inscription__translation').append('<p>' + line + '</p>')
+					})
+
+					$('#inscription__people').html('')
+					epigraph.people.forEach(function (person) {
+
+						var person_url = PEOPLE_API_URL + person
+
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: person_url
+						}).done(function (person) {
+							name = person[0].name
+							$('#inscription__people').append(`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
+						})
+
+						
 					})
 				})
 		})

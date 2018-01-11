@@ -1,5 +1,6 @@
 {
 	"_id": "domitianus_damnatiomemoriae",
+	"title": "Damnatio memoriae against Domitianus", 
 	"type": "Damnatio Memoriae",
 	"doer/s": [
 		"Roman Senate",
@@ -8,7 +9,7 @@
 		"Imperator Domitianus (https://en.wikipedia.org/wiki/Domitian )"
 	],
 	"description": [
-	"In 96 A.D., after the death of Domitianus, the Senate passed damnatio memoriae on his memory: his name was erased from all public records.
+	"In 96 A.D., after the death of Domitianus, the Senate passed damnatio memoriae on his memory: his name was erased from all public records."
 	],
 	"documents": [
 		"ariminum_0004"

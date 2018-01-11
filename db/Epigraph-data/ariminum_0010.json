@@ -1,38 +1,26 @@
 {
   "_id": "ariminum_0010",
-  "title": [{
-      "side": "Bridge East-side",
-      "text": [
-        "[...] IVI F AVGVSTVS PONTIFEX MAX COS XIII IMP XX TRIBVNIC POTEST XXII P P",
-        "[...] AR DIVI AVGVSTI F DIVI IVLI N AVGVST PONTIF MAXIM COS IIII IMP VIII TRIB POTEST XXII",
-        "DEDER"
-      ]
-    },
-    {
-      "bridge": "Bridge West-side",
-      "text": [
-        "IMP CA[_]SAR DIVI F AVGVSTV[...]AXIM C[...]X TRIBVNIC POTEST XXXVII P P",
-        "TI CAESAR DIVI AVGVSTI F D[...]GVST PONTIF[...]S IIII IMP VIII TRIB POTEST XXII",
-        "DEDERE"
-      ]
-    }
+  "cil": "XI, 367",
+  "cil_URL": "cil_ariminum_0010.jpg",
+  "title": [
+    "(Bridge East-side)",
+    "[...] IVI F AVGVSTVS PONTIFEX MAX COS XIII IMP XX TRIBVNIC POTEST XXII P P",
+    "[...] AR DIVI AVGVSTI F DIVI IVLI N AVGVST PONTIF MAXIM COS IIII IMP VIII TRIB POTEST XXII",
+    "DEDER",
+	"(Bridge West-side)",
+	"IMP CA[_]SAR DIVI F AVGVSTV[...]AXIM C[...]X TRIBVNIC POTEST XXXVII P P",
+    "TI CAESAR DIVI AVGVSTI F D[...]GVST PONTIF[...]S IIII IMP VIII TRIB POTEST XXII",
+    "DEDERE"
   ],
-  "transcription": [{
-      "side": "Bridge East-side",
-      "text": [
-        "[Imp(erator) Caesar D]ivi f(ilius) Augustus pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
-        "[Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
-        "Deder(e)"
-      ]
-    },
-    {
-      "side": "Bridge West-side",
-      "text": [
-        "Imp(erator) Ca[e]sar Divi f(ilius) Augustu[s] [pontifex m]axim(us) c[o(n)s(ul) XIII imp(erator) X]X tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
-        "Ti(berius) Caesar Divi Augusti f(ilius) D[ivi Iuli n(epos) Au]gust(us) pontif(ex)[maxim(us) co(n)]s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
-        "Dedere"
-      ]
-    }
+  "transcription": [
+    "(Bridge East-side)",
+    "[Imp(erator) Caesar D]ivi f(ilius) Augustus pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
+    "[Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
+    "Deder(e)",
+    "(Bridge West-side)",
+    "Imp(erator) Ca[e]sar Divi f(ilius) Augustu[s] [pontifex m]axim(us) c[o(n)s(ul) XIII imp(erator) X]X tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
+    "Ti(berius) Caesar Divi Augusti f(ilius) D[ivi Iuli n(epos) Au]gust(us) pontif(ex)[maxim(us) co(n)]s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
+    "Dedere"
   ],
   "translation": [
     "The emperor, son of the divine Caesar, Augustus, pontifex maximus, consul fourteen times, greeted as emperor twenty times, awarded with the tribunicia potestas thirtyseven times, pater patriae.",
