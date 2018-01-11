@@ -1,16 +1,16 @@
 {
 	"_id": "viaaemilia_augustus1bc",
-	"title": "Augustus restored the Via Aemilia"
+	"title": "Augustus restored the Via Aemilia",
 	"type": "imperial propaganda",
 	"doer/s": [
-		"Augustus (https://en.wikipedia.org/wiki/Augustus )"
-	]
+		"<a href='https://en.wikipedia.org/wiki/Augustus)'>Augustus</a>"
+	],
 	"receiver/s": [
 		"citizens"
-	]
+	],
 	"receiver/s": [
-	"Augustus restored the Via Aemilia between Ariminum and Trebia river in 1 B.C."
-	]
+		"Augustus restored the Via Aemilia between Ariminum and Trebia river in 1 B.C."
+	],
 	"documents": [
 		"ariminum_0002"
 	]
