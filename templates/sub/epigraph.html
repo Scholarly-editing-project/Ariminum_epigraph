@@ -124,6 +124,7 @@
 			</div>
 			<div class="card__copy">
 				<button id="btn_toggle" data-type="transcription">See transcription</button>
+				<div id="inscription__audio"></div>
 			</div>
 		</div>
 		<div class="card">
@@ -296,6 +297,15 @@
 					$('#inscription__cil').text('CIL: ' + epigraph['cil'])
 					$('#inscription__api').attr('href', url)
 
+
+					$('#inscription__audio').html(
+						`	Classic
+							<audio controls >
+								<source src="../audio/${epigraph['_id']}.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+							</audio>
+						`
+					)
+
 					$('#inscription__repository').text(epigraph.repository)
 					$('#inscription__support').text(epigraph.support)
 					$('#inscription__material').text(epigraph.material)
@@ -334,10 +344,11 @@
 							url: person_url
 						}).done(function (person) {
 							var name = person[0].name
-							$('#inscription__people').append(`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
+							$('#inscription__people').append(
+								`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
 						})
 
-						
+
 					})
 				})
 		})
