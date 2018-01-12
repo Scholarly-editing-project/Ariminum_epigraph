@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
   height: 100%;
 }
 
@@ -20,6 +21,7 @@ ol {
   list-style-type: upper-roman;
   text-align: justify;
 }
+
 
 /*-----------------------------
 General
@@ -56,6 +58,7 @@ a:hover {
 hr {
   border-top: 1px solid #fff;
 }
+
 
 /*-----------------------------
 Header
@@ -118,7 +121,9 @@ Header
   margin-bottom: 5px;
 }
 
-#inscription__code, #inscription__title, #inscription__transcription {
+#inscription__code,
+#inscription__title,
+#inscription__transcription {
   text-transform: uppercase;
 }
 
@@ -127,13 +132,15 @@ Header
   letter-spacing: 3px;
 }
 
-#inscription_cil_image img{
-  max-height: 600px
+#inscription_cil_image img {
+  max-height: 600px;
+  max-width: 300px;
 }
 
 .hidden {
   display: none;
 }
+
 
 /*-----------------------------
 Cover
@@ -208,6 +215,7 @@ Cover
   font-size: 42px;
 }
 
+
 /*-----------------------------
 Cards
 -----------------------------*/
@@ -239,9 +247,11 @@ Cards
   margin-bottom: 0;
 }
 
+
 /*-----------------------------
 Banner
 -----------------------------*/
+
 .banner {
   background: #fff;
   height: 50%;
@@ -282,6 +292,7 @@ Banner
   margin: 5px 0;
 }
 
+
 /*-----------------------------
 Project
 -----------------------------*/
@@ -310,6 +321,7 @@ Project
   height: auto;
 }
 
+
 /*-----------------------------
 Contact
 -----------------------------*/
@@ -322,6 +334,7 @@ input {
 textarea {
   width: 100%;
 }
+
 
 /*-----------------------------
 Ariminum page
@@ -352,6 +365,7 @@ Ariminum page
   position: relative;
 }
 
+
 /*-----------------------------
 Events page
 -----------------------------*/
@@ -361,6 +375,7 @@ Events page
   bottom: -34px;
 }
 
+
 /*-----------------------------
 Epigraph page
 -----------------------------*/
@@ -369,6 +384,7 @@ Epigraph page
   width: 100%;
   height: 270px;
 }
+
 
 /*-----------------------------
 Footer
@@ -381,9 +397,11 @@ Footer
   letter-spacing: 1px;
 }
 
+
 /*-----------------------------
 Tablet
 -----------------------------*/
+
 @media (max-width: 998px) {
   /* banner */
   .banner__image,
@@ -393,9 +411,11 @@ Tablet
   }
 }
 
+
 /*-----------------------------
 Smartphone
 -----------------------------*/
+
 @media (max-width: 767px) {
   .header {
     position: fixed;
@@ -403,49 +423,42 @@ Smartphone
     width: 100%;
     min-height: 15%;
   }
-
   .header__icon-bar {
     display: block;
   }
-
   .header__menu {
     width: 100%;
     height: 0px;
     overflow: hidden;
     margin: 0;
   }
-
   .header__menu__item {
     display: block;
   }
-
   .is-open {
     height: 300px;
     overflow: auto;
   }
-
   /* Cover */
   .cover {
     height: 100%;
   }
-
   /* Cards */
   .card {
     width: 90%;
     margin: 5%;
   }
-
   /* Banner */
   .banner {
     height: 600px;
   }
-
   .banner__image,
   .banner__copy {
     width: 100%;
     height: 50%;
   }
 }
+
 
 /* clearfix */
 
@@ -460,10 +473,17 @@ Smartphone
 
 * html .clearfix {
   zoom: 1;
-} /* IE6 */
+}
+
+
+/* IE6 */
+
 *:first-child+html .clearfix {
   zoom: 1;
-} /* IE7 */
+}
+
+
+/* IE7 */
 
 *,
 *:before,

@@ -15,7 +15,7 @@ let scheme = mongoose.Schema({
     role: String,
     grade: String,
     place: String,
-    type: String,
+    category: String,
     description: String
   }],
   relation: [{

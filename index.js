@@ -58,10 +58,6 @@ app.get('/events', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EVENTS}`)
 })
 
-app.get('/people', (req, res) => {
-  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.PEOPLE}`)
-})
-
 app.get('/city/ariminum', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.ARIMINUM}`)
 })
@@ -72,6 +68,11 @@ app.get('/epigraph/:id', (req, res, next) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EPIGRAPH}`)
 })
 
+app.get('/people/:id', (req, res) => {
+
+  res.cookie("people_id", req.params.id)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.PEOPLE}`)
+})
 
 /**
  * Get the entire list of epigraphs
@@ -124,7 +125,7 @@ app.get('/api/epigraph/:id', (req, res) => {
     _id: req.params.id
   }
 
-  findEpigraphs(filter, (err, epigraph) => {
+  MONGODB.findEpigraphs(filter, (err, epigraph) => {
 
     // Throw given errors
     if (err) throw err
