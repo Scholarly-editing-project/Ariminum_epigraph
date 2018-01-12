@@ -195,17 +195,16 @@
 	<script id="jsbin-javascript">
 		//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
 		var map = L.map('map', {
-			maxZoom: 9, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
-			minZoom: 4,
+			maxZoom: 17, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
+			minZoom: 5,
 			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
 		});
-		map.setView([45.43, 13.18], 4); //coordinate inziali
+		map.setView([45.43, 13.18], 5); //coordinate inziali
 		imageBounds = [
-			[21.08, -11],
-			[57, 46]
+			[21.08, -28.04],
+			[62.12, 50.54]
 		]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
 		map.setMaxBounds(imageBounds);
-
 		prov = L.geoJson(provinces).addTo(map); //carica il geojson che disegna le province dell'impero
 		prov.eachLayer(function (layer) {
 			layer.bindPopup(layer.feature.properties.name); //crea un popup utilizzando la key "name" per ogni feature del file geojson (a ogni provincia il suo nome)
@@ -213,30 +212,33 @@
 		prov.setStyle({
 			fillColor: "#a6a6a6",
 			color: "grey",
-			fillOpacity: 0.8,
-			weight: 1
+			fillOpacity: 0.8
 		}) //personalizza il disegno creato dal file geojson
+
+		var osm = L.tileLayer(
+			'http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { //importa i dati da openstreetmap (inserisce giustamente i crediti al servizio OSM)
+			}).addTo(map);
 
 		var selected //evidenzia una provincia quando viene selezionata
 		prov.on('click', function (e) {
-			if (selected) {
+			if (map.getZoom() < 13) {
+				if (selected) {
+					selected.setStyle({
+						fillColor: "#a6a6a6",
+						color: "grey",
+						fillOpacity: 0.8
+					}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
+				}
+				//determina una nuovo elemento selezionato
+				selected = e.layer
+				//porta il selezionato in primo piano
+				selected.bringToFront()
+				//assegna un nuovo aspetto all'elemento selezionato
 				selected.setStyle({
-					fillColor: "#a6a6a6",
-					color: "grey",
-					fillOpacity: 0.8
-				}) //ripristina l'elemento all'origine quando si seleziona un nuovo elemento
+					'color': 'red',
+					'fillColor': '#d27979',
+				})
 			}
-			//determina una nuovo elemento selezionato
-			selected = e.layer
-			//porta il selezionato in primo piano
-			selected.bringToFront()
-			//assegna un nuovo aspetto all'elemento selezionato
-			selected.setStyle({
-				'color': 'red',
-				'fillColor': '#d27979'
-			})
-			map.fitBounds(selected.getBounds());
-
 		}).addTo(map)
 
 		//marker
@@ -250,10 +252,192 @@
 		//crea marker con: coordinate, icona e popup al click
 		//piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato
 
-		var marker = L.marker([44.05951, 12.56857], {
+		var ariminum = L.marker([44.05951, 12.56857], {
 			icon: city
-		}).addTo(map);
-		marker.bindPopup(' <a href="city/ariminum">ARIMINVM</a>').openPopup();
+		});
+		ariminum.bindPopup('ARIMINUM').openPopup();
+		ariminum.on('click', function (eve) {
+			map.setView(eve.latlng, 13);
+		});
+		var cities = L.layerGroup([ariminum]).addTo(map);
+
+
+		var bounds = new L.LatLngBounds( <!--confini della mappa, praticamente un rettangolo generato dalla sua diagonale (è "settato" su Rimini)-->
+			new L.LatLng(44.026026114234604, 12.442703247070314),
+			new L.LatLng(44.10977494207831, 12.663459777832031));
+
+
+		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); <!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
+
+		map.on('zoomend', function () {
+			if (map.getZoom() < 13 && map.hasLayer(overlay)) {
+				map.addLayer(prov);
+				map.removeLayer(overlay);
+				map.setMaxBounds(imageBounds);
+				map.addLayer(cities);
+				map.removeLayer(Ariminum);
+			}
+			if (map.getZoom() >= 13 && map.hasLayer(overlay) == false) {
+				map.addLayer(overlay);
+				map.setMaxBounds(bounds);
+				map.removeLayer(prov);
+				map.removeLayer(cities);
+				map.addLayer(Ariminum);
+			}
+		});
+
+		var epigraph = L.icon({
+			iconUrl: 'icons/epigraph.png',
+			iconSize: [30, 30],
+		});
+		var problem = L.icon({
+			iconUrl: 'icons/epigraph.png',
+			iconSize: [30, 30],
+			popupAnchor: [100, 0],
+		});
+		var place = L.icon({
+			iconUrl: 'icons/place.png',
+			iconSize: [30, 30],
+		});
+		var street = L.icon({
+			iconUrl: 'icons/street.png',
+			iconSize: [50, 50],
+		});
+
+		<!--crea marker con: coordinate, icona e popup al click-->
+		<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
+
+
+		var Surgeon_Domus = L.marker([44.06225, 12.56768], {
+			icon: place
+		});
+		Surgeon_Domus.bindPopup("Surgeon's Domus").openPopup();
+		var Theatre = L.marker([44.0605, 12.5684], {
+			icon: place
+		});
+		Theatre.bindPopup("Theatre").openPopup();
+		var Basilica = L.marker([44.05954, 12.56957], {
+			icon: place
+		});
+		Basilica.bindPopup("Basilica").openPopup();
+		var Amphitheatre = L.marker([44.05996, 12.57497], {
+			icon: place
+		});
+		Amphitheatre.bindPopup("Amphitheatre").openPopup();
+		var Augustus_Arch = L.marker([44.05699, 12.57126], {
+			icon: place
+		});
+		Augustus_Arch.bindPopup("Augustus' Arch").openPopup();
+		var Tiberius_Bridge = L.marker([44.06403, 12.56362], {
+			icon: place
+		});
+		Tiberius_Bridge.bindPopup("Tiberius Bridge").openPopup();
+		var Forum = L.marker([44.05932, 12.56857], {
+			icon: place
+		});
+		Forum.bindPopup("Forum").openPopup();
+		var Gatehouse = L.marker([44.05766, 12.56584], {
+			icon: place
+		});
+		Gatehouse.bindPopup("Gatehouse").openPopup();
+		var places = L.layerGroup([Surgeon_Domus, Theatre, Basilica, Amphitheatre, Augustus_Arch, Tiberius_Bridge, Forum,
+			Gatehouse
+		]);
+
+
+
+		var Via_Aemilia = L.marker([44.06887, 12.54213], {
+			icon: street
+		});
+		Via_Aemilia.bindPopup('Via Aemilia').openPopup();
+		var Via_Flaminia = L.marker([44.0479, 12.5804], {
+			icon: street
+		});
+		Via_Flaminia.bindPopup('Via Flaminia').openPopup();
+		var roads = L.layerGroup([Via_Aemilia, Via_Flaminia]);
+
+
+
+		var Ariminum_0001 = L.marker([44.05497, 12.57252], {
+			icon: epigraph
+		});
+		Ariminum_0001.bindPopup(
+			'Liberteis hisce fecere patrono Q(uintus) Ovi(us) Q(uinti) l(ibertus) Barg(ates?) Q(uintus) Nadiacus Q(uintus) Pilon(icus) Q(uintus) Ovi(us) C(ai) f(ilius) Freg(ellanus) hic sepult(us) quod suis dedit appare(t)'
+		).openPopup();
+		var Ariminum_0002 = L.marker([44.0866, 12.4538], {
+			icon: problem
+		});
+		Ariminum_0002.bindPopup(
+			'Imp(erator) Caesar Augustus pontifex maximus co(n)s(ul) XIII tribunicia potestate XXII viam Aemiliam ab Arimino ad flumen Trebiam muniendam curavit VII'
+		).openPopup();
+		var Ariminum_0003 = L.marker([44.0529188, 12.5085514], {
+			icon: epigraph
+		});
+		Ariminum_0003.bindPopup(
+			'M(arcus) Arrecinus M(arci) f(ilius) [---] Clemens trib(unus) mil(itum) leg(ionis) III Cyren(aicae) et leg(ionis) XXII praef(ectus) fabr(um) IIvir IIIvir Aug(ur) B(accho) et S(ilvano) v(otum) s(olvit) l(ibens) m(erito)'
+		).openPopup();
+		var Ariminum_0004 = L.marker([111], {
+			icon: epigraph
+		});
+		Ariminum_0004.bindPopup(
+			'Imp(erator) Caes(ar) divi Vespasian[[i f(ilius)]] [[Domitianus]] [[Aug(ustus) Germanicus]] pontifex maxim(us) trib(unicia) potest(ate) [[XII]] imp(erator) [[XX]]II co(n)s(ul) [[XV]]I censor perp(etuus) p(ater) p(atriae) faciend(um) curavit'
+		).openPopup();
+		var Ariminum_0005 = L.marker([1111], {
+			icon: epigraph
+		});
+		Ariminum_0005.bindPopup(
+			'Septimiae Veneriae nat(ione) Noric(ae) coniugi dulc(issimae) quae vix(it) annis XXXX T(itus) Fl(avius) Marcellus veter(anus) Aug(ustorum)'
+		).openPopup();
+		var Ariminum_0006 = L.marker([44.056917, 12.571111], {
+			icon: epigraph
+		});
+		Ariminum_0006.bindPopup(
+			'Senatus Populusq[ue Romanus] [Imp(eratori) Caesari divi f(ilio) Augusto imp(eratori) sept(imo) ...] co(n)s(uli) sept(imo) designat(o) octavom v[ia Flamin]ia [et reliquei]s celeberrimeis Italiae vieis consilio [et sumptib]us [eius mu]niteis'
+		).openPopup();
+		var Ariminum_0007 = L.marker([44.05975, 12.56827], {
+			icon: epigraph
+		});
+		Ariminum_0007.bindPopup(
+			'L(ucio) Lepidio L(uci) f(ilio) An(iensi) Proculo Mil(iti) leg(ionis) V Macedon(icae) (centurioni) leg(ionis) eiusd(em) II (centurioni) leg(ionis) VI Victricis (centurioni) leg(ionis) XV Apollinar(is) Prim(o pilo) leg(ionis) XIII Gemin(ae) Donis donato ab Imp(eratore) Vespasiano Aug(usto) Bello Iudaico torquib(us) Armillis phaleris Corona vallari Salinatores civitatis Menapiorum ob mer(ita) eius Septimina f(ilia) reponend(um) Curavit'
+		).openPopup();
+		var Ariminum_0008 = L.marker([44.05931, 12.56887], {
+			icon: epigraph
+		});
+		Ariminum_0008.bindPopup(
+			'L(ucio) Lepidio L(uci) f(ilio) An(iensi) Proculo Mil(iti) leg(ionis) V Macedon(icae) (centurioni) leg(ionis) eiusd(em)(centurioni) leg(ionis) eiusd(em) II (centurioni) leg(ionis) VI Victricis (centurioni) leg(ionis) XV Apollinar(is) Prim(o pilo) leg(ionis) XIII Gemin(ae) Donis donato ab Imp(eratore) Vespasiano Aug(usto) bello Iudaico torquib(us) armil(lis) Phaleris corona vallari Salinatores civitatis Morinorum ob mer(ita) eius Septimina f(ilia) reponend(um) Curavit'
+		).openPopup();
+		var Ariminum_0009 = L.marker([44.05983, 12.56858], {
+			icon: epigraph
+		});
+		Ariminum_0009.bindPopup(
+			'L(ucio) Septimio Liberali VIvir(o) Aug(ustali) Vicani vici Cermali ob Merita eius quo<d=T> decurion(ibus) Et vicanis vicor(um) VII sing(ulis) In annos X(denarios) III in perpet(uum) re[l(iquit)] Et in eam rem fundos XXI Obligari iussit quorumpartem VI legis Falc(idiae) nomin(e) Deductam ab tutoribus Septimiae Priscae matris Suae Lepidi[a] Septimina Populo concessit'
+		).openPopup();
+		var Ariminum_0010 = L.marker([44.063689, 12.563656], {
+			icon: epigraph
+		});
+		Ariminum_0010.bindPopup(
+			'[Imp(erator) Caesar D]ivi f(ilius) Augustus pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae) [Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII Deder(e)'
+		).openPopup();
+		var Ariminum_0011 = L.marker([44.05737, 12.56599], {
+			icon: epigraph
+		});
+		Ariminum_0011.bindPopup(
+			'M(arcus) Liburnius L(uci) F(ilius) M(arcus) Vettius T(iti) F(ilius) Ex D(ecurionum) C(onsulto) murum pub[licum] Fac(iundum) cur(averunt)'
+		).openPopup();
+		var Ariminum_0012 = L.marker([44.05822, 12.56508], {
+			icon: epigraph
+		});
+		Ariminum_0012.bindPopup(
+			'C(aius) Obulcius C(ai) f(ilius) M(anius) Octavius M(ani) [filius] Duovir(i) Hoc opus fac(iundum) curaverunt').openPopup();
+
+
+
+		var documents = L.layerGroup([Ariminum_0001, Ariminum_0002, Ariminum_0003, Ariminum_0006, Ariminum_0007,
+			Ariminum_0008, Ariminum_0009, Ariminum_0010, Ariminum_0011, Ariminum_0012
+		]);
+
+
+		var Ariminum = L.layerGroup([roads, places, documents]);
 	</script>
 </body>
 
