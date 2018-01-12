@@ -42,7 +42,7 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 style="font-weight:100;">Person's name</h1>
+				<h1 id="person__name" style="font-weight:100;">Person's name</h1>
 			</div>
 		</div>
 	</section>
@@ -50,9 +50,18 @@
 
 	<article class="panel">
 		<div class="panel__copy">
-			<p class="description__event" id="type__event" align="center"><strong>Praenomen:</strong></p>
-			<p class="description__event" id="doer__event" align="center"><strong>Nomen:</strong></p>
-			<p class="description__event" id="reciver__event" align="center"><strong>Cognomen:</strong></p>
+			<p class="description__event" align="center">
+				Praenomen:
+				<strong id="person_praenomen"></strong>
+			</p>
+			<p class="description__event" align="center">
+				Nomen:
+				<strong id="person__nomen"></strong>
+			</p>
+			<p class="description__event" align="center">
+				Cognomen:
+				<strong id="person__cognomen"></strong>
+			</p>
 		</div>
 	</article>
 
@@ -66,10 +75,18 @@
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>General metadata</h2>
 			<ul type="square">
-				<li id="metadata__people"><strong>Gender</strong>:</li>
-				<li id="metadata__people"><strong>Age:</strong></li>
-				<li id="metadata__people"><strong>Social status:</strong></li>
-				<li id="metadata__people"><strong>City:</strong></li>
+				<li>Gender:
+					<strong id="person__gender"></strong>
+				</li>
+				<li>Age:
+					<strong id="person__age"></strong>
+				</li>
+				<li>Social status:
+					<strong id="person__status"></strong>
+				</li>
+				<li>City:
+					<strong id="person__city"></strong>
+				</li>
 			</ul>
 		</div>
 	</article>
@@ -79,8 +96,7 @@
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>Relationships</h2>
-			<ul type="square">
-				<li id="metadata__relationships"><strong>Father of:</strong> person</li>
+			<ul type="square" id="person__relations">
 			</ul>
 		</div>
 	</article>
@@ -89,13 +105,8 @@
 
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
-			<h2>Carreer</h2>
-			<ul type="square">
-				<li id="metadata__carreer"><strong>Role:</strong></li>
-				<li id="metadata__carreer"><strong>Grade:</strong></li>
-				<li id="metadata__carreer"><strong>Place:</strong></li>
-				<li id="metadata__carreer"><strong>Type:</strong></li>
-				<li id="metadata__carreer"><strong>Description:</strong></li>
+			<h2>Career</h2>
+			<ul type="square" id="person__career">
 			</ul>
 		</div>
 	</article>
@@ -106,8 +117,12 @@
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>Actions</h2>
 			<ul type="square">
-				<li id="metadata__actions"><strong>Role:</strong></li>
-				<li id="metadata__actions"><strong>Name:</strong></li>
+				<li id="metadata__actions">
+					<strong>Role:</strong>
+				</li>
+				<li id="metadata__actions">
+					<strong>Name:</strong>
+				</li>
 			</ul>
 		</div>
 	</article>
@@ -117,11 +132,7 @@
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>Documents</h2>
-			<ul type="square">
-				<li id="documents__people">Document 1</li>
-				<li id="documents__people">Document 2</li>
-				<li id="documents__people">Document 3</li>
-				<li id="documents__people">Document 4</li>
+			<ul id="person__documents" type="square">
 			</ul>
 		</div>
 	</article>
@@ -190,6 +201,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script>
 		$(document).ready(function () {
 
@@ -199,6 +211,59 @@
 				e.preventDefault();
 
 			});
+
+			const url = '../api/people/' + Cookies.get('people_id')
+
+			$.ajax({
+				method: "GET",
+				dataType: 'json',
+				url: url
+			}).done(function (person) {
+				person = person[0]
+
+				// Id
+				$('#person__name').text(person['_id'])
+
+				// Name
+				$('#person_praenomen').text(person.name.praenomen)
+				$('#person__nomen').text(person.name.nomen)
+				$('#person__cognomen').text(person.name.cognomen)
+
+				// General metadata
+				$('#person__gender').text(person.gender)
+				$('#person__age').text(person.age)
+				$('#person__status').text(person.social_status)
+				$('#person__city').text(person.city)
+
+				// Relations
+				$('#person__relations').html('')
+				person.relation.forEach(function (relation) {
+					$('#person__relations').append(
+						`<li>
+							${relation.is}: <strong>${relation.person}</strong> 
+						</li>`)
+					if (!person.relation.length)
+						$('#person__relations').html('<p>Not given</p>')
+				})
+
+				// Carreer
+				$('#person__career').html('')
+				person.career.forEach(function (single_career) {
+					$('#person__career').append(
+						`<li>
+							<p>${single_career.role} ${single_career.grade? '('+single_career.grade+')':''} in ${single_career.place} [${single_career.category}].</p>
+						</li>`
+					)
+					if (!person.career.length)
+						$('#person__career').html('<p>Not given</p>')
+				})
+
+				//documents
+				$('#person__documents').html('')
+				person.documents.forEach(function (doc) {
+					$('#person__documents').append("<li><p><a href=\"../epigraph/" + doc + "\">" + doc + "</a></p></li>")
+				})
+			})
 		});
 	</script>
 

@@ -343,12 +343,11 @@
 							dataType: 'json',
 							url: person_url
 						}).done(function (person) {
-							var name = person[0].name
+							var person = person[0]
 							$('#inscription__people').append(
-								`<li><p><a href="${person_url}">${name.praenomen} ${name.nomen} ${name.cognomen}</a></p>`)
+								`<li><p><a href="../people/${person['_id']}">${person.name.praenomen} ${person.name.nomen} ${person.name.cognomen}</a></p>`
+							)
 						})
-
-
 					})
 				})
 		})
