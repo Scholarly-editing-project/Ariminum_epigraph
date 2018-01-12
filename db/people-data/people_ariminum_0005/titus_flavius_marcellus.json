@@ -13,9 +13,9 @@
 	"career": [{
 		"role": "veteran",
 		"grade": "miles",
-		"place": "Noricum(?)(https://en.wikipedia.org/wiki/Noricum )",
+		"place": "<a target='_blank' href='https://en.wikipedia.org/wiki/Noricum'>Noricum(?)</a>",
 		"category": "military",
-		"description": "During the campaign of Two Imperators (https://en.wikipedia.org/wiki/Marcus_Aurelius ; https://en.wikipedia.org/wiki/Lucius_Verus )"
+		"description": "During the campaign of Two Imperators (<a target='_blank' href='https://en.wikipedia.org/wiki/Marcus_Aurelius'>Marcus Aurelius</a> ; <a target='_blank' href='https://en.wikipedia.org/wiki/Lucius_Verus'>Lucius Verus</a> )"
 	}],
 	"relation": [{
 		"is": "husband of",
