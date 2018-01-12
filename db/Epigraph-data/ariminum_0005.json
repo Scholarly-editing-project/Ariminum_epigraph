@@ -9,10 +9,10 @@
     "VETER AUGGG"
   ],
   "transcription": [
-    "Septimiae Veneriae",
+    "<a href='../api/people/quintus_ovius_bargates'>Septimiae Veneriae</a>",
     "nat(ione) Noric(ae) coniugi",
     "dulc(issimae) quae vix(it) annis",
-    "XXXX T(itus) Fl(avius) Marcellus",
+    "XXXX <a href='../api/people/quintus_ovius_bargates'>T(itus) Fl(avius) Marcellus</a>",
     "veter(anus) Aug(ustorum)"
   ],
   "translation": [
@@ -41,7 +41,7 @@
   "people": [
     "septimiae_veneriae",
     "titus_flavius_marcellus",
-    "Two Imperators: Marcus Aurelius (https://en.wikipedia.org/wiki/Marcus_Aurelius) and Lucius Verus (https://en.wikipedia.org/wiki/Lucius_Verus)"
+    "Two Imperators: <a href='https://en.wikipedia.org/wiki/Marcus_Aurelius'>Marcus Aurelius</a> and <a href='https://en.wikipedia.org/wiki/Lucius_Verus'>Lucius Verus</a>"
   ],
   "actions": [
     "septveneria_dedication"

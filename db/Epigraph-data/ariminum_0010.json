@@ -14,8 +14,8 @@
   ],
   "transcription": [
     "(Bridge East-side)",
-    "[Imp(erator) Caesar D]ivi f(ilius) Augustus pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
-    "[Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
+    "[Imp(erator) <a href='https://en.wikipedia.org/wiki/Augustus'> Caesar D]ivi f(ilius) Augustus </a> pontifex maxim(us) co(n)s(ul) XIII imp(erator) XX tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
+    "<a href='https://en.wikipedia.org/wiki/Tiberius'> [Ti(berius) Caes]ar Divi Augusti f(ilius) Divi Iuli n(epos) August(us) </a> pontif(ex) maxim(us) co(n)s(ul) IIII imp(erator) VIII trib(unicia) potest(ate) XXII",
     "Deder(e)",
     "(Bridge West-side)",
     "Imp(erator) Ca[e]sar Divi f(ilius) Augustu[s] [pontifex m]axim(us) c[o(n)s(ul) XIII imp(erator) X]X tribunic(ia) potest(ate) XXXVII p(ater) p(atriae)",
@@ -44,8 +44,8 @@
     }
   },
   "people": [
-    "Augustus (https://en.wikipedia.org/wiki/Augustus)",
-    "Tiberius (https://en.wikipedia.org/wiki/Tiberius)"
+    "<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>",
+    "<a href='https://en.wikipedia.org/wiki/Tiberius'>Tiberius</a>"
   ],
   "actions": [
     "ariminum_bridge_construction"
