@@ -262,12 +262,12 @@
 		var cities = L.layerGroup([ariminum]).addTo(map);
 
 
-		var bounds = new L.LatLngBounds( <!--confini della mappa, praticamente un rettangolo generato dalla sua diagonale (è "settato" su Rimini)-->
+		var bounds = new L.LatLngBounds( //<!--confini della mappa, praticamente un rettangolo generato dalla sua diagonale (è "settato" su Rimini)-->
 			new L.LatLng(44.026026114234604, 12.442703247070314),
 			new L.LatLng(44.10977494207831, 12.663459777832031));
 
 
-		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); <!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
+		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); //<!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
 
 		map.on('zoomend', function () {
 			if (map.getZoom() < 13 && map.hasLayer(overlay)) {
@@ -304,8 +304,8 @@
 			iconSize: [50, 50],
 		});
 
-		<!--crea marker con: coordinate, icona e popup al click-->
-		<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
+		//<!--crea marker con: coordinate, icona e popup al click-->
+		//<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
 
 
 		var Surgeon_Domus = L.marker([44.06225, 12.56768], {
