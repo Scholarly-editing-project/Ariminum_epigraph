@@ -203,11 +203,12 @@
 		});
 
 		map.setView([45.43, 13.18], 5); //coordinate inziali
-
 		imageBounds = [
 			[21.08, -28.04],
 			[62.12, 50.54]
 		]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
+		map.on("zoomstart", function(){
+		zoomLev = map.getZoom(6)})
 		map.setMaxBounds(imageBounds);
 		prov = L.geoJson(provinces).addTo(map); //carica il geojson che disegna le province dell'impero
 		prov.eachLayer(function (layer) {
@@ -222,7 +223,7 @@
 		var osm = L.tileLayer(
 			'http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { //importa i dati da openstreetmap (inserisce giustamente i crediti al servizio OSM)
 			}).addTo(map);
-
+	
 
 		var selected //evidenzia una provincia quando viene selezionata
 		prov.on('click', function (e) {
@@ -287,9 +288,13 @@
 		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); //<!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
 
 		var AriminumPOILayer
-
+		
 		map.on('zoomend', function () {
-			if (map.getZoom() < 13 && map.hasLayer(overlay)) {
+		
+			if (map.getZoom() < 13) {
+				map.setMaxBounds(imageBounds);
+				}
+			else if (map.getZoom() < 13 && map.hasLayer(overlay)) {
 
 				map.removeLayer(AriminumPOILayer)
 				map.removeLayer(overlay);
