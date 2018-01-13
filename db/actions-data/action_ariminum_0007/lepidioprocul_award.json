@@ -1,22 +1,22 @@
 {
 	"_id": "lepidioprocul_award",
 	"title": "Lucius Lepidius Proculus was awarded",
-	"type": "military award",
+	"category": "military award",
 	"doer/s": [
-		"<a href='https://en.wikipedia.org/wiki/Vespasian'>Imperator Vespasian</a>""
-	]
+		"<a href='https://en.wikipedia.org/wiki/Vespasian'>Imperator Vespasian</a>"
+	],
 	"receiver/s": [
 		"lucius_lepidius_proculus"
-	]
+	],
 	"description": [
-	"During the <a href='https://en.wikipedia.org/wiki/Galilee_campaign_(67)'>Jewish War</a> Imperator Vespasian awarded Lucius Lepidius Proculus with:"
-	"<a href='https://en.wikipedia.org/wiki/Torc'> torqe </a>,",
-	"<a href='https://en.wikipedia.org/wiki/Armilla_(military_decoration)'>armillae </a>,",
-	"<a href='https://en.wikipedia.org/wiki/Phalera_(military_decoration)'>phaleris </a>,",
-	"<a href='https://en.wikipedia.org/wiki/Camp_crown'>Corona vallari </a>"
-	]
+		"During the <a href='https://en.wikipedia.org/wiki/Galilee_campaign_(67)'>Jewish War</a> Imperator Vespasian awarded Lucius Lepidius Proculus with:",
+		"<a href='https://en.wikipedia.org/wiki/Torc'> torqe </a>,",
+		"<a href='https://en.wikipedia.org/wiki/Armilla_(military_decoration)'>armillae </a>,",
+		"<a href='https://en.wikipedia.org/wiki/Phalera_(military_decoration)'>phaleris </a>,",
+		"<a href='https://en.wikipedia.org/wiki/Camp_crown'>Corona vallari </a>"
+	],
 	"documents": [
-		"ariminum_0007"
+		"ariminum_0007",
 		"ariminum_0008"
 	]
 }

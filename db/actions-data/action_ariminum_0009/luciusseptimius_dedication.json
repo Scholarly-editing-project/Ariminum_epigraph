@@ -1,16 +1,16 @@
 {
 	"_id": "luciusseptimius_dedication",
 	"title": "Dedication to Lucius Septimius Liberalis",
-	"type": "dedication",
+	"category": "dedication",
 	"doer/s": [
-		"vicani_cermali",
-	]
+		"vicani_cermali"
+	],
 	"receiver/s": [
 		"lucius_septimius_liberalis"
-	]
+	],
 	"description": [
-	"The Vicani of Vicus Cermali dedicated an epigraph to Lucius Septimius Liberalis to remember and thank that he left an inheritance to them."
-	]
+		"The Vicani of Vicus Cermali dedicated an epigraph to Lucius Septimius Liberalis to remember and thank that he left an inheritance to them."
+	],
 	"documents": [
 		"ariminum_0009"
 	]

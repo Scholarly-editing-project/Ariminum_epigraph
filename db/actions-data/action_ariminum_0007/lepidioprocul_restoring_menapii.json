@@ -1,16 +1,16 @@
 {
 	"_id": "lepidioprocul_restoring_menapii",
 	"title": "Lepidia Septimia restored a document",
-	"type": "epigraph restoring",
+	"category": "epigraph restoring",
 	"doer/s": [
 		"lepidia_septimina"
-	]
+	],
 	"receiver/s": [
 		"lucius_lepidius_proculus"
-	]
+	],
 	"description": [
-	"After the Saliantores of the people of the Menapii had dedicated an epigraph to Lucius Lepidius Proculus, his daughter, Lepidia Septimina, decided to put the inscription inside the Forum of Ariminum to remember her father's merits." 
-	]
+		"After the Saliantores of the people of the Menapii had dedicated an epigraph to Lucius Lepidius Proculus, his daughter, Lepidia Septimina, decided to put the inscription inside the Forum of Ariminum to remember her father's merits."
+	],
 	"documents": [
 		"ariminum_0007"
 	]

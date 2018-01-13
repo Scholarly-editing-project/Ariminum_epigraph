@@ -1,7 +1,7 @@
 {
 	"_id": "augustusarch_ariminum",
 	"title": "The Senate erected a triumphal arch",
-	"type": "imperial propaganda",
+	"category": "imperial propaganda",
 	"doer/s": [
 		"Roman Senate"
 	],
@@ -9,8 +9,8 @@
 		"<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>"
 	],
 	"description": [
-	"The Senate erected a triumphal arch in Ariminum to celebrate Augustus' building policy"
-	]
+		"The Senate erected a triumphal arch in Ariminum to celebrate Augustus' building policy"
+	],
 	"documents": [
 		"ariminum_0006"
 	]

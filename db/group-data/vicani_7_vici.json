@@ -1,7 +1,7 @@
 {
 	"_id": "vicani_7_vici",
 	"title": "Vicanis Vicorum VII",
-	"members":[
+	"members": [
 		"vicani_cermali",
 		"vicani Aventini",
 		"vicani Velabri",
@@ -9,16 +9,14 @@
 		"vicani Fortunae",
 		"unknown",
 		"unknown"
-	]
+	],
 	"city": "Ariminum",
-	"type": "social and political",
-	"actions":[
-	{
-		"_id": "luciusseptimius_lastwill",
+	"category": "social and political",
+	"actions": [{
+		"name": "luciusseptimius_lastwill",
 		"role": "receivers"
-	}
-	]
-	"documents":[
+	}],
+	"documents": [
 		"ariminum_0009"
 	]
 }

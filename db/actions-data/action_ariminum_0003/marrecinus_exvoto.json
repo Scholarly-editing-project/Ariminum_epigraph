@@ -1,18 +1,18 @@
 {
 	"_id": "marrecinus_exvoto",
 	"title": "Marcus Arrecinus fulfilled his vow",
-	"type": "ex voto",
+	"category": "ex voto",
 	"doer/s": [
 		"marcus_arrecinus_clemens"
-	]
+	],
 	"receiver/s": [
 		"<a target='_blank' href='https://en.wikipedia.org/wiki/Dionysus'>Bacchus</a>",
 		"<a target='_blank' href='https://en.wikipedia.org/wiki/Silvanus_(mythology)'>Silvanus</a>"
-	]
+	],
 	"description": [
-	"Marcus Arrecinus Clemens made in the past a Votum, making a wish to Bacchus and Silvanus."
-	"Subsequently, when the wish was fulfilled, He gave an offer to his gods to thank them"  
-	]
+		"Marcus Arrecinus Clemens made in the past a Votum, making a wish to Bacchus and Silvanus.",
+		"Subsequently, when the wish was fulfilled, He gave an offer to his gods to thank them"
+	],
 	"documents": [
 		"ariminum_0003"
 	]

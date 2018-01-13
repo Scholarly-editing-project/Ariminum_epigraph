@@ -1,17 +1,17 @@
 {
 	"_id": "lepidiaseptimia_granted",
 	"title": "Lepidia Septimina guaranteed the continuation of her grandfather's legacy",
-	"type": "propaganda(?)",
+	"category": "propaganda(?)",
 	"doer/s": [
 		"lepidia_septimina"
-	]
+	],
 	"receiver/s": [
 		"Citizens of Ariminum"
-	]
+	],
 	"description": [
-	"Lepidia Septimina guaranteed to the population the continuation of her grandfather's legacy.",
-	"This kind of private financial intervention was a matter of family pride, and private interventions were important in roman provincial society."
-	]
+		"Lepidia Septimina guaranteed to the population the continuation of her grandfather's legacy.",
+		"This kind of private financial intervention was a matter of family pride, and private interventions were important in roman provincial society."
+	],
 	"documents": [
 		"ariminum_0009"
 	]

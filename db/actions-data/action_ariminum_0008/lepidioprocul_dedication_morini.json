@@ -1,18 +1,18 @@
 {
 	"_id": "lepidioprocul_dedication_morini",
 	"title": "Dedication to Lucius Lepidius Proculus",
-	"type": "public dedication",
+	"category": "public dedication",
 	"doer/s": [
 		"salinatores_morini"
-	]
+	],
 	"receiver/s": [
 		"lucius_lepidius_proculus"
-	]
+	],
 	"description": [
-	"The Salinatores of the people of Morini dedicated an epigraph to Lucius Lepidus Proculus for his merits.",
-	"It is not possible to know when he deserved this gratitude, but probably during his service in the VI legio Victrix, near Morini's territory.",
-	"It is important to note that salt was an important product in the army's food management."
-	]
+		"The Salinatores of the people of Morini dedicated an epigraph to Lucius Lepidus Proculus for his merits.",
+		"It is not possible to know when he deserved this gratitude, but probably during his service in the VI legio Victrix, near Morini's territory.",
+		"It is important to note that salt was an important product in the army's food management."
+	],
 	"documents": [
 		"ariminum_0008"
 	]

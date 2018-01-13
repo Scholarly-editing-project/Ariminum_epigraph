@@ -1,18 +1,16 @@
 {
 	"_id": "vicani_cermali",
 	"title": "Vicani Vici Cermali",
-	"members":[
+	"members": [
 		"The inhabitants of one of the seven electoral districts of Ariminum."
-	]
+	],
 	"city": "Ariminum",
-	"type": "social and political",
-	"actions":[
-	{
-		"_id": "luciusseptimius_dedication",
+	"category": "social and political",
+	"actions": [{
+		"name": "luciusseptimius_dedication",
 		"role": "doer"
-	}
-	]
-	"documents":[
+	}],
+	"documents": [
 		"ariminum_0009"
 	]
 }

@@ -1,16 +1,16 @@
 {
 	"_id": "domitianus_build93",
-	"title": "Domitianus built something in 93 A.D."
-	"type": "imperial propaganda",
+	"title": "Domitianus built something in 93 A.D.",
+	"category": "imperial propaganda",
 	"doer/s": [
 		"<a href='https://en.wikipedia.org/wiki/Domitian'>Imperator Domitianus</a>"
-	]
+	],
 	"receiver/s": [
 		"Citizens"
-	]
+	],
 	"description": [
 		"In the 93 A.D. Imperator Domitianus took care of the construction of some infrastructure outside Ariminum, probably something related to road structure"
-	]
+	],
 	"documents": [
 		"ariminum_0004"
 	]

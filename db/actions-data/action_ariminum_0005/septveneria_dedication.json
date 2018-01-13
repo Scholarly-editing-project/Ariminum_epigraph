@@ -1,16 +1,16 @@
 {
 	"_id": "septveneria_dedication",
 	"title": "Dedication to Septimia Veneria",
-	"type": "burial dedication",
+	"category": "burial dedication",
 	"doer/s": [
-		"titus_flavius_marcellus",
-	]
+		"titus_flavius_marcellus"
+	],
 	"receiver/s": [
 		"septimia_veneria"
-	]
+	],
 	"description": [
-	"Titus Flavius Marcellus dedicated the tomb to his wife, Spetimia Veneria."
-	]
+		"Titus Flavius Marcellus dedicated the tomb to his wife, Spetimia Veneria."
+	],
 	"documents": [
 		"ariminum_0005"
 	]

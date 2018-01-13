@@ -1,18 +1,16 @@
 {
 	"_id": "salinatores_menapii",
 	"title": "Salinatores civitatis Menapiorum",
-	"members":[
+	"members": [
 		"Guild of salt-traders"
-	]
-	"place": "<a href='https://en.wikipedia.org/wiki/Menapii'>Menapii's territory</a>"
-	"type": "commercial"
-	"actions":[
-	{
-		"_id": "lepidioprocul_dedication_menapii",
+	],
+	"place": "<a href='https://en.wikipedia.org/wiki/Menapii'>Menapii's territory</a>",
+	"category": "commercial",
+	"actions": [{
+		"name": "lepidioprocul_dedication_menapii",
 		"role": "doer"
-	}
-	]
-	"documents":[
+	}],
+	"documents": [
 		"ariminum_0007"
 	]
 }

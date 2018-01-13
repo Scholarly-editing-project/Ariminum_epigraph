@@ -1,17 +1,17 @@
 {
 	"_id": "liburnus_vettius_wall_construction",
 	"title": "The duovir built a wall",
-	"type": "Public building",
+	"category": "Public building",
 	"doer/s": [
 		"marcus_liburnus",
 		"marcus_vettius"
-	]
+	],
 	"receiver/s": [
 		"Ariminum citizens"
-	]
+	],
 	"description": [
 		"The duovir of the city of Ariminum, took care of the construction of city wall folowing a decree of the decurions"
-	]
+	],
 	"documents": [
 		"ariminum_0011"
 	]

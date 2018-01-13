@@ -1,17 +1,17 @@
 {
 	"_id": "ariminum_bridge_construction",
 	"title": "Augustus and Tiberius builded a bridge",
-	"type": "Imperial propaganda",
+	"category": "Imperial propaganda",
 	"doer/s": [
-    "<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>",
-    "<a href='https://en.wikipedia.org/wiki/Tiberius'>Tiberius</a>"
-	]
+		"<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>",
+		"<a href='https://en.wikipedia.org/wiki/Tiberius'>Tiberius</a>"
+	],
 	"receiver/s": [
 		"Citizens"
-	]
+	],
 	"description": [
 		"In 14 A.D. Augustus started the construction of a bridge in Ariminum. In 21 A.D. Tiberius, successor of Augustus, completed the construction."
-	]
+	],
 	"documents": [
 		"ariminum_0010"
 	]
