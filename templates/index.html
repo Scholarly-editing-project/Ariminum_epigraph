@@ -274,7 +274,7 @@
 		ariminum.on('click', function (eve) {
 			map.setView(eve.latlng, 13);
 		});
-		
+
 		var cities = L.layerGroup([ariminum]).addTo(map);
 
 
@@ -285,21 +285,31 @@
 
 		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); //<!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
 
+		var AriminumPOILayer
 
 		map.on('zoomend', function () {
-			if (map.getZoom() < 13) { //&& map.hasLayer(overlay)
-				map.addLayer(prov);
+			if (map.getZoom() < 13 && map.hasLayer(overlay)) {
+
+				map.removeLayer(AriminumPOILayer)
 				map.removeLayer(overlay);
 				map.setMaxBounds(imageBounds);
-				map.addLayer(cities);
-				map.removeLayer(AriminumLayer);
-			}
-			if (map.getZoom() >= 13) { //&& map.hasLayer(overlay) == false
 
-				map.addLayer(overlay);
-				map.setMaxBounds(bounds);
+				map.eachLayer(function (layer) {
+					if (layer instanceof L.Marker)
+						map.removeLayer(layer);
+				});
+
+				map.addLayer(prov);
+				map.addLayer(cities);
+			}
+			else if (map.getZoom() >= 13 && !map.hasLayer(overlay)) {
+
+				map.addLayer(AriminumPOILayer);
 				map.removeLayer(prov);
 				map.removeLayer(cities);
+				map.setMaxBounds(bounds);
+				map.addLayer(overlay);
+				map.setMaxBounds(bounds);
 
 				$.ajax({
 						method: "GET",
@@ -336,11 +346,9 @@
 							}
 						})
 
-						AriminumLayer = L.layerGroup(markers);
-						map.addLayer(AriminumLayer);
+						map.addLayer(L.layerGroup(markers));
 					})
 			}
-
 		});
 
 		var epigraph = L.icon({
@@ -361,14 +369,14 @@
 			iconSize: [50, 50],
 		});
 
-		map.addLayer(overlay);
+		//map.addLayer(overlay);
 		map.setMaxBounds(bounds);
 		//map.addLayer(Ariminum);
 
 		//<!--crea marker con: coordinate, icona e popup al click-->
 		//<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
 
-		/*
+
 		var Surgeon_Domus = L.marker([44.06225, 12.56768], {
 			icon: place
 		});
@@ -415,10 +423,11 @@
 			icon: street
 		});
 		Via_Flaminia.bindPopup('Via Flaminia').openPopup();
+
 		var roads = L.layerGroup([Via_Aemilia, Via_Flaminia]);
 
-
-
+		AriminumPOILayer = L.layerGroup([places, roads]);
+		/*
 		var Ariminum_0001 = L.marker([44.05497, 12.57252], {
 			icon: epigraph
 		});
