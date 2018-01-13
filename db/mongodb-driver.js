@@ -97,7 +97,7 @@ module.exports = {
    */
   findGroups: function (filter, callback) {
 
-    let Group = this._getActionModel()
+    let Group = this._getGroupModel()
 
     // Get groups by filter
     Group.find(filter, (err, groups) => {

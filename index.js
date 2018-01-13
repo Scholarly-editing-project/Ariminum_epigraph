@@ -77,6 +77,42 @@ app.get('/people/:id', (req, res) => {
 /**
  * Get the entire list of epigraphs
  */
+app.get('/api/actions/', (req, res) => {
+
+  let filter = {}
+
+  MONGODB.findActions(filter, (err, actions) => {
+
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
+
+    res.send(actions)
+  })
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/api/actions/:id', (req, res) => {
+
+  let filter = {
+    _id: req.params.id
+  }
+
+  MONGODB.findActions(filter, (err, actions) => {
+
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
+
+    res.send(actions)
+  })
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
 app.get('/api/epigraph', (req, res) => {
 
   let city = req.query.city
@@ -119,6 +155,43 @@ app.get('/api/epigraph/:id', (req, res) => {
 
     // Or send back JSON object
     res.send(epigraph)
+  })
+})
+
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/api/groups/', (req, res) => {
+
+  let filter = {}
+
+  MONGODB.findGroups(filter, (err, groups) => {
+
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
+
+    res.send(groups)
+  })
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/api/groups/:id', (req, res) => {
+
+  let filter = {
+    _id: req.params.id
+  }
+
+  MONGODB.findGroups(filter, (err, groups) => {
+
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
+
+    res.send(groups)
   })
 })
 
