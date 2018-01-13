@@ -2,7 +2,7 @@
   "_id": "ariminum_0002",
   "cil": "Not gived",
   "title": [
-    "<a href='https://en.wikipedia.org/wiki/Augustus'>IMP CAESAR AVGVSTVS</a>",
+    "IMP CAESAR AVGVSTVS",
     "PONTIFEX MAXIMVS COS",
     "XIII TRIBVNICIA POTESTATE XXII",
     "VIAM AEMILIAM AB ARIMINO",
@@ -11,7 +11,7 @@
     "VII"
   ],
   "transcription": [
-    "Imp(erator) Caesar Augustus",
+    "Imp(erator) <a href='https://en.wikipedia.org/wiki/Augustus'>Caesar Augustus</a>",
     "pontifex maximus co(n)s(ul)",
     "XIII tribunicia potestate XXII",
     "viam Aemiliam ab Arimino",
@@ -47,7 +47,7 @@
     }
   },
   "people": [
-    "Augustus (https://en.wikipedia.org/wiki/Augustus )"
+    "<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>"
   ],
   "actions": [
     "viaaemilia_augustus1bc"

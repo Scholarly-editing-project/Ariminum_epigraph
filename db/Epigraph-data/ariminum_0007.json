@@ -21,15 +21,15 @@
 		"CURAVIT"
 	],
 	"transcription": [
-		"L(ucio) Lepidio L(uci) f(ilio) An(iensi)",
-		"Proculo",
+		"<a href='../api/people/lucius_lepidius_proculus'>L(ucio) Lepidio L(uci) f(ilio) An(iensi)</a>",
+		"<a href='../api/people/lucius_lepidius_proculus'>Proculo</a>",
 		"Mil(iti) leg(ionis) V Macedon(icae)",
 		"(centurioni) leg(ionis) eiusd(em) II",
 		"(centurioni) leg(ionis) VI Victricis",
 		"(centurioni) leg(ionis) XV Apollinar(is)",
 		"Prim(o pilo) leg(ionis) XIII Gemin(ae)",
 		"Donis donato ab",
-		"Imp(eratore) Vespasiano Aug(usto)",
+		"Imp(eratore) <a href='https://en.wikipedia.org/wiki/Vespasian'>Vespasiano Aug(usto)</a>",
 		"Bello Iudaico torquib(us)",
 		"Armillis phaleris",
 		"Corona vallari",
@@ -70,7 +70,7 @@
 	"people": [
 		"lucius_lepidius_proculus",
 		"lepidia_septimina",
-		"Vespasian (https://en.wikipedia.org/wiki/Vespasian )",
+		"<a href='https://en.wikipedia.org/wiki/Vespasian'>Imperator Vespasian</a>",
 		"salinatores_menapii"
 	],
 	"actions": [

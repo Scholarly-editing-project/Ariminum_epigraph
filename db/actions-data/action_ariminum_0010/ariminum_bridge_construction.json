@@ -3,8 +3,8 @@
 	"title": "Augustus and Tiberius builded a bridge",
 	"type": "Imperial propaganda",
 	"doer/s": [
-		"Augustus (https://en.wikipedia.org/wiki/Augustus)",
-		"Tiberius (https://en.wikipedia.org/wiki/Tiberius)"
+    "<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>",
+    "<a href='https://en.wikipedia.org/wiki/Tiberius'>Tiberius</a>"
 	]
 	"receiver/s": [
 		"Citizens"

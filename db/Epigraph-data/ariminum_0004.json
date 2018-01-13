@@ -14,10 +14,10 @@
     "FACIEND CVRAVIT"
   ],
   "transcription": [
-    "Imp(erator) Caes(ar)",
+    "Imp(erator) <a href='https://en.wikipedia.org/wiki/Domitian'>Caes(ar)",
     "divi Vespasian[[i f(ilius)]]",
     "[[Domitianus]]",
-    "[[Aug(ustus) Germanicus]]",
+    "[[Aug(ustus) Germanicus]]</a>",
     "pontifex maxim(us)",
     "trib(unicia) potest(ate) [[XII]]",
     "imp(erator) [[XX]]II co(n)s(ul) [[XV]]I",
@@ -49,7 +49,7 @@
     }
   },
   "people": [
-    "Imperator Domitianus (https://en.wikipedia.org/wiki/Domitian )"
+    "<a href='https://en.wikipedia.org/wiki/Domitian'>Imperator Domitianus</a>"
   ],
   "actions": [
     "domitianus_build93",

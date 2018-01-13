@@ -12,9 +12,9 @@
   ],
   "transcription": [
     "Liberteis hisce fecere",
-    "patrono <a href='../api/people/quintus_ovius_bargates'>Q(uintus) Ovi(us)</a> Q(uinti) l(ibertus) Barg(ates?)",
-    "Q(uintus) Nadiacus Q(uintus) Pilon(icus)",
-    "Q(uintus) Ovi(us) C(ai) f(ilius) Freg(ellanus) hic sepult(us)",
+    "patrono <a href='../api/people/quintus_ovius_bargates'>Q(uintus) Ovi(us)</a> Q(uinti) l(ibertus) Barg(ates?)</a>",
+    "<a href='../api/people/quintus_ovius_nadiacus'>Q(uintus) Nadiacus</a> <a href='../api/people/quintus_ovius_pilonicus'>Q(uintus) Pilon(icus)</a>",
+    "<a href='../api/people/quintus_ovius_fregellanus'>Q(uintus) Ovi(us) C(ai) f(ilius) Freg(ellanus)</a> hic sepult(us)",
     "quod suis dedit appare(t)"
   ],
   "translation": [

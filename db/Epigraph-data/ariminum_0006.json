@@ -10,7 +10,7 @@
   ],
   "transcription": [
     "Senatus Populusq[ue Romanus]",
-    "[Imp(eratori) Caesari divi f(ilio) Augusto imp(eratori) sept(imo) ...]",
+    "[Imp(eratori) <a href='https://en.wikipedia.org/wiki/Augustus'>Caesari divi f(ilio) Augusto</a> imp(eratori) sept(imo) ...]",
     "co(n)s(uli) sept(imo) designat(o) octavom v[ia Flamin]ia [et reliquei]s",
     "celeberrimeis Italiae vieis consilio [et sumptib]us [eius mu]niteis"
   ],
@@ -37,7 +37,7 @@
     }
   },
   "people": [
-    "Augustus (https://en.wikipedia.org/wiki/Augustus )"
+    "<a href='https://en.wikipedia.org/wiki/Augustus'>Augustus</a>"
   ],
   "actions": [
     "augustusarch_ariminum"
