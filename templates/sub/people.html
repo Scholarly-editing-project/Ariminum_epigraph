@@ -219,50 +219,55 @@
 				dataType: 'json',
 				url: url
 			}).done(function (person) {
-				person = person[0]
 
-				// Id
-				$('#person__name').text(person['_id'])
+				if (person.length > 0) {
 
-				// Name
-				$('#person_praenomen').text(person.name.praenomen)
-				$('#person__nomen').text(person.name.nomen)
-				$('#person__cognomen').text(person.name.cognomen)
+					person = person[0]
 
-				// General metadata
-				$('#person__gender').text(person.gender)
-				$('#person__age').text(person.age)
-				$('#person__status').text(person.social_status)
-				$('#person__city').text(person.city)
+					// Id
+					$('#person__name').text(person['_id'])
 
-				// Relations
-				$('#person__relations').html('')
-				person.relation.forEach(function (relation) {
-					$('#person__relations').append(
-						`<li>
-							${relation.is}: <strong>${relation.person}</strong> 
-						</li>`)
+					// Name
+					$('#person_praenomen').text(person.name.praenomen)
+					$('#person__nomen').text(person.name.nomen)
+					$('#person__cognomen').text(person.name.cognomen)
+
+					// General metadata
+					$('#person__gender').text(person.gender)
+					$('#person__age').text(person.age)
+					$('#person__status').text(person.social_status)
+					$('#person__city').text(person.city)
+
+					// Relations
+					$('#person__relations').html('')
+					person.relation.forEach(function (relation) {
+						$('#person__relations').append(
+							`<li>
+								${relation.is}: <strong><a href="/people/${relation.person}">${relation.person}</a></strong> 
+							</li>`
+						)
+					})
 					if (!person.relation.length)
 						$('#person__relations').html('<p>Not given</p>')
-				})
 
-				// Carreer
-				$('#person__career').html('')
-				person.career.forEach(function (single_career) {
-					$('#person__career').append(
-						`<li>
-							<p>${single_career.role} ${single_career.grade? '('+single_career.grade+')':''} in ${single_career.place} [${single_career.category}].</p>
-						</li>`
-					)
-					if (!person.career.length)
+					// Carreer
+					$('#person__career').html('')
+					person.career.forEach(function (single_career) {
+						$('#person__career').append(
+							`<li>
+								<p>${single_career.role} ${single_career.grade? '('+single_career.grade+')':''} in ${single_career.place} [${single_career.category}].</p>
+							</li>`
+						)
+					})
+					if (!person.career || !person.career.length)
 						$('#person__career').html('<p>Not given</p>')
-				})
 
-				//documents
-				$('#person__documents').html('')
-				person.documents.forEach(function (doc) {
-					$('#person__documents').append("<li><p><a href=\"../epigraph/" + doc + "\">" + doc + "</a></p></li>")
-				})
+					//documents
+					$('#person__documents').html('')
+					person.documents.forEach(function (doc) {
+						$('#person__documents').append("<li><p><a href=\"../epigraph/" + doc + "\">" + doc + "</a></p></li>")
+					})
+				}
 			})
 		});
 	</script>

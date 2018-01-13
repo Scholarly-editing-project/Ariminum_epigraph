@@ -123,7 +123,7 @@
 				<p>Inscription with abbr.</p>
 			</div>
 			<div class="card__copy">
-				<button id="btn_toggle" data-type="transcription">See transcription</button>
+				<button id="btn_toggle" data-type="transcription">See original</button>
 				<div id="inscription__audio"></div>
 			</div>
 		</div>
@@ -249,7 +249,7 @@
 			const EPIGRAPH_API_URL = '../api/epigraph/'
 			const PEOPLE_API_URL = '../api/people/'
 
-			$('#inscription__transcription').hide()
+			$('#inscription__title').hide()
 
 			var url = EPIGRAPH_API_URL + Cookies.get('epigraphy_id')
 
