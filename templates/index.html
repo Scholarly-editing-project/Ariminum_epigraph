@@ -236,6 +236,7 @@
 				}
 				//determina una nuovo elemento selezionato
 				selected = e.layer
+				map.fitBounds(e.layer.getBounds())
 				//porta il selezionato in primo piano
 				selected.bringToFront()
 				//assegna un nuovo aspetto all'elemento selezionato
@@ -309,7 +310,6 @@
 				map.removeLayer(cities);
 				map.setMaxBounds(bounds);
 				map.addLayer(overlay);
-				map.setMaxBounds(bounds);
 
 				$.ajax({
 						method: "GET",
