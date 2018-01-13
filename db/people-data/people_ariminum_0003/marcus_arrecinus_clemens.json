@@ -57,7 +57,7 @@
 		"person": "Marcus Arrecinus"
 	}],
 	"actions": [{
-		"_id": "marrecinus_exvoto",
+		"name": "marrecinus_exvoto",
 		"role": "doer"
 	}],
 	"documents": [
