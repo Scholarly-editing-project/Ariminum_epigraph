@@ -193,13 +193,17 @@
 
 	<!--script_mappa-->
 	<script id="jsbin-javascript">
+		var AriminumLayer
+
 		//crea la mappa  NB stavolta non utilizziamo una mappa di base ma impostiamo le coordinate ad una immagine
 		var map = L.map('map', {
 			maxZoom: 17, //max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa
 			minZoom: 5,
 			maxBoundsViscosity: 1, //rende solidi i confini della mappa/immagine (evita che l'utente si perda nel vuoto cosmico mentre visualizza la mappa)
 		});
+
 		map.setView([45.43, 13.18], 5); //coordinate inziali
+
 		imageBounds = [
 			[21.08, -28.04],
 			[62.12, 50.54]
@@ -218,6 +222,7 @@
 		var osm = L.tileLayer(
 			'http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', { //importa i dati da openstreetmap (inserisce giustamente i crediti al servizio OSM)
 			}).addTo(map);
+
 
 		var selected //evidenzia una provincia quando viene selezionata
 		prov.on('click', function (e) {
@@ -255,10 +260,21 @@
 		var ariminum = L.marker([44.05951, 12.56857], {
 			icon: city
 		});
+
 		ariminum.bindPopup('ARIMINUM').openPopup();
+
+		ariminum.on('mouseover', function (e) {
+			this.openPopup();
+		});
+
+		ariminum.on('mouseout', function (e) {
+			this.closePopup();
+		});
+
 		ariminum.on('click', function (eve) {
 			map.setView(eve.latlng, 13);
 		});
+		
 		var cities = L.layerGroup([ariminum]).addTo(map);
 
 
@@ -269,21 +285,62 @@
 
 		var overlay = new L.ImageOverlay("layers/Ariminum.jpg", bounds); //<!--inserisce il jpg della mappa antica in modo da sovrapporsi perfettamente alla mappa (condividendo con essa le coordinate)-->
 
+
 		map.on('zoomend', function () {
-			if (map.getZoom() < 13 && map.hasLayer(overlay)) {
+			if (map.getZoom() < 13) { //&& map.hasLayer(overlay)
 				map.addLayer(prov);
 				map.removeLayer(overlay);
 				map.setMaxBounds(imageBounds);
 				map.addLayer(cities);
-				map.removeLayer(Ariminum);
+				map.removeLayer(AriminumLayer);
 			}
-			if (map.getZoom() >= 13 && map.hasLayer(overlay) == false) {
+			if (map.getZoom() >= 13) { //&& map.hasLayer(overlay) == false
+
 				map.addLayer(overlay);
 				map.setMaxBounds(bounds);
 				map.removeLayer(prov);
 				map.removeLayer(cities);
-				map.addLayer(Ariminum);
+
+				$.ajax({
+						method: "GET",
+						dataType: 'json',
+						url: '/api/epigraph?city=Ariminum',
+					})
+					.done(function (given_epigraph) {
+
+						var markers = []
+						given_epigraph.forEach(function (given_epigraph) {
+
+							// Add the current marker only if has coordinates
+							if (typeof given_epigraph.place.geo.lat != 'undefined' && typeof given_epigraph.place.geo.len !=
+								'undefined') {
+
+								try {
+									// Create marker
+									var marker = L.marker([parseFloat(given_epigraph.place.geo.lat), parseFloat(given_epigraph.place.geo.len)], {
+										icon: epigraph
+									})
+
+									// Update text showed as popup
+									var text = `<b>${given_epigraph['_id']}</b><br>`
+									given_epigraph.transcription.forEach(function (line) {
+										text += `${line}<br>`
+									})
+									text += `<a href="/epigraph/${given_epigraph['_id']}">Navigate to page</a>`
+
+									marker.bindPopup(text)
+
+									markers.push(marker)
+								} catch (exception) {}
+
+							}
+						})
+
+						AriminumLayer = L.layerGroup(markers);
+						map.addLayer(AriminumLayer);
+					})
 			}
+
 		});
 
 		var epigraph = L.icon({
@@ -304,10 +361,14 @@
 			iconSize: [50, 50],
 		});
 
+		map.addLayer(overlay);
+		map.setMaxBounds(bounds);
+		//map.addLayer(Ariminum);
+
 		//<!--crea marker con: coordinate, icona e popup al click-->
 		//<!--piccolo problema, per qualche motivo all'avvio c'è sempre un popup aperto (l'ultimo della lista ad essere stato creato-->
 
-
+		/*
 		var Surgeon_Domus = L.marker([44.06225, 12.56768], {
 			icon: place
 		});
@@ -361,7 +422,8 @@
 		var Ariminum_0001 = L.marker([44.05497, 12.57252], {
 			icon: epigraph
 		});
-		Ariminum_0001.bindPopup(`
+		Ariminum_0001.bindPopup(
+			`
 			<b>ARIMINUM_0001</b><br><br>
 			Liberteis hisce fecere<br>
 			patrono Q(uintus) Ovi(us) Q(uinti) l(ibertus) Barg(ates?)<br>
@@ -435,15 +497,17 @@
 		});
 		Ariminum_0012.bindPopup(
 			'C(aius) Obulcius C(ai) f(ilius) M(anius) Octavius M(ani) [filius] Duovir(i) Hoc opus fac(iundum) curaverunt').openPopup();
+		*/
 
 
-
+		/*
 		var documents = L.layerGroup([Ariminum_0001, Ariminum_0002, Ariminum_0003, Ariminum_0006, Ariminum_0007,
 			Ariminum_0008, Ariminum_0009, Ariminum_0010, Ariminum_0011, Ariminum_0012
 		]);
 
 
 		var Ariminum = L.layerGroup([roads, places, documents]);
+		*/
 	</script>
 </body>
 
