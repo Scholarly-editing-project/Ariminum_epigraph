@@ -51,16 +51,20 @@
 	<article class="panel">
 		<div class="panel__copy">
 			<p class="description__event" align="center">
-				Praenomen:
-				<strong id="person_praenomen"></strong>
+				Gender:
+				<strong id="person__gender"></strong>
 			</p>
 			<p class="description__event" align="center">
-				Nomen:
-				<strong id="person__nomen"></strong>
+				Age:
+				<strong id="person__age"></strong>
 			</p>
 			<p class="description__event" align="center">
-				Cognomen:
-				<strong id="person__cognomen"></strong>
+				Social status:
+				<strong id="person__status"></strong>
+			</p>
+			<p class="description__event" align="center">
+				City:
+				<strong id="person__city"></strong>
 			</p>
 		</div>
 	</article>
@@ -70,28 +74,6 @@
 		<div class="cover__caption">
 		</div>
 	</section>
-
-	<article class="panel">
-		<div class="panel__copy" style="margin-top:0px;">
-			<h2>General metadata</h2>
-			<ul type="square">
-				<li>Gender:
-					<strong id="person__gender"></strong>
-				</li>
-				<li>Age:
-					<strong id="person__age"></strong>
-				</li>
-				<li>Social status:
-					<strong id="person__status"></strong>
-				</li>
-				<li>City:
-					<strong id="person__city"></strong>
-				</li>
-			</ul>
-		</div>
-	</article>
-
-	<hr style="position:relative; top:-40px;">
 
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
@@ -116,13 +98,7 @@
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>Actions</h2>
-			<ul type="square">
-				<li id="metadata__actions">
-					<strong>Role:</strong>
-				</li>
-				<li id="metadata__actions">
-					<strong>Name:</strong>
-				</li>
+			<ul type="square" id="person__actions">
 			</ul>
 		</div>
 	</article>
@@ -225,7 +201,11 @@
 					person = person[0]
 
 					// Id
-					$('#person__name').text(person['_id'])
+					$('#person__name').text(
+						`	${person.name.praenomen?person.name.praenomen:''} 
+							${person.name.nomen?person.name.nomen:''} 
+							${person.name.cognomen?person.name.cognomen:''}`
+					)
 
 					// Name
 					$('#person_praenomen').text(person.name.praenomen)
@@ -241,11 +221,28 @@
 					// Relations
 					$('#person__relations').html('')
 					person.relation.forEach(function (relation) {
-						$('#person__relations').append(
-							`<li>
-								${relation.is}: <strong><a href="/people/${relation.person}">${relation.person}</a></strong> 
-							</li>`
-						)
+
+						var peopleUrl = '../api/people/' + relation.person
+
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: peopleUrl,
+							success: function (person) {
+								var person = person[0]
+								$('#person__relations').append(
+									`<li><p>${relation.is} <a href="../people/${person['_id']}">
+									${person.name.praenomen?person.name.praenomen:''} 
+									${person.name.nomen?person.name.nomen:''} 
+									${person.name.cognomen?person.name.cognomen:''}</a></p>`
+								)
+							},
+							error: function (err) {
+								$('#person__relations').append(
+									`<li><p>${relation.is} ${relation.person}</p>`
+								)
+							}
+						})
 					})
 					if (!person.relation.length)
 						$('#person__relations').html('<p>Not given</p>')
@@ -255,14 +252,42 @@
 					person.career.forEach(function (single_career) {
 						$('#person__career').append(
 							`<li>
-								<p>${single_career.role} ${single_career.grade? '('+single_career.grade+')':''} in ${single_career.place} [${single_career.category}].</p>
+								<p>${single_career.role} 
+									${single_career.grade? '('+single_career.grade+')':''} in 
+									${single_career.place} 
+									[${single_career.category}].</p>
 							</li>`
 						)
 					})
 					if (!person.career || !person.career.length)
 						$('#person__career').html('<p>Not given</p>')
 
-					//documents
+					// Actions
+
+					/*
+						"actions": [{
+							"role": "receiver",
+							"name": "dedication_qoviusfreg"
+						}],
+					*/
+
+					$('#person__actions').html('')
+					person.actions.forEach(function (action) {
+						var actionUrl = '../api/actions/' + action.name
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: actionUrl,
+							success: function (retrievedAction) {
+								retrievedAction = retrievedAction[0]
+								$('#person__actions').append(`<li><p>${action.role} of ${retrievedAction.title}</p></li>`)
+							}
+						})
+					})
+					if (!person.actions || !person.actions.length)
+						$('#person__actions').html('<p>Not given</p>')
+
+					// Documents
 					$('#person__documents').html('')
 					person.documents.forEach(function (doc) {
 						$('#person__documents').append("<li><p><a href=\"../epigraph/" + doc + "\">" + doc + "</a></p></li>")
