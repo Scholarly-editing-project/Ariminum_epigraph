@@ -95,24 +95,10 @@ app.get('/api/epigraph', (req, res) => {
 
   MONGODB.findEpigraphs(filter, (err, epigraphs) => {
 
-    if (err) throw err
+    if (err)
+      res.status(err.STATUS).send(err.body)
 
     res.send(epigraphs)
-  })
-})
-
-/**
- * Get the entire list of epigraphs
- */
-app.get('/api/people', (req, res) => {
-
-  let filter = {}
-
-  MONGODB.findPeople(filter, (err, people) => {
-
-    if (err) throw err
-
-    res.send(people)
   })
 })
 
@@ -128,10 +114,28 @@ app.get('/api/epigraph/:id', (req, res) => {
   MONGODB.findEpigraphs(filter, (err, epigraph) => {
 
     // Throw given errors
-    if (err) throw err
+    if (err)
+      res.status(err.STATUS).send(err.body)
 
     // Or send back JSON object
     res.send(epigraph)
+  })
+})
+
+/**
+ * Get the entire list of epigraphs
+ */
+app.get('/api/people', (req, res) => {
+
+  let filter = {}
+
+  MONGODB.findPeople(filter, (err, people) => {
+
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
+
+    res.send(people)
   })
 })
 
@@ -146,43 +150,12 @@ app.get('/api/people/:id', (req, res) => {
 
   MONGODB.findPeople(filter, (err, people) => {
 
-    if (err) throw err
+    // Throw given errors
+    if (err)
+      res.status(err.STATUS).send(err.body)
 
     res.send(people)
   })
-})
-
-/**
- * 
- * @param {*} id 
- * @param {*} callback 
- */
-function getEpigraphById(id, callback) {
-
-  let filter = {
-    '_id': id
-  }
-
-  MONGODB.findEpigraphsByFilter(filter, (err, epigraph) => {
-
-    // Throw given errors
-    if (err) callback(err)
-
-    // Or send back JSON object
-    callback(null, epigraph)
-  })
-}
-
-/**
- * If none of the precedent methods are called show 404 Error
- */
-app.use((req, res, next) => {
-
-  // Update HTTP code to "404 Not Found"
-  res.status(404)
-
-  // Return 404 error
-  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.PAGES.NOT_FOUND}`)
 })
 
 /**
