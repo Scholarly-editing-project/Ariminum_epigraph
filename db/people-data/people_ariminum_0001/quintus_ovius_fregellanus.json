@@ -6,29 +6,29 @@
 		"nomen": "Ovius",
 		"cognomen": "Fregellanus"
 	},
-	"gender": "male",
-	"age": "unknown",
-	"social_status": "roman citizen",
+	"gender": "Male",
+	"age": "Unknown",
+	"social_status": "Roman Citizen",
 	"city": "Ariminum",
 	"relation": [{
-			"is": "son of",
+			"is": "Son of",
 			"person": "Caius Ovius Fregellanus"
 		},
 		{
-			"is": "patronus of",
+			"is": "Patronus of",
 			"person": "quintus_ovius_bargates"
 		},
 		{
-			"is": "patronus of",
+			"is": "Patronus of",
 			"person": "quintus_ovius_nadiacus"
 		},
 		{
-			"is": "patronus of",
+			"is": "Patronus of",
 			"person": "quintus_ovius_pilonicus"
 		}
 	],
 	"actions": [{
-		"role": "receiver",
+		"role": "Receiver",
 		"name": "dedication_qoviusfreg"
 	}],
 	"documents": [

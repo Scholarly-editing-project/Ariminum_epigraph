@@ -11,11 +11,11 @@
 	"social_status": "libertus",
 	"city": "Ariminum",
 	"relation": [{
-		"is": "libertus of",
+		"is": "Libertus of",
 		"person": "quintus_ovius_fregellanus"
 	}],
 	"actions": [{
-		"role": "doer",
+		"role": "Doer",
 		"name": "dedication_qoviusfreg"
 	}],
 	"documents": [
