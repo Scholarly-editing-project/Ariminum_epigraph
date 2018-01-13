@@ -207,8 +207,6 @@
 			[21.08, -28.04],
 			[62.12, 50.54]
 		]; //confini della mappa/immagine, praticamente un rettangolo generato dalla sua diagonale
-		map.on("zoomstart", function(){
-		zoomLev = map.getZoom(6)})
 		map.setMaxBounds(imageBounds);
 		prov = L.geoJson(provinces).addTo(map); //carica il geojson che disegna le province dell'impero
 		prov.eachLayer(function (layer) {
