@@ -111,7 +111,7 @@
 				<p>Inscription with abbr.</p>
 			</div>
 			<div class="card__copy">
-				<button id="btn_toggle" data-type="transcription">See original</button>
+				<button id="btn_toggle" data-type="original">See original</button>
 				<div id="inscription__audio"></div>
 			</div>
 		</div>
@@ -290,10 +290,15 @@
 
 
 					$('#inscription__audio').html(
-						`	Classic
+						`	<p>Listen the classic reading
 							<audio controls >
-								<source src="../audio/${epigraph['_id']}.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-							</audio>
+								<source src="../audio/${epigraph['_id']}A.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+							</audio></p>
+
+							<p>Listen the ecclesiastic reading
+							<audio controls >
+								<source src="../audio/${epigraph['_id']}B.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+							</audio></p>
 						`
 					)
 
