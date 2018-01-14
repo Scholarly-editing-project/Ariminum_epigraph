@@ -244,6 +244,19 @@
 
 			var url = EPIGRAPH_API_URL + Cookies.get('epigraphy_id')
 
+			$('#inscription__audio').html(
+				`	<p>Listen the classic reading
+							<audio controls >
+								<source src="../audio/${Cookies.get('epigraphy_id')}A.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+							</audio></p>
+
+							<p>Listen the ecclesiastic reading
+							<audio controls >
+								<source src="../audio/${Cookies.get('epigraphy_id')}B.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+							</audio></p>
+						`
+			)
+
 			$('#btn_toggle').on('click', function (e) {
 				e.preventDefault()
 
@@ -287,20 +300,6 @@
 					$('#inscription__code').text(epigraph['_id'])
 					$('#inscription__cil').text('CIL: ' + epigraph['cil'])
 					$('#inscription__api').attr('href', url)
-
-
-					$('#inscription__audio').html(
-						`	<p>Listen the classic reading
-							<audio controls >
-								<source src="../audio/${epigraph['_id']}A.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-							</audio></p>
-
-							<p>Listen the ecclesiastic reading
-							<audio controls >
-								<source src="../audio/${epigraph['_id']}B.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-							</audio></p>
-						`
-					)
 
 					$('#inscription__repository').text(epigraph.repository)
 					$('#inscription__support').text(epigraph.support)
