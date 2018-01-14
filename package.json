@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "The SEDA project",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.9.1",
+    "npm": "^4.2.0"
   },
   "main": "index.js",
   "scripts": {

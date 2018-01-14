@@ -145,7 +145,7 @@
 				<h3>
 					<a>Groups</a>
 				</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
+				<p>TODO (?)
 				</p>
 			</div>
 		</div>
@@ -155,7 +155,8 @@
 				<h3>
 					<a>Events</a>
 				</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis sequi incidunt optio, asperiores dolorum ratione excepturi.
+				<p>
+					<ul id="inscription__events"></ul>
 				</p>
 			</div>
 		</div>
@@ -349,6 +350,18 @@
 							console.log(error)
 						})
 					})
+
+					for (let action of epigraph.actions) {
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: `../api/actions/${action}`,
+							success: function (action) {
+								action = action[0]
+								$('#inscription__events').append(`<li><p><a href="../action/${action._id}">${action.title}</a></p></li>`)
+							}
+						})
+					}
 				})
 		})
 	</script>
