@@ -80,6 +80,12 @@ app.get('/action/:id', (req, res) => {
   res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EVENTS}`)
 })
 
+app.get('/action/:id', (req, res) => {
+
+  res.cookie("action_id", req.params.id)
+  res.sendFile(`${DIRNAME}/${CONSTANTS.FOLDERS.TEMPLATES}/${CONSTANTS.FOLDERS.SUB_FOLDER}/${CONSTANTS.PAGES.EVENTS}`)
+})
+
 /**
  * Get the entire list of epigraphs
  */

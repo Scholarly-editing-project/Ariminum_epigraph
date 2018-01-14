@@ -42,7 +42,7 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 style="font-weight:100;">Events</h1>
+				<h1 id="action__title" style="font-weight:100;"></h1>
 			</div>
 		</div>
 	</section>
@@ -50,9 +50,22 @@
 
 	<article class="panel">
 		<div class="panel__copy">
-			<p class="description__event" id="type__event" align="center"><strong>Type:</strong></p>
-			<p class="description__event" id="doer__event" align="center"><strong>Doer/doers:</strong></p>
-			<p class="description__event" id="reciver__event" align="center"><strong>Reciver:</strong></p>
+			<p class="description__event" id="type__event" align="center">
+				Category:
+				<strong id="action__category"></strong>
+			</p>
+			<p class="description__event" id="doer__event" align="center">
+				Doer(s):
+				<strong id="action__doer"></strong>
+			</p>
+			<p class="description__event" id="reciver__event" align="center">
+				Receiver(s):
+				<strong id="action__receiver"></strong>
+			</p>
+			<p class="description__event" id="reciver__event" align="center">
+				Document:
+				<strong id="action__document"></strong>
+			</p>
 		</div>
 	</article>
 
@@ -65,24 +78,7 @@
 	<article class="panel">
 		<div class="panel__copy" style="margin-top:0px;">
 			<h2>Description</h2>
-			<p id="description__of__this__event">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga quae aperiam eaque id, illum delectus repudiandae natus
-				minus, ullam! Impedit excepturi quaerat delectus provident consectetur laboriosam deleniti at, temporibus.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga quae aperiam eaque id, illum delectus repudiandae natus
-				minus, ullam! Impedit excepturi quaerat delectus provident consectetur laboriosam deleniti at, temporibus.</p>
-		</div>
-	</article>
-
-	<hr style="position:relative; top:-40px;">
-
-	<article class="panel">
-		<div class="panel__copy" style="margin-top:0px;">
-			<h2>Documents</h2>
-			<ul type="square">
-				<li id="documents__event">Document 1</li>
-				<li id="documents__event">Document 2</li>
-				<li id="documents__event">Document 3</li>
-				<li id="documents__event">Document 4</li>
-			</ul>
+			<p id="action__description"></p>
 		</div>
 	</article>
 
@@ -150,6 +146,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<script>
 		$(document).ready(function () {
 
@@ -159,6 +156,55 @@
 				e.preventDefault();
 
 			});
+
+			function elaborateName({
+				praenomen,
+				nomen,
+				cognomen = ''
+			}) {
+				return `${praenomen} ${nomen} ${cognomen}`
+			}
+
+			$.ajax({
+				method: "GET",
+				dataType: 'json',
+				url: `../api/actions/${Cookies.get('action_id')}`,
+				success: function (action) {
+					action = action[0]
+
+					$('#action__title').text(action.title)
+					$('#action__category').text(action.category)
+
+					for (let doer of action['doer/s']) {
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: `../api/people/${doer}`,
+							success: function (person) {
+								person = person[0].name
+								$('#action__doer').append(`<a href="../people/${doer}">${elaborateName(person)}</a>, `)
+							}
+						})
+					}
+
+					for (let receiver of action['receiver/s']) {
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: `../api/people/${receiver}`,
+							success: function (person) {
+								person = person[0].name
+								$('#action__receiver').append(`<a href="../people/${receiver}">${elaborateName(person)}</a>, `)
+							}
+						})
+					}
+
+					for (let line of action.description)
+						$('#action__description').append(`${line} <br>`)
+
+					$('#action__document').html(`<a href="../epigraph/${action.documents[0]}">${action.documents[0]}</a>`)
+				}
+			})
 		});
 	</script>
 

@@ -280,7 +280,7 @@
 							url: actionUrl,
 							success: function (retrievedAction) {
 								retrievedAction = retrievedAction[0]
-								$('#person__actions').append(`<li><p>${action.role} of <a href="../api/actions/${action.name}">${retrievedAction.title}</a></p></li>`)
+								$('#person__actions').append(`<li><p>${action.role} of <a href="../action/${action.name}">${retrievedAction.title}</a></p></li>`)
 							}
 						})
 					})
