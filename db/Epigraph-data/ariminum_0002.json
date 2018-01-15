@@ -54,12 +54,12 @@
   ],
   "date": "1BC~2BC",
   "bibliographies": [{
-    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
-    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
-	},
-	{
-	"citation": "Mansuelli, Guido Achille. 1950. De lapide milliario Augusti Caesaris nomine inscripto iuxta Ariminum reperto ,in Epigraphica 12, 131-134."
-	"uri": "http://www.epigraphica.org/35/1950.html"
-	}
+      "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+      "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+    },
+    {
+      "citation": "Mansuelli, Guido Achille. 1950. De lapide milliario Augusti Caesaris nomine inscripto iuxta Ariminum reperto ,in Epigraphica 12, 131-134.",
+      "uri": "http://www.epigraphica.org/35/1950.html"
+    }
   ]
 }
