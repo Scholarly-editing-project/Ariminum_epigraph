@@ -1,59 +1,59 @@
  {
-   "_id": "ariminum_0005",
-   "cil": "Not given",
-   "title": [
-     "SEPTIMIAE VENERIAE",
-     "NAT NORIC CONIVG",
-     "DVL QUAE VIX ANNIS",
-     "XXXX T F MARCELLUS",
-     "VETER AUGGG"
-   ],
-   "transcription": [
-     "<a href='../people/quintus_ovius_bargates'>Septimiae Veneriae</a>",
-     "nat(ione) Noric(ae) coniugi",
-     "dulc(issimae) quae vix(it) annis",
-     "XXXX <a href='../people/quintus_ovius_bargates'>T(itus) Fl(avius) Marcellus</a>",
-     "veter(anus) Aug(ustorum)"
-   ],
-   "translation": [
-     "To Septimia Veneria,",
-     "from the country of Noricum,",
-     "very sweet wife that lived forty years.",
-     "(made by) Titus Flavius Marcellus,",
-     "veteran of the two Impeators."
-   ],
-   "repository": "Lapidario Romano Rimini",
-   "support": "Urn",
-   "material": "Not Avaiable",
-   "size": {
-     "structure": ["Description: ", "Base: 0.37 mt x 0.54 mt x 0.45 mt"],
-     "letters": "0.028~0.026 mt"
-   },
-   "place": {
-     "ancient": "Ariminum",
-     "modern": "Rimini",
-     "geo": {
-       "accuracy": "Medium",
-       "lat": "Fornace fabbri",
-       "len": "Fornace fabbri"
-     }
-   },
-   "people": [
-     "septimiae_veneriae",
-     "titus_flavius_marcellus",
-     "Two Imperators: <a href='https://en.wikipedia.org/wiki/Marcus_Aurelius'>Marcus Aurelius</a> and <a href='https://en.wikipedia.org/wiki/Lucius_Verus'>Lucius Verus</a>"
-   ],
-   "actions": [
-     "septveneria_dedication"
-   ],
-   "date": "3rd Century A.D.",
-   "bibliographies": [{
-       "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
-       "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
-     },
-     {
-       "citation": "Graziosi, Anna. 1962. Iscrizioni romane di Rimini. Testi inediti, in 'Studi Romagnoli 13', 158-159.",
-       "uri": "http://www.istitutodatini.it/biblio/riviste/r-t/st-rmgn.htm"
-     }
-   ]
- }
+  "_id": "ariminum_0005",
+  "cil": "Not given",
+  "title": [
+    "SEPTIMIAE VENERIAE",
+    "NAT NORIC CONIVG",
+    "DVL QUAE VIX ANNIS",
+    "XXXX T F MARCELLUS",
+    "VETER AUGGG"
+  ],
+  "transcription": [
+    "<a href='../people/quintus_ovius_bargates'>Septimiae Veneriae</a>",
+    "nat(ione) Noric(ae) coniugi",
+    "dulc(issimae) quae vix(it) annis",
+    "XXXX <a href='../people/quintus_ovius_bargates'>T(itus) Fl(avius) Marcellus</a>",
+    "veter(anus) Aug(ustorum)"
+  ],
+  "translation": [
+    "To Septimia Veneria,",
+    "from the country of Noricum,",
+    "very sweet wife that lived forty years.",
+    "(made by) Titus Flavius Marcellus,",
+    "veteran of the two Impeators."
+  ],
+  "repository": "Lapidario Romano Rimini",
+  "support": "Urn",
+  "material": "Not Avaiable",
+  "size": {
+    "structure": ["Description: ", "Base: 0.37 mt x 0.54 mt x 0.45 mt"],
+    "letters": "0.028~0.026 mt"
+  },
+  "place": {
+    "ancient": "Ariminum",
+    "modern": "Rimini",
+    "geo": {
+      "accuracy": "Medium",
+      "lat": "44.0529736",
+      "len": "12.5643885"
+    }
+  },
+  "people": [
+    "septimiae_veneriae",
+    "titus_flavius_marcellus",
+    "Two Imperators: <a href='https://en.wikipedia.org/wiki/Marcus_Aurelius'>Marcus Aurelius</a> and <a href='https://en.wikipedia.org/wiki/Lucius_Verus'>Lucius Verus</a>"
+  ],
+  "actions": [
+    "septveneria_dedication"
+  ],
+  "date": "3rd Century A.D.",
+  "bibliographies": [{
+    "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
+    "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
+  },
+  {
+	"citation": "Graziosi, Anna. 1962. Iscrizioni romane di Rimini. Testi inediti, in 'Studi Romagnoli 13', 158-159."
+	"uri": "http://www.istitutodatini.it/biblio/riviste/r-t/st-rmgn.htm"
+  }
+  ]
+}
