@@ -193,8 +193,7 @@ Cover
   height: 50%;
   background-image: url("../img/mappa_contatti.jpg");
   background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
+  
   background-position: center center;
   position: relative;
 }
