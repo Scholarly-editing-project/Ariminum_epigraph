@@ -50,5 +50,10 @@
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
-  }]
+  },
+  {
+	"citation": "Graziosi, Anna. 1962. Iscrizioni romane di Rimini. Testi inediti, in 'Studi Romagnoli 13', 158-159."
+	"uri": "http://www.istitutodatini.it/biblio/riviste/r-t/st-rmgn.htm"
+  }
+  ]
 }

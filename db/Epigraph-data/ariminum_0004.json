@@ -59,5 +59,10 @@
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
-  }]
+  },
+  {
+	"citation": "Alföldy Géza. 2002. Zu kaiserlichen Bauinschriften aus Italien, in 'Epigraphica 64', 138."
+	"uri": "http://www.epigraphica.org/99/2002.html"
+  }
+  ]
 }

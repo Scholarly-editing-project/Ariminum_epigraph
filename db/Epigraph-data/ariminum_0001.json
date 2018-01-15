@@ -61,5 +61,13 @@
   "bibliographies": [{
     "citation": "Donati, Angela. 1981. Il Lapidario romano: Rimini antica. Rimini: Comune di Rimini, Assessorato alla cultura, Musei della città.",
     "uri": "https://www.worldcat.org/title/lapidario-romano-rimini-antica/oclc/949079595"
-  }]
+	},
+	{
+	"citation": "Aurigemma Salvatore. 1941. Due epigrafi riminesi, in 'Epigraphica 3', 14-22."
+	"uri": "http://www.epigraphica.org/32/1941.html"
+	},
+	{
+	"citation": "Degrassi Attilio. 1941. Il monumento riminese di Q. Ovius Fregellanus, in 'Athenaeum 19', 133-140.",
+	} 
+  ]
 }
