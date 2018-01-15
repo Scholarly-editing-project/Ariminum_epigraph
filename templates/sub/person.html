@@ -51,6 +51,18 @@
 	<article class="panel">
 		<div class="panel__copy">
 			<p class="description__event" align="center">
+				Praenomen:
+				<strong id="person__praenomen"></strong>
+			</p>
+			<p class="description__event" align="center">
+				Nomen:
+				<strong id="person__nomen"></strong>
+			</p>
+			<p class="description__event" align="center">
+				Cognomen:
+				<strong id="person__cognomen"></strong>
+			</p>
+			<p class="description__event" align="center">
 				Gender:
 				<strong id="person__gender"></strong>
 			</p>
@@ -205,7 +217,7 @@
 					)
 
 					// Name
-					$('#person_praenomen').text(person.name.praenomen)
+					$('#person__praenomen').text(person.name.praenomen)
 					$('#person__nomen').text(person.name.nomen)
 					$('#person__cognomen').text(person.name.cognomen)
 
@@ -277,7 +289,8 @@
 							url: actionUrl,
 							success: function (retrievedAction) {
 								retrievedAction = retrievedAction[0]
-								$('#person__actions').append(`<li><p>${action.role} of <a href="../action/${action.name}">${retrievedAction.title}</a></p></li>`)
+								$('#person__actions').append(
+									`<li><p>${action.role} of <a href="../action/${action.name}">${retrievedAction.title}</a></p></li>`)
 							}
 						})
 					})
