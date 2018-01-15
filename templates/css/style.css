@@ -135,6 +135,10 @@ Header
   max-width: 300px;
 }
 
+.banner__image img{
+  max-width: 300px
+}
+
 .hidden {
   display: none;
 }

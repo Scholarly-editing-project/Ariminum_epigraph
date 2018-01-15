@@ -42,19 +42,19 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 id="inscription__code" style="font-weight:100;">Inscription ID</h1>
-				<h2 id="inscription__cil">Inscription CIL</h2>
+				<h1 id="inscription__code" style="font-weight:100;"></h1>
+				<h2 id="inscription__cil"></h2>
 			</div>
 		</div>
 	</section>
 
 	<article class="panel">
 		<div class="panel__copy">
+			<p>Bibliographies:
+				<ul id="inscription__biblio" type="square"></ul>
+			</p>
 			<p>See the description in Json format from
 				<a target="_blank" id="inscription__api">HERE</a>.</p>
-			<p>See the bibliographies from
-				<a>HERE</a>.</p>
-			</p>
 		</div>
 	</article>
 
@@ -67,7 +67,8 @@
 	<section class="banner clearfix" style="
     position:  relative;
     margin-left: 287px;">
-		<div class="banner__image"></div>
+		<div id="inscription__img" class="banner__image">
+		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
 				<p>Repository:
@@ -298,8 +299,11 @@
 				.done(function (epigraph) {
 					epigraph = epigraph[0]
 
+					let src = `../img/epigraphs/${epigraph._id}.jpg`
+					$('#inscription__img').append(`<img src="${src}" alt="Photo fo the epigraph"/>`)
+
 					$('#inscription__code').text(epigraph['_id'])
-					$('#inscription__cil').text('CIL: ' + epigraph['cil'])
+					$('#inscription__cil').text('CIL ' + epigraph['cil'])
 					$('#inscription__api').attr('href', url)
 
 					$('#inscription__repository').text(epigraph.repository)
@@ -313,6 +317,11 @@
 					} else
 						$('#inscription_cil_image').replaceWith('<p>CIL image not given</p>')
 
+					for (let biblio of epigraph.bibliographies) {
+						if (typeof biblio.uri != 'undefined')
+							$('#inscription__biblio').append(
+								`<li><p><a target="_blank" href="${biblio.uri}">${biblio.citation}</a></p></li>`)
+					}
 
 					$('#inscription__title').html('')
 					epigraph.title.forEach(function (line) {
