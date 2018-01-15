@@ -67,17 +67,17 @@
 	<section class="banner clearfix" style="
     position:  relative;
     margin-left: 287px;">
-		<div id="inscription__img" class="banner__image">
+		<div class="banner__image">
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
 				<p>Repository:
 					<b id="inscription__repository"></b>
 				</p>
-				<p>support:
+				<p>Support:
 					<b id="inscription__support"></b>
 				</p>
-				<p>material:
+				<p>Material:
 					<b id="inscription__material"></b>
 				</p>
 				<p>Place:
@@ -93,12 +93,12 @@
 	<section class="cards clearfix">
 		<div class="card">
 			<div class="card__copy">
-				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">CIL IMAGE</p>
+				<p style="font-size: 30px; letter-spacing:7px; line-height:150%;">PHOTO</p>
 			</div>
 			<div class="card__copy">
-				<a target="_blank" id="inscription_cil_image" href="">
-					<img src="" alt="CIL screenshot">
-				</a>
+				<p target="_blank">
+					<a id="inscription__img" target="_blank" href=""></a>
+				</p>
 			</div>
 		</div>
 		<div class="card">
@@ -130,26 +130,22 @@
 
 	<section class="cards clearfix">
 		<div class="card">
+			<a id="inscription_cil_image" href="">
+				<img src="" alt="Screenshot of the CIL">
+			</a>
+		</div>
+		<div class="card">
 			<img class="card__image__epigraph" src="../img/rimini__personaggi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
 					<a>Characters</a>
 				</h3>
 				<p>
-					<ul id="inscription__people"></ul>
+					<ul type="square" id="inscription__people"></ul>
 				</p>
 			</div>
 		</div>
-		<div class="card">
-			<img class="card__image__epigraph" src="../img/rimini__gruppi.jpg" alt="">
-			<div class="card__copy">
-				<h3>
-					<a>Groups</a>
-				</h3>
-				<p>TODO (?)
-				</p>
-			</div>
-		</div>
+
 		<div class="card">
 			<img class="card__image__epigraph" src="../img/rimini__eventi.jpg" alt="">
 			<div class="card__copy">
@@ -157,7 +153,7 @@
 					<a>Events</a>
 				</h3>
 				<p>
-					<ul id="inscription__events"></ul>
+					<ul type="square" id="inscription__events"></ul>
 				</p>
 			</div>
 		</div>
@@ -301,6 +297,7 @@
 
 					let src = `../img/epigraphs/${epigraph._id}.jpg`
 					$('#inscription__img').append(`<img src="${src}" alt="Photo fo the epigraph"/>`)
+					$('#inscription__img').attr('href', src)
 
 					$('#inscription__code').text(epigraph['_id'])
 					$('#inscription__cil').text('CIL ' + epigraph['cil'])
