@@ -169,6 +169,11 @@ Cover
   max-width: 1200px;
 }
 
+#inscription__map {
+  max-width: 400px;
+  margin-top: 60px;
+}
+
 .cover {
   height: 80%;
   background-image: url("../img/background.jpeg");
