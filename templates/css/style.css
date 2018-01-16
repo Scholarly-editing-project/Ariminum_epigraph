@@ -22,6 +22,7 @@ ol {
   text-align: justify;
 }
 
+
 /*-----------------------------
 General
 -----------------------------*/
@@ -57,6 +58,7 @@ a:hover {
 hr {
   border-top: 1px solid #fff;
 }
+
 
 /*-----------------------------
 Header
@@ -135,7 +137,7 @@ Header
   max-width: 300px;
 }
 
-#inscription__img img{
+#inscription__img img {
   max-width: 300px
 }
 
@@ -151,13 +153,21 @@ Header
   color: #ED5565 !important;
 }
 
-.leaflet-popup-content a:hover, #inscription__transcription a:hover {
+.leaflet-popup-content a:hover,
+#inscription__transcription a:hover {
   text-decoration: underline;
 }
+
 
 /*-----------------------------
 Cover
 -----------------------------*/
+
+#map {
+  min-height: 500px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
 .cover {
   height: 80%;
@@ -193,7 +203,6 @@ Cover
   height: 50%;
   background-image: url("../img/mappa_contatti.jpg");
   background-size: cover;
-  
   background-position: center center;
   position: relative;
 }
@@ -231,6 +240,7 @@ Cover
   font-size: 42px;
 }
 
+
 /*-----------------------------
 Cards
 -----------------------------*/
@@ -261,6 +271,7 @@ Cards
 .card__copy h3 {
   margin-bottom: 0;
 }
+
 
 /*-----------------------------
 Banner
@@ -306,6 +317,7 @@ Banner
   margin: 5px 0;
 }
 
+
 /*-----------------------------
 Project
 -----------------------------*/
@@ -334,6 +346,7 @@ Project
   height: auto;
 }
 
+
 /*-----------------------------
 Contact
 -----------------------------*/
@@ -346,6 +359,7 @@ input {
 textarea {
   width: 100%;
 }
+
 
 /*-----------------------------
 Ariminum page
@@ -376,6 +390,7 @@ Ariminum page
   position: relative;
 }
 
+
 /*-----------------------------
 Events page
 -----------------------------*/
@@ -385,6 +400,7 @@ Events page
   bottom: -34px;
 }
 
+
 /*-----------------------------
 Epigraph page
 -----------------------------*/
@@ -393,6 +409,7 @@ Epigraph page
   width: 100%;
   height: 270px;
 }
+
 
 /*-----------------------------
 Footer
@@ -404,6 +421,7 @@ Footer
   padding-bottom: 1px;
   letter-spacing: 1px;
 }
+
 
 /*-----------------------------
 Tablet
@@ -418,6 +436,7 @@ Tablet
   }
 }
 
+
 /*-----------------------------
 Smartphone
 -----------------------------*/
@@ -429,49 +448,42 @@ Smartphone
     width: 100%;
     min-height: 15%;
   }
-
   .header__icon-bar {
     display: block;
   }
-
   .header__menu {
     width: 100%;
     height: 0px;
     overflow: hidden;
     margin: 0;
   }
-
   .header__menu__item {
     display: block;
   }
-
   .is-open {
     height: 300px;
     overflow: auto;
   }
-
   /* Cover */
   .cover {
     height: 100%;
   }
-
   /* Cards */
   .card {
     width: 90%;
     margin: 5%;
   }
-
   /* Banner */
   .banner {
     height: 600px;
   }
-
   .banner__image,
   .banner__copy {
     width: 100%;
     height: 50%;
   }
 }
+
 
 /* clearfix */
 
@@ -488,11 +500,13 @@ Smartphone
   zoom: 1;
 }
 
+
 /* IE6 */
 
 *:first-child+html .clearfix {
   zoom: 1;
 }
+
 
 /* IE7 */
 
