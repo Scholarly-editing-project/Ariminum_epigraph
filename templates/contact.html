@@ -10,12 +10,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	
-	<!-- Mappa -->
-	<style id="jsbin-css">#map { height: 50px;}</style>  
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.css">
-	<script src="http://cdn.leafletjs.com/leaflet/v1.0.0-beta.2/leaflet.js"></script> 
-
 </head>
 
 <body>
@@ -64,7 +58,7 @@
 		</div>
 	</article>
 
-	<section class="cover2 cover--single">
+	<section class="cover2 cover--single" >
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 		</div>
@@ -87,8 +81,7 @@
 		</div>
 	</article>
 
-	<div id='map'>
-		<div class="cover__filter"></div>
+	<div class="cover4" style="position:relative;top: -30px;">
 		<div class="cover__caption">
 		</div>
 	</div>
@@ -183,7 +176,7 @@
 	<script>
 	var map = L.map('map', {
             maxZoom: 18, <!--max-min gestiscono quanto si possa zoomare avanti o indietro nella mappa-->
-            minZoom: 15,
+            minZoom: 18,
         });
         map.setView([44.49659, 11.35143], 18); <!--coordinate inziali ("settate" su Rimini)-->
 

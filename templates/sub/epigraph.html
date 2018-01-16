@@ -68,6 +68,7 @@
     position:  relative;
     margin-left: 287px;">
 		<div class="banner__image">
+			<img id="inscription__map" src="" alt="Map of where the epigraph is">
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
@@ -295,6 +296,8 @@
 					let src = `../img/epigraph/${epigraph._id}.jpg`
 					$('#inscription__img').append(`<img src="${src}" alt="Photo fo the epigraph"/>`)
 					$('#inscription__img').attr('href', src)
+
+					$('#inscription__map').attr('src',`../img/epigraphs_map/map_${epigraph._id}.jpg`)
 
 					$('#inscription__code').text(epigraph['_id'])
 					$('#inscription__cil').text('CIL ' + epigraph['cil'])
