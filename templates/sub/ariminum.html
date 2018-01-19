@@ -73,13 +73,11 @@
 		<div class="card">
 			<div class="card__copy">
 				<h3>
-					<a>All the epigraphs</a>
+					<a>Epigraphs</a>
 				</h3>
+				<h4>All epigraphs:</h4>
 				<p>
-					<ol id="epigraphs__ariminum_left" type="I" start="1">
-						<li>
-							<a href="" alt="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
+					<ol id="epigraphs__left" type="I" start="1">
 					</ol>
 				</p>
 			</div>
@@ -87,10 +85,7 @@
 		<div class="card">
 			<div class="card__copy">
 				<p>
-					<ol id="epigraphs__ariminum_right" type="I" start="5">
-						<li>
-							<a href="" alt="" id="">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
+					<ol id="epigraphs__right" type="I" start="5">
 					</ol>
 				</p>
 			</div>
@@ -105,14 +100,9 @@
 				<h3>
 					<a>People</a>
 				</h3>
+				<h4>All people:</h4>
 				<p>
-					<ol type="I" start="1">
-						<li>
-							<a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="people__left" type="I">
 					</ol>
 				</p>
 			</div>
@@ -120,14 +110,7 @@
 		<div class="card">
 			<div class="card__copy">
 				<p>
-					<ol type="I" start="5">
-						<li>
-							<a href="" alt="" id="people__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="people__right" type="I">
 					</ol>
 				</p>
 			</div>
@@ -150,53 +133,11 @@
 		<div class="card">
 			<div class="card__copy">
 				<h3>
-					<a>Groups</a>
-				</h3>
-				<p>
-					<ol type="I" start="1">
-						<li>
-							<a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-					</ol>
-				</p>
-			</div>
-		</div>
-		<div class="card">
-			<div class="card__copy">
-				<p>
-					<ol type="I" start="5">
-						<li>
-							<a href="" alt="" id="groups__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-					</ol>
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<hr>
-
-	<section class="cards clearfix">
-		<div class="card">
-			<div class="card__copy">
-				<h3>
 					<a>Events</a>
 				</h3>
+				<h4>All events:</h4>
 				<p>
-					<ol type="I" start="1">
-						<li>
-							<a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="events__left" type="I">
 					</ol>
 				</p>
 			</div>
@@ -204,21 +145,9 @@
 		<div class="card">
 			<div class="card__copy">
 				<p>
-					<ol type="I" start="5">
-						<li>
-							<a href="" alt="" id="events__ariminum">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-						</li>
-						<li>Et fuga quae aperiam eaque id, illum delectus repudiandae</li>
-						<li>natus minus, ullam! Impedit excepturi quaerat delectus</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
-						<li>provident consectetur laboriosam deleniti at, temporibus.</li>
+					<ol id="events__right" type="I">
 					</ol>
 				</p>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card__image" src="../img/rimini__eventi.jpg" alt="">
-			<div class="card__copy">
 			</div>
 		</div>
 	</section>
@@ -294,32 +223,91 @@
 
 			});
 
-			var url = '../api/epigraph?city=Ariminum'
+			const urlBase = '../'
 
 			$.ajax({
-					method: "GET",
-					dataType: 'json',
-					url: url
-				})
-				.done(function (epigraphs) {
+				method: "GET",
+				dataType: 'json',
+				url: `${urlBase}api/epigraph`,
+				success: function (epigraphs) {
 
-					$('#epigraphs__ariminum_left').html('')
-					$('#epigraphs__ariminum_right').html('')
+					$('#epigraphs__left').html('')
+					$('#epigraphs__right').html('')
+
+					let len = epigraphs.length % 2 == 0 ? epigraphs.length / 2 : epigraphs.length / 2 + 1
+					$('#epigraphs__right').attr('start', len + 1)
 					epigraphs.forEach(function (epigraph, index) {
-						if (index <= 4)
-							$('#epigraphs__ariminum_left').append(
+						if (index < len)
+							$('#epigraphs__left').append(
 								`<li><a href="../epigraph/${epigraph['_id']}" alt="" >${epigraph['_id']}</a></li>`)
-						if (index > 4 && index <= 9)
-							$('#epigraphs__ariminum_right').append(
+						if (index >= len)
+							$('#epigraphs__right').append(
 								`<li><a href="../epigraph/${epigraph['_id']}" alt="" >${epigraph['_id']}</a></li>`)
 					})
 
-					if (!$('#epigraphs__ariminum_left').children().length)
-						$('#epigraphs__ariminum_left').replaceWith('<p>Empty...</p>')
+					if (!$('#epigraphs__left').children().length)
+						$('#epigraphs__right').replaceWith('<p>Empty...</p>')
 
-					if (!$('#epigraphs__ariminum_right').children().length)
-						$('#epigraphs__ariminum_right').remove()
-				})
+					if (!$('#epigraphs__left').children().length)
+						$('#epigraphs__right').remove()
+				}
+			})
+
+			$.ajax({
+				method: "GET",
+				dataType: 'json',
+				url: `${urlBase}api/people`,
+				success: function (people) {
+
+					$('#people__left').html('')
+					$('#people__right').html('')
+
+					let len = people.length
+					$('#people__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
+					people.forEach(function (person, index) {
+						if (index <= len / 2)
+							$('#people__left').append(
+								`<li><a href="../epigraph/${person['_id']}" alt="" >${person['_id']}</a></li>`)
+						if (index > len / 2)
+							$('#people__right').append(
+								`<li><a href="../epigraph/${person['_id']}" alt="" >${person['_id']}</a></li>`)
+					})
+
+					if (!$('#people__left').children().length)
+						$('#people__right').replaceWith('<p>Empty...</p>')
+
+					if (!$('#people__left').children().length)
+						$('#people__right').remove()
+				}
+			})
+
+			$.ajax({
+				method: "GET",
+				dataType: 'json',
+				url: `${urlBase}api/actions/`,
+				success: function (events) {
+
+					$('#events__left').html('')
+					$('#events__right').html('')
+
+					let len = events.length
+					$('#events__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
+					events.forEach(function (event, index) {
+						if (index <= len / 2)
+							$('#events__left').append(
+								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
+						if (index > len / 2)
+							$('#events__right').append(
+								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
+					})
+
+					if (!$('#events__left').children().length)
+						$('#events__right').replaceWith('<p>Empty...</p>')
+
+					if (!$('#events__left').children().length)
+						$('#events__right').remove()
+				}
+			})
 		});
 	</script>
 

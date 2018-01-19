@@ -158,41 +158,6 @@
 		<div class="card">
 			<div class="card__copy">
 				<h3>
-					<a>Groups</a>
-				</h3>
-				<h4>All groups:</h4>
-				<p>
-					<ol id="groups__left" type="I">
-					</ol>
-				</p>
-			</div>
-		</div>
-		<div class="card">
-			<div class="card__copy">
-				<p>
-					<ol id="groups__right" type="I">
-					</ol>
-				</p>
-			</div>
-		</div>
-		<div class="card">
-			<img class="card__image" src="img/gruppi.jpg" alt="">
-			<div class="card__copy">
-			</div>
-		</div>
-	</section>
-
-	<hr>
-
-	<section class="cards clearfix">
-		<div class="card">
-			<img class="card__image" src="img/eventi.jpg" alt="">
-			<div class="card__copy">
-			</div>
-		</div>
-		<div class="card">
-			<div class="card__copy">
-				<h3>
 					<a>Events</a>
 				</h3>
 				<h4>All events:</h4>
@@ -210,8 +175,12 @@
 				</p>
 			</div>
 		</div>
+		<div class="card">
+			<img class="card__image" src="img/gruppi.jpg" alt="">
+			<div class="card__copy">
+			</div>
+		</div>
 	</section>
-
 
 	<footer class="footer">
 		<section class="cards clearfix">
@@ -346,28 +315,28 @@
 			$.ajax({
 				method: "GET",
 				dataType: 'json',
-				url: `${urlBase}api/groups/`,
-				success: function (groups) {
+				url: `${urlBase}api/actions/`,
+				success: function (events) {
 
-					$('#groups__left').html('')
-					$('#groups__right').html('')
+					$('#events__left').html('')
+					$('#events__right').html('')
 
-					let len = groups.length
-					$('#groups__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
-					groups.forEach(function (group, index) {
+					let len = events.length
+					$('#events__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
+					events.forEach(function (event, index) {
 						if (index <= len / 2)
-							$('#groups__left').append(
-								`<li><a href="../groups/${group['_id']}" alt="" >${group['_id']}</a></li>`)
+							$('#events__left').append(
+								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
 						if (index > len / 2)
-							$('#groups__right').append(
-								`<li><a href="../groups/${group['_id']}" alt="" >${group['_id']}</a></li>`)
+							$('#events__right').append(
+								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
 					})
 
-					if (!$('#groups__left').children().length)
-						$('#groups__right').replaceWith('<p>Empty...</p>')
+					if (!$('#events__left').children().length)
+						$('#events__right').replaceWith('<p>Empty...</p>')
 
-					if (!$('#groups__left').children().length)
-						$('#groups__right').remove()
+					if (!$('#events__left').children().length)
+						$('#events__right').remove()
 				}
 			})
 		});
