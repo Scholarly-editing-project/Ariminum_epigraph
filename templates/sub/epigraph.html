@@ -66,7 +66,7 @@
 
 	<section class="cards clearfix">
 		<div class="card">
-			<img class='card_image_epigraph' id="inscription__map" src="" alt="Map of where the epigraph is" style="width: 300px" >
+			<img class='card_image_epigraph' id="inscription__map" src="" alt="Map of where the epigraph is" style="width: 300px">
 		</div>
 		<div class="card">
 			<div class="banner__copy__text">
@@ -82,6 +82,8 @@
 				<p>Place:
 					<b id="inscription__place"></b>
 				</p>
+
+				<p id="inscription__size">
 				</p>
 			</div>
 		</div>
@@ -130,7 +132,7 @@
 	<section class="cards clearfix">
 		<div class="card" style="overflow: hidden; height: 270px">
 			<a id="inscription_cil_image" href="" target="_blank" style="width: 287.51px">
-			<img   src="" alt="Screenshot of the CIL" style="width: 100%">
+				<img src="" alt="Screenshot of the CIL" style="width: 100%">
 			</a>
 			<div class="card__copy">
 				<h3>
@@ -139,7 +141,7 @@
 			</div>
 		</div>
 		<div class="card">
-			<img class="card__image__epigraph" src="../img/rimini__personaggi.jpg" alt="" >
+			<img class="card__image__epigraph" src="../img/rimini__personaggi.jpg" alt="">
 			<div class="card__copy">
 				<h3>
 					<a>Characters</a>
@@ -300,7 +302,7 @@
 					$('#inscription__img').append(`<img src="${src}" alt="Photo fo the epigraph"/>`)
 					$('#inscription__img').attr('href', src)
 
-					$('#inscription__map').attr('src',`../img/epigraphs_map/map_${epigraph._id}.jpg`)
+					$('#inscription__map').attr('src', `../img/epigraphs_map/map_${epigraph._id}.jpg`)
 
 					$('#inscription__code').text(epigraph['_id'])
 					$('#inscription__cil').text('CIL ' + epigraph['cil'])
@@ -359,6 +361,10 @@
 							console.log(error)
 						})
 					})
+					for (let line of epigraph.size.structure) {
+						$("#inscription__size").append(`<b>${line}</b><br>`)
+					}
+					$("#inscription__size").append(`<b>Letters: ${epigraph.size.letters}</b><br>`)
 
 					for (let action of epigraph.actions) {
 						$.ajax({
