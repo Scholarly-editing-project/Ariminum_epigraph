@@ -30,12 +30,7 @@
   "size": {
     "structure": [
       "Description: made by six stone blocks",
-      "upper_block: 0.28 mt x 1.325 mt x 0.765 mt",
-      "middle-right_block: 0.295 mt x 0.64 mt x 0.61 mt",
-      "middle-left_block: 0.30 mt x 0.64 mt x 1.275 mt",
-      "lower-right_block: 0.60 mt x 0.23 mt x 1.295 mt",
-      "lower-middle_block: 0.61 mt x 0.77 mt x 0.35 mt",
-      "lower-left_block: 0.605 mt x 0.295 mt x 1.31 mt"
+      "Body: 1.19 mt x 1.31 mt x 1.31 mt"
     ],
     "letters": "9.9~8 mt"
   },
