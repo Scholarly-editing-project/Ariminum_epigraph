@@ -42,7 +42,7 @@
 		<div class="cover__filter"></div>
 		<div class="cover__caption">
 			<div class="cover__caption__copy">
-				<h1 style="font-weight:100;">Inscriptions</h1>
+				<h1 style="font-weight:100;">Epigraphs</h1>
 			</div>
 		</div>
 	</section>
@@ -50,8 +50,8 @@
 	<article class="panel" style="height: 30%">
 		<div class="panel__copy">
 			<p>BROWSE THE DATABASE</p>
-			<p align="justify">In this section of the Archive You can search for any object of our collection without using the map.
-				You can return in the homepage if You prefer to explore the map instead.
+			<p align="justify">In this section of the Archive You can search for any object of our collection without using the map. You can return in
+				the homepage if You prefer to explore the map instead.
 			</p>
 		</div>
 	</article>
@@ -254,6 +254,14 @@
 
 			const urlBase = '../'
 
+			function elaborateName({
+				praenomen,
+				nomen,
+				cognomen = ''
+			}) {
+				return `${praenomen} ${nomen} ${cognomen}`
+			}
+
 			$.ajax({
 				method: "GET",
 				dataType: 'json',
@@ -292,20 +300,29 @@
 					$('#people__right').html('')
 
 					let len = people.length
+
 					$('#people__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
 					people.forEach(function (person, index) {
-						if (index <= len / 2)
-							$('#people__left').append(
-								`<li><a href="../epigraph/${person['_id']}" alt="" >${person['_id']}</a></li>`)
-						if (index > len / 2)
-							$('#people__right').append(
-								`<li><a href="../epigraph/${person['_id']}" alt="" >${person['_id']}</a></li>`)
+
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: `${urlBase}api/people/${person['_id']}`,
+							success: function (specificPerson) {
+
+								let name = elaborateName(specificPerson[0].name)
+
+								if (index <= len / 2)
+									$('#people__left').append(
+										`<li><a href="../epigraph/${person['_id']}" alt="" >${name}</a></li>`)
+								if (index > len / 2)
+									$('#people__right').append(
+										`<li><a href="../epigraph/${person['_id']}" alt="" >${name}</a></li>`)
+							}
+						})
 					})
 
-					if (!$('#people__left').children().length)
-						$('#people__right').replaceWith('<p>Empty...</p>')
-
-					if (!$('#people__left').children().length)
+					if (!people.length)
 						$('#people__right').remove()
 				}
 			})
