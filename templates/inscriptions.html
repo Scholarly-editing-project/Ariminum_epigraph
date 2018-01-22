@@ -255,8 +255,8 @@
 			const urlBase = '../'
 
 			function elaborateName({
-				praenomen,
-				nomen,
+				praenomen ='',
+				nomen ='',
 				cognomen = ''
 			}) {
 				return `${praenomen} ${nomen} ${cognomen}`
@@ -343,7 +343,7 @@
 						$.ajax({
 							method: "GET",
 							dataType: 'json',
-							url: `${urlBase}api/actions/`,
+							url: `${urlBase}api/actions/${event['_id']}`,
 							success: function (specificEvent) {
 								name = specificEvent[0].title
 
