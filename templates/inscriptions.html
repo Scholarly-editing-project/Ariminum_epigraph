@@ -339,16 +339,23 @@
 					let len = events.length
 					$('#events__right').attr('start', len % 2 == 0 ? len / 2 : len / 2 + 1)
 					events.forEach(function (event, index) {
-						if (index <= len / 2)
-							$('#events__left').append(
-								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
-						if (index > len / 2)
-							$('#events__right').append(
-								`<li><a href="../groups/${event['_id']}" alt="" >${event['_id']}</a></li>`)
-					})
 
-					if (!$('#events__left').children().length)
-						$('#events__right').replaceWith('<p>Empty...</p>')
+						$.ajax({
+							method: "GET",
+							dataType: 'json',
+							url: `${urlBase}api/actions/`,
+							success: function (specificEvent) {
+								name = specificEvent[0].title
+
+								if (index <= len / 2)
+									$('#events__left').append(
+										`<li><a href="../groups/${event['_id']}" alt="" >${name}</a></li>`)
+								if (index > len / 2)
+									$('#events__right').append(
+										`<li><a href="../groups/${event['_id']}" alt="" >${name}</a></li>`)
+							}
+						})
+					})
 
 					if (!$('#events__left').children().length)
 						$('#events__right').remove()
