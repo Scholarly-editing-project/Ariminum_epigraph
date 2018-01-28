@@ -286,10 +286,10 @@
 
 								if (index <= len / 2)
 									$('#people__left').append(
-										`<li><a href="../epigraph/${person['_id']}" alt="" >${name}</a></li>`)
+										`<li><a href="../people/${person['_id']}" alt="" >${name}</a></li>`)
 								if (index > len / 2)
 									$('#people__right').append(
-										`<li><a href="../epigraph/${person['_id']}" alt="" >${name}</a></li>`)
+										`<li><a href="../people/${person['_id']}" alt="" >${name}</a></li>`)
 							}
 						})
 					})
@@ -321,10 +321,10 @@
 
 								if (index <= len / 2)
 									$('#events__left').append(
-										`<li><a href="../groups/${event['_id']}" alt="" >${name}</a></li>`)
+										`<li><a href="../action/${event['_id']}" alt="" >${name}</a></li>`)
 								if (index > len / 2)
 									$('#events__right').append(
-										`<li><a href="../groups/${event['_id']}" alt="" >${name}</a></li>`)
+										`<li><a href="../action/${event['_id']}" alt="" >${name}</a></li>`)
 							}
 						})
 					})
