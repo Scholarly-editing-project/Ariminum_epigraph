@@ -315,7 +315,7 @@
 						$.ajax({
 							method: "GET",
 							dataType: 'json',
-							url: `${urlBase}api/actions/`,
+							url: `${urlBase}api/actions/${event['_id']}`,
 							success: function (specificEvent) {
 								name = specificEvent[0].title
 
